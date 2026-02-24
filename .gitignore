@@ -1,0 +1,7 @@
+# Ignore Videos
+*.mp4
+
+# Ignore other large media files
+*.mov
+*.zip
+*.exe
