@@ -1,0 +1,85 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+Esystemi
+Z0 w1761347490
+!i122 2
+Z1 dC:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5
+Z2 8C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemI.vhd
+Z3 FC:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemI.vhd
+l0
+L3 1
+VmQ7O?A8KLnPF4QG]Fj5PE3
+!s100 kMlIKb^@77lSglBKI;OCT0
+Z4 OV;C;2020.1;71
+32
+Z5 !s110 1761347524
+!i10b 1
+Z6 !s108 1761347524.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemI.vhd|
+Z8 !s107 C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemI.vhd|
+!i113 1
+Z9 o-work work -2002 -explicit
+Z10 tExplicit 1 CvgOpt 0
+Abehavioral
+DEx4 work 7 systemi 0 22 mQ7O?A8KLnPF4QG]Fj5PE3
+!i122 2
+l11
+L10 9
+V9`fYNY2ALh=@`e0U?c4]22
+!s100 flSiTUJ:A0XJlZBQObJRL0
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Esystemi_tb
+Z11 w1761246709
+!i122 0
+R1
+Z12 8C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemI_TB.vhd
+Z13 FC:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemI_TB.vhd
+l0
+L1 1
+V3Cin[[KY>LGQTgcH0mlF>1
+!s100 P`Z8JzS;f61c@AR8<[5e81
+R4
+32
+Z14 !s110 1761347148
+!i10b 1
+Z15 !s108 1761347148.000000
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemI_TB.vhd|
+Z17 !s107 C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemI_TB.vhd|
+!i113 1
+R9
+R10
+Asystemi_tb_arch
+DEx4 work 10 systemi_tb 0 22 3Cin[[KY>LGQTgcH0mlF>1
+!i122 0
+l19
+L4 49
+Vaz:Yz>41`?BSI13f3eHYm3
+!s100 NH<;I8cR;2oEah`]zGGT:1
+R4
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R9
+R10

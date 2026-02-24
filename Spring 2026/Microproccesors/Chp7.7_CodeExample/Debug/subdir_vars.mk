@@ -1,0 +1,29 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CMD_SRCS += \
+../lnk_msp430fr2355.cmd 
+
+ASM_SRCS += \
+../7.3-7.4main.asm 
+
+OBJS += \
+./7.3-7.4main.obj 
+
+ASM_DEPS += \
+./7.3-7.4main.d 
+
+OBJS__QUOTED += \
+"7.3-7.4main.obj" 
+
+ASM_DEPS__QUOTED += \
+"7.3-7.4main.d" 
+
+ASM_SRCS__QUOTED += \
+"../7.3-7.4main.asm" 
+
+

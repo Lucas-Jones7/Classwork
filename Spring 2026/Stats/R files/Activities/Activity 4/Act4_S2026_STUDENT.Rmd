@@ -1,0 +1,256 @@
+---
+title: "Stat 337 - Activity 4 (Two-Way ANOVA)"
+author: "Lucas Jones"
+date: "Due: Friday, February 20th, 2026 by 11.59pm in Gradescope"
+output: 
+  pdf_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      message = FALSE,
+                      warnings = FALSE, 
+                      eval = TRUE) 
+options(show.signif.stars = FALSE)
+```
+
+## Background
+
+Much research has been done examining predator/prey behavioral dynamics, and it is well established that when a prey animal recognizes a particular predator, it can use its knowledge to make an "educated guess" about similar, but new, predators. This type of predator recognition can be extremely helpful in the case of hybrid predators such as the tiger trout, which are the product of a brown trout female mating with a male brook trout. Tiger trout are fast-growing, but sterile, and so are widely used as stocking fish for sport fishing. However, introduced species like these tend to be very efficient predators, since native prey often fail to recognize them.
+
+Researchers want to learn if prey can be conditioned or taught to recognize hybrid predators, especially if the prey already recognizes the parent species. Woodfrogs are ideal for this type of study, since they are common prey for trout and because they have the ability to learn and then generalize their predator recognition.
+
+For this experiment, researchers collected 215 woodfrog tadpoles from a pond known to contain no fish predators in south-central Alberta, Canada; previous work has shown that tadpoles from this source do not display anti-predator behavior when presented with fish odors. After an acclimatization period, the tadpoles were placed in 500mL cups (one per cup), and given more time to acclimatize to rule out behaviors related to environment disturbance. The sides of the tadpole cups were then injected with one of two different solutions. The first was a solution of 5mL of fish odor (from one of five different fish species) mixed with 5mL of well water; the tadpoles who received this mixture were classified as "naive" (the control group). The second solution consisted of 5mL of tiger trout odor combined with a 5mL "alarm cue" mixture of crushed tadpole and well water; the tadpoles that received this mixture were classified as "experienced." One hour later, the fish were moved to new cups. The following day, the fish were tested for their response to one of five different fish odors injected into the side of their new cups. 
+
+The researchers observed the tadpoles for four minutes before the injection and for four minutes after the injection, counting the number of times the tadpole crossed the medial line of the cup. Reduced swimming activity is considered indicative of anti-predator behavior.
+
+We want to explore whether the average difference in number of times a tadpole crosses the medial line (Post - Pre treatment) is different for the different fish odors. Additionally, we want to see if the average differences across the different fish odors change based on whether the tadpoles are "naive" or "experienced."
+
+
+The variables in this dataset include the following:
+
+- `Conditioning`: Whether a tadpole was classified as "naive" or "experienced"
+
+- `Cue`: The fish odor a tadpole was exposed to (tiger trout, brook trout, brown trout, rainbow trout, or goldfish)
+
+- `Pre`: The number of times in four minutes a tadpole crossed the medial line before receiving a treatment
+
+- `Post`: The number of times in four minutes a tadpole crossed the medial line after receiving a treatment
+
+- `Diff`: The difference in number of times a tadpole crossed the medial line (Post treatment - Pre treatment)
+
+- `Pdiff`: The percentage change in number of times the medial line was crossed, calculated as $\;\frac{Post - Pre}{Pre}$
+
+All code has been provided for you. 
+
+*data courtesy of: Chivers DP, Mathiron A, Sloychuk JR, Ferrari MCO. 2015 Responses of tadpoles to hybrid predator odours: strong maternal signatures and the potential risk/response mismatch. Proc. R. Soc.  B282:20150365.http://dx.doi.org/10.1098/rspb.2015.0365*
+
+## Instructions
+
+**Include all output and generated plots to receive full credit for each question. Be sure to bold your answers to questions where relevant, and write in complete sentences.  Answers to multiple choice questions may be indicated by typing the selected letter below the choices and bolding that. You should spell check your RMD file by going to "edit-> check spelling". Also, be sure to proofread your knitted word document to ensure all images and formatting are correctly implemented. Once finished, save as a pdf and submit to the appropriate assignment folder in Gradescope. Make sure you have assigned pages to your answers in Gradescope!**
+
+***If you work in a group, please make sure ALL group member names are listed in line 3 and in the Gradescope submission!!***
+
+## Variables and Hypotheses
+
+1. What does it mean if `Conditioning` and `Cue` “interact”? Select the correct interpretation for the interaction between these two factors.
+
+    A. The effect of `Cue` on the true mean difference in number of times the medial line is crossed is the same for the "naive" tadpoles as for the "experienced" tadpoles.
+
+    B. The effect of `Cue` on the true mean difference in number of times the medial line is crossed depends on the `Conditioning` of the tadpole.
+
+    C. There is no effect of `Conditioning` on the true mean difference in number of times the medial line is crossed unless `Cue` is included in the model.
+
+    D. The effect of `Cue` on the true mean difference in number of times the medial line is crossed does not differ between "naive" tadpoles and "experienced" tadpoles.
+    
+    
+    
+2. Using the code chunk below, call the `tidyverse`, `readr`, `mosaic`, and `car` packages. In the provided code, read in the data by replacing the XXX with the name of the csv file. Declare the two predictor variables as factors by replacing the *** with the appropriate variable names. There will be no output produced by this chunk.
+
+```{r message=F, warning=F}
+library(tidyverse)
+library(readr)
+library(mosaic)
+library(car)
+
+load.data <- read_csv("tadpoles.csv") 
+
+tadpole <- load.data %>%
+  mutate(Cue = factor(Cue),
+         Conditioning = factor(Conditioning))
+
+```
+
+3. The code below will generate the summary statistics for these data. Is this a balanced design? Justify your reasoning.
+
+```{r}
+sum_stats <- favstats(Diff ~ Conditioning + Cue, data = tadpole)
+cbind(sum_stats[,1], round(sum_stats[,-1], 3))
+```
+**This is not a balanced design because there is variability in sample sizes between the Conditioning groups.**
+
+4. Complete the code below to create interaction plots (replace the XXX with the appropriate variables/syntax - see the `fit_int` model structure on page 6 of the Ch 4 notes for an example). Based on these plots, do you think there is an interaction between the two explanatory variables? Explain why or why not, clearly referencing the plots.
+
+```{r fig.width=11, fig.height=6, message=F, warning=F}
+    
+    #Code to install the catstats package
+    #Be sure to comment these two lines out after running for the first time!
+    #install.packages("remotes")
+    #remotes::install_github("greenwood-stat/catstats")
+
+    #Note: if the catstats package install does not work, 
+    #comment the two previous lines out and uncomment and run
+    #the following line:
+    #source("http://www.math.montana.edu/courses/s217/documents/intplotfunctions_v3.R")
+    
+# code for plot colors
+pal <- c("#D43F3AFF", "#357EBDFF","#EEA236FF", "#5CB85CFF", "#46B8DAFF" )
+
+library(catstats)
+intplotarray(XXX, data = tadpole, col = pal, lwd = 2,
+             main = "Interaction between \n Conditioning and Cue", las = 2)
+## Note: To make the labels on the x-axis of the interaction plot horizontal, 
+## remove the `las=2` at the end of the plotting code
+
+```
+
+
+5. Regardless of your answer to the previous question, which of the following is the correct theoretical model to test for an interaction between `Conditioning` and `Cue`?
+
+    A. $y_{ijk} = \alpha + \tau_j + \gamma_k$
+
+    B. $y_{ijk} = \alpha + \tau_j + \gamma_k + \varepsilon_{ijk}, \; \varepsilon \sim N(0, \sigma^2)$
+
+    C. $y_{ijk} = \alpha+\tau_j+\gamma_k+\omega_{jk}$
+
+    D. $y_{ijk} = \alpha + \tau_j + \gamma_k + \omega_{jk} + \varepsilon_{ijk}, \; \varepsilon \sim N(0, \sigma^2)$
+
+
+
+6. Write out the alternative hypothesis for the test for an interaction between the variables of interest, in words and in the context of the problem.
+
+
+## Model Fitting and Assumption Check
+
+7. The code below fits a model to address the research question. Which model was fit?
+
+```{r}
+lm.tadpole <- lm(Diff ~ Conditioning * Cue, data = tadpole)
+```
+
+
+>A. Additive model
+    
+>B. Interaction model
+
+
+8. Generate the summary output for the model fit in Q7. Using this output, estimate the mean difference in number of times the medial line is crossed for an experienced tadpole that was given a brook trout cue. Show all necessary work and use proper notation. *You can type this in or neatly write it by hand and insert an image into your knitted Word file.*
+
+```{r}
+
+
+```
+
+
+
+9. Using the summary output you generated above, estimate the mean difference in number of times the medial line is crossed for a naive tadpole that was given a tiger trout cue. Show all necessary work and use proper notation. *You can type this in or neatly write it by hand and insert an image into your knitted Word file.*
+
+
+10. Assess the assumption of normality for these data using the provided residual diagnostic plots, clearly referencing which plot(s) you are using and making sure you discuss the type of violation (i.e., pattern), if one is present.
+
+```{r fig.width=8, fig.height=5}
+par(mfrow = c(1, 3))
+plot(lm.tadpole, which = 1:3, pch = 16)
+```
+
+
+## Hypothesis Test & Conclusions
+
+11. Examine the `anova()` output from the code provided below. Since the p-value for `Conditioning:Cue` is the largest of the three, can we justify removing this term from the model? Explain your reasoning.
+
+```{r warning=F, message = F}
+    library(car)
+    anova(lm.tadpole)
+```
+
+
+12. Based on the `anova` output, what is your conclusion regarding the test for the interaction between `Conditioning` and `Cue`? 
+
+    A. There is strong evidence against the null hypothesis of no interaction between `Conditioning` and `Cue` on the true mean difference in number of times the medial line is crossed; the interaction term should remain in the model.
+
+    B. There is moderate evidence against the hypothesis that the effect of `Cue` on the true mean difference in number of times the medial line is crossed depends on the `Cue`, so the interaction term is needed.
+
+    C. There is very strong evidence of an interaction between `Conditioning` and `Cue`, so the interaction term should be removed.
+
+    D. There is little to no evidence of an interaction between `Cue` and `Conditioning` when both variables are included in the model, so the interaction term can be removed.
+
+
+13. Provide the $F$-statistic, distribution under the null, and the p-value you based your conclusion on.
+
+
+## Next Steps
+
+Regardless of what previous results may have indicated, the researchers decided to remove the interaction between `Conditioning` and `Cue` and fit an additive model instead. 
+
+14. In words and in context, provide the null hypothesis for a test of the main effect of `Cue` in the additive model with `Conditioning`.
+
+
+15. A model for this second test has been fit below, with summary output provided. Use this to estimate the mean difference in times to cross the medial line for a naive tadpole given a goldfish cue. Show all necessary work and use proper notation.
+
+```{r}
+    lm.tadpole.add <- lm(Diff ~ Conditioning + Cue, data = tadpole)
+    summary(lm.tadpole.add)
+```
+
+
+16. Select the best assessment of the equal variance assumption for the additive model using the diagnostic plots provided below. 
+
+```{r}
+    par(mfrow = c(1,3))
+    plot(lm.tadpole.add, which = c(1:3), pch = 16)
+```
+
+
+$\qquad$ A. There may be some evidence against this assumption as the residuals in the Residuals vs Fitted plot are not evenly distributed horizontally across the fitted values.
+
+$\qquad$ B. There is strong evidence against this assumption as the residuals are not consistently spread vertically across the fitted values in the Residual vs Fitted plot.
+
+$\qquad$ C. There may be some evidence against this assumption as the points in the Normal Q-Q plot show some deviation from the 1:1 line.
+
+$\qquad$ D. There is some evidence against this assumption as the smoother line in the Scale-Location plot does not follow the same shape as that in the Residuals vs Fitted plot.
+
+
+17. (7pts) Complete the partial Type I SS ANOVA table below. For each letter in the table, show your work on the respective line below. **Show all work for each calculation. Do not enter your answer in the table itself.** *Hint: complete the cells following the order of the lettering.*
+
+
+
+|   Source      | DF  |Sum of Squares |Mean Squares |F-ratio| p-value |
+|---------------|-----|---------------|-------------|-------|---------|
+|Conditioning   |  1  |       c       |   1812.0    |39.468 |1.905e-09|
+|Cue            |  a  |    1972.4     |      d      |   g   |6.165e-08|
+|Residuals      |  b  |       f       |      e      |       |         |
+|Total          | 214 |               |             |       |         |
+
+
+$\qquad$ a. $df_{Cue} = $
+
+$\qquad$ b. $df_{Residuals} = $
+
+$\qquad$ c. $SS_{A} = $
+
+$\qquad$ d. $MS_{B} = $
+
+$\qquad$ e. $MS_{E} = $
+
+$\qquad$ f. $SS_{E} = $
+
+$\qquad$ g. $F\text{-}stat_{B} = $
+
+
+18. Using the ANOVA table you just completed, state a conclusion for the test for the main effect of `Cue` in the context of the problem, including the test statistic, distribution under the null, and p-value.
+
+
+19. Please list anyone that you worked on any part of this activity with if their name is not already part of this group's submission. For tutors, give their name and affiliation (MSC, SmartyCats, etc.). For fellow students, give their name and section number. Appropriately cite any non-course provided resources. If you did not utilize any outside resources, simply enter "NA."
+
+**NA**

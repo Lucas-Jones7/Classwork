@@ -1,0 +1,24 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity encoder_8to3_binary is
+    port (
+        A : in bit_vector(7 downto 0);
+        F : out bit_vector(2 downto 0)
+    );
+end entity encoder_8to3_binary;
+
+architecture selected of encoder_8to3_binary is
+begin
+    -- Selected signal assignment: maps one-hot input to binary output
+    with A select
+        F <= "000" when "00000001",  -- input 0 active
+             "001" when "00000010",  -- input 1 active
+             "010" when "00000100",  -- input 2 active
+             "011" when "00001000",  -- input 3 active
+             "100" when "00010000",  -- input 4 active
+             "101" when "00100000",  -- input 5 active
+             "110" when "01000000",  -- input 6 active
+             "111" when "10000000",  -- input 7 active
+             "---" when others;      -- undefined for invalid/multiple inputs
+end architecture selected;

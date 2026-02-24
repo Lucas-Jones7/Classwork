@@ -1,0 +1,28 @@
+-- File: SystemI.vhd
+library ieee;
+use ieee.std_logic_1164.all;  -- harmless to include; ports use type bit as requested
+
+entity SystemI is
+    port (
+        A : in  bit;
+        B : in  bit;
+        C : in  bit;
+        D : in  bit;
+        F : out bit
+    );
+end entity SystemI;
+
+architecture Behavioral of SystemI is
+begin
+    -- F = ? m(1,3,9,11)
+    -- m1  =  A' B' C' D
+    -- m3  =  A' B' C  D
+    -- m9  =  A  B' C' D
+    -- m11 =  A  B' C  D
+
+    F <= (not A and not B and not C and D) or
+         (not A and not B and C and D) or
+         (A and not B and not C and D) or
+         (A and not B and C and D);
+end architecture Behavioral;
+

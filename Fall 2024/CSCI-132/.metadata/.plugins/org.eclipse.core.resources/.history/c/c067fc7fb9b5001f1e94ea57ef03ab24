@@ -1,0 +1,7 @@
+public class Program5Demo {
+    public static void main(String[] args) {
+        MazeSolver solver = new MazeSolver();
+        solver.loadMaze("maze.txt"); // Ensure "maze.txt" exists in the program's directory
+        solver.solveMaze();
+    }
+}

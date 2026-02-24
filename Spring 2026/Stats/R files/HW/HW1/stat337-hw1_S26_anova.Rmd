@@ -1,0 +1,231 @@
+---
+title: "Stat 337 - Homework 1: ANOVA"
+author: "Lucas Jones"
+date: 'Due: Friday, February 13, 2026 by 11:59pm in Gradescope'
+output:
+  word_document: default
+fontsize: 12pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      message = FALSE,
+                      warnings = FALSE, 
+                      eval = TRUE) 
+options(show.signif.stars = FALSE)
+```
+
+## Instructions (READ CAREFULLY!)
+
+- **Use the steps we discussed in class for working with .R and .Rmd files!** 
+
+    - 0: make sure your .Rmd and .csv are in the same folder and your working directory is set to this folder. 
+    - 1: copy appropriate code from the .R script file into the code chunks in the .Rmd file where prompted. Add comments to your code so you begin to learn what each command does! 
+    - 2: run lines of code in each code chunk in the console to make sure you can generate the desired output. Use the output to answer the question and edit the .Rmd to reflect your answer 
+    - 3: change code chunk from `eval = FALSE` to `eval = TRUE` and knit your document. You should see any new output and your response in the updated knitted document! 
+    - 4: move on to the next chunk 
+    - 5: rinse and repeat 1-4 until you have completed the assignment! 
+    
+- **Include all generated plots to receive full credit for each question. If you are having trouble with knitting to .html, knit to word instead. All MSU students can download MS Office with office 365.** 
+- **Be sure to bold your answers to questions where relevant, and write in complete sentences.** 
+- **Answers to multiple choice questions may be indicated by typing "bolding" (putting double asterisks) around the appropriate choice or typing a bold letter representing your choice below the question.** 
+- **Spell check your RMD file by going to "edit-> check spelling." Also, be sure to proofread your knitted document to ensure all images and formatting are correctly implemented.** 
+- **Once finished, submit your completed work to Gradescope and BE SURE TO ASSIGN PAGES IN YOUR SUBMISSION TO EACH QUESTION OUTLINED IN THE GRADESCOPE ASSIGNMENT. IF YOU DO NOT SELECT PAGES, YOUR ASSIGNMENT WILL NOT BE GRADED! EXAMPLE HERE: [https://help.gradescope.com/article/ccbpppziu9-student-submit-work#submitting_a_pdf](https://help.gradescope.com/article/ccbpppziu9-student-submit-work#submitting_a_pdf)**
+- ***Group work is encouraged! If you work in a group (of up to four people), please make sure ALL group member names are listed in line 3 and in the Gradescope submission! Each group only needs to submit one assignment to Gradescope.***
+
+**_PLEASE DELETE ALL INSTRUCTIONS BEFORE SUBMITTING YOUR ASSIGNMENT (lines 17-36).**_ 
+
+
+## Critiquing published research 
+
+A learning outcome of this course is to _Demonstrate an understanding of statistical results as used in journal articles, and discuss scope of inference in the context of authentic research questions and data
+sets._ For this assignment, we will further investigate the memory study used in the Chapter 1/2 review notes. To answer the following questions you will need to read, _Mednick SC, Cai DJ, Kanady J, Drummond SP. Comparing the benefits of caffeine, naps and placebo on verbal, motor and perceptual memory. Behav Brain Res. 2008 Nov 3;193(1):79-86. doi: 10.1016/j.bbr.2008.04.028. Epub 2008 May 8. PMID: 18554731; PMCID: PMC2603066._ (available on the course webpage as _MednickCaiKanadyDrummond2008_memory-study.pdf_). We will focus on the 7hr retention associated with the "Verbal Task" for this assignment. 
+
+1. Based on the information provided in the methods section only, to what population do results from the Verbal Task apply to? Be specific.  
+
+- **The results can be generalized to healthy young adult participants who were recruited for the study.** 
+
+2. The paper describes their main outcomes of interest from the Verbal Task as the recall and recognition for the 7hr retention interval. In the analysis section, they describe procedures they used to investigate their questions of interest. In your own words, provide an explanation of what their major concern was, and what procedures they use to justify ignoring baseline scores and focusing on the 7hr recall and recognition. Do you have any concerns about their logic (i.e., using an ANOVA to provide "evidence for the null")? 
+
+- **Their main concern was whether the treatment groups differed at basline before the 7-hour retention interval. They justified ignoring basline scored after finding no significant differences between groups after conducting an ANOVA test.** 
+
+3. Let $y_{ij}$ = the recall score (# words remembered) for the $i$th participant in the $j$th group at the 7hr retention interval, where $i = 1,2,...,n_j$ and $j = 1 (Caffeine), 2 (Nap), 3 (Placebo)$. Define in the context of the problem or provide a value for the following. 
+
+- $\mathbf{\mu_j} =$ **true mean number of words recalled after 7 hours for participants in group j** 
+- $\mathbf{n_1} =$ **12**
+- $\mathbf{n_2} =$ **12**
+- $\mathbf{n_3} =$ **11** 
+
+4. Is this a balanced design? Explain why/why not. 
+
+- **No its not a balanced design due to ** 
+
+5. Use the parameters you defined in 3 to write out the theoretical *cell means* model for a 1-way ANOVA. *You do not need to define $\epsilon_{ij}$ or $\sigma$. You can insert a picture of a __neatly__ handwritten model into your knitted Word document. Do this as the final step to finishing your hw (i.e., add to word doc at the end), as each time you re-knit, your Word document will update.* 
+
+- $\mathbf{}$
+
+
+6. Write the null and alternative hypotheses for investigating if there are any differences in the true mean # of words recalled across the three treatment groups at the 7hr interval. Use proper notation (i.e., write these hypotheses in "symbols").
+
+- $H_0:$
+- $H_a:$ 
+
+7. On page 14 of the paper, you will find plots of the observed data for the recall at 7hrs in Figure 2a. This type of graphic is called a "dynamite plot" because it provides the sample mean for each group and a sample standard deviation (as the black half-error bar) and looks like a detonator. Does this plot allow you to easily address two of the ANOVA assumptions (normality of groups, and constant variance) informally? If yes, explain, and if no, what key components are missing? 
+
+- **YOUR RESPONSE HERE** 
+
+The results section provides the following information about the 1-way ANOVA results. *"Recall memory for Word List 1 after 7hr retention interval showed significant group differences (F = 5.41, p=.009, partial $eta^2$=.25, Fig 2a). Post-hoc tests showed: a) the Nap group performed significantly better than the Caffeine group (p=.003); b) Nap performed marginally better than Placebo (p=.06.); and c) there were non-significant differences between Caffeine and Placebo (p=.22)."* Use this to answer the following questions.
+
+8. What is the test statistic being used for the 1-way ANOVA and what distribution does it follow under the null hypothesis? 
+
+- **YOUR RESPONSE HERE** 
+
+9. The results mention "post-hoc" tests and provide results for 3 simultaneous tests. It's unclear what type of post-hoc procedures they used, which is important to understand for trusting inferences. Why is knowing the type of post-hoc test important? That is, what should we always be worried about when conducting simultaneous tests? 
+
+- **YOUR RESPONSE HERE** 
+
+10. What fundamental information related to _practical significance_ is omitted from the results prevented in the paper. What procedure and or graphic could the authors use to provide this information for the post-hoc tests in addition to their results?
+
+- **YOUR RESPONSE HERE** 
+
+11. Read the discussion and conclusion and pay particular attention to the implied scope of inference suggested by the language used in the paper. Do the claims made in the discussion and conclusion appropriately convey the scope of inference based on the methods used in the study. Why/why not? Be specific in your answer! 
+
+- **YOUR RESPONSE HERE** 
+
+12. Based on the information provided in the paper, you should not feel comfortable deciding whether the assumptions and conditions for running a parametric one-way ANOVA were severely violated. Briefly explain what else you would want to see to help you choose whether to trust the inferences made in the paper. 
+
+- **YOUR RESPONSE HERE** 
+
+
+## Conducting an ANOVA analysis
+
+Data from the 2024 Big Sky Biggie 30-mile Mountain bike race [https://bigskybiggie.com/](https://bigskybiggie.com/) are provided on the course webpage as _big-sky-biggie_clean30.csv_. The variables in the data set are, 
+
+- `Place`: Overall place in the race 
+- `Name`: participant's name
+- `City`: participant's home city 
+- `State`: participant's home state 
+- `Gender`: participant's gender (M, F)
+- `Pace`: average pace (mph)
+- `age_group`: participant's age group (18 and under, 19-29, 30-39, 40-49, 50+)
+- `Bib`: bib number 
+- `Age`: Age in years 
+- `mph`: average miles per hour (mph)
+- `tot_time`: total time in minutes 
+- `finish_time`: time crossing the finish line (MST) 
+
+_Suppose we are interested in the relationship between age group and total time to complete the race. Specifically, we want to know if there are any differences in the true mean time to complete the 30-mile biggie across the age groups (18 and under, 19-29, 30-39, 40-49, 50+)._ 
+
+An R script file, _stat337-fa25_hw1.R_ is provided for you to use with this assignment. The code chunk below will load necessary packages and read these data into R. 
+
+```{r load-packages-data, eval = FALSE, warning=FALSE, message=FALSE}
+# load packages 
+library(tidyverse)
+library(yarrr)
+library(mosaic)
+library(multcomp)
+
+# read in data as df_biggie_30
+df_biggie30 <- read_csv("big-sky-biggie_clean30.csv")
+glimpse(df_biggie30)
+```
+
+13. What are the relevant variables for addressing our research question? 
+
+- **Response variable: tot_time** 
+
+- **Explanatory variable: age_group** 
+
+14. You'll need to do some wrangling of the explanatory variable to get it ready for use in a statistical model. Copy and paste appropriate code from the provided script file (stat337-S26_hw1.R) that accomplishes this task for you. Provide a brief description of what it does as a comment. 
+
+```{r wrangle, warning = FALSE, echo = FALSE, eval = TRUE
+}
+df_race <- df_biggie30 %>%  
+  mutate(age_group = factor(age_group)) # Converts age_group into a categorical factor
+```
+
+## Defining Hypotheses
+
+15. Define parameters for a reference-coded model using proper notation. [_Some potentially helpful math-mode examples:_ $y_{ij}$, $\mu_{group}$, $\tau_{group}$, $y \sim Distribution$, $\alpha$, $\epsilon_{ij}$.] 
+
+- **$y_{ij}$ = total time (mins) for rider i in age group j** 
+
+- **$\mu_{group}$ = true mean total time for the reference age group**
+
+- **$\tau_{j}$ = effect of age group j relative to the reference group**
+
+- **$\epsilon_{ij}$ = random error term**
+
+**$y_{ij}$ = $\mu_{group}$ + $\tau_{j}$ + $\epsilon_{ij}$**
+
+16. Use the parameters you defined to provide the null and alternative hypotheses for a reference-coded ANOVA. 
+
+- **$H_0:$ $\tau_{1}$ = $\tau_{2}$ = ... = $\tau_{k}$ = 0**
+- **$H_a:$ At least one $\tau_{j}$ != 0**
+
+## Exploratory Data Analysis
+
+17. Paste all code into the following code chunk that is associated with creating exploratory plots, and providing raw-data summary statistics for each state. Be sure that the output from the code (but not the code itself) is showing up in your knitted document! 
+
+```{r eda, message=FALSE, warning=FALSE, fig.width=7, echo = FALSE, eval = FALSE, fig.height=4}
+favstats(tot_time ~ age_group, data = df_race) # compute summary stat within each age group
+pirateplot(tot_time ~ age_group, data = df_race) #Generates a Pirate plot with explanatory and response variable
+
+```
+    
+
+18. Paste the appropriate code into the code chunk below to produce the estimated model for the **reference-coded** parameterization of the ANOVA model. Using proper notation (based on what you defined in 2), provide the estimate for the mean total time for the `19-29` age group. Show all necessary work! _Note, to put a "hat" on a symbol, you can use the `\hat` command in math mode e.g.,_ $\hat{\mu}$ creates "mu-hat". _Hint: see earlier problems for examples of how to create symbols in math mode._ _Alternatively, you can insert a picture of a ***neatly*** handwritten model into your knitted Word document. Do this as the final step to finishing your hw, as each time you re-knit, your word document will update._ 
+
+```{r ref-coded, eval = FALSE}
+fit_30b <- lm(tot_time ~ age_group, data = df_race) #fit a reference anova model
+summary(fit_30b) #display summary of fit_30b
+```
+
+- **$\hat{\mu_{19-29}}$ = $\hat{\mu}$ + $\hat{\tau_{19-29}}$**
+
+- **$\hat{\mu_{19-29}}$ = 145.831 + 43.067 = 188.898 minutes**
+
+## Hypothesis Test and Assessing Assumptions
+
+19. Create appropriate diagnostic plots for a parametric ANOVA. Paste in the appropriate code to create diagnostic plots for running an ANOVA on the reference-coded model in the code chunk below. No discussion. 
+
+```{r diag-plots, fig.width=9, fig.height=4, eval = FALSE}
+par(mfrow = c(1,4))
+plot(fit_30b)
+par(mfrow = c(1,1))
+```
+
+20. Use appropriate diagnostic plots to assess the assumption of "equal variance." Make sure you are referencing appropriate plot(s) and features of the plot(s). 
+
+- **The assumption of equal variance appears reasonably satisfied. There are minor spread differences but none that are severe** 
+
+21. Use appropriate diagnostic plots to assess the assumption of normality of the residuals for these data. Make sure you are referencing appropriate plot(s) and features of the plot(s). 
+
+- **The assumption of normality is reasonably satisfied**
+
+22. Based only on your assessments of "normality" and "equal variance", do you feel confident reporting results from the parametric ANOVA test? (Remember, you'd also want to consider independence, but I'm not asking for that here.)
+
+- **I feel confident reporting results from the parametric ANOVA test**
+
+23. Regardless of your answer above, paste code into the code chunk to run a parametric anova for these data. Show the ANOVA table and write a summary of statistical findings that includes: the test-statistic, its assume distribution under the null, the associated p-value, an evidence statement, and a conclusion based on the evidence. 
+
+```{r anova, eval = FALSE}
+anova(fit_30b) # run anova test for fit_30b data
+```
+**The ANOVA test produced an F-statistic of 10.44, which follows an F distribution under the null hypothesis. The observed p-value was 8.389e-08. The p-value is less than 0.05, so we reject the null hypothesis. There is sufficient evidence that the mean total time differs across age groups.**
+
+24. To further investigate the research question, you conduct a Tukey follow-up test to obtain 95% family-wise CIs for all pairwise differences in mean total time (sec) among all age groups. Paste the appropriate code into the code chunk below to run the test and provide a summary plot. Summarize the findings of the follow-up test in a few sentences. 
+
+```{r tukey, fig.width=5, fig.height=8, eval = FALSE}
+pairs <- glht(fit_30b, linfct = mcp(age_group = "Tukey"))
+plot(pairs)
+confint(pairs)
+cld(pairs)
+```
+
+- **The Tukey test compares all pairwise differences while controlling the FW error rate. The results indicate that there is a difference in total mean time in the 18 and under group when compared to all other groups. The 18 and under groups interval doesn't include zero showing a significant difference in total mean time**
+
+
+25. Please list anyone that you worked on any part of this activity with if their name is not already part of this group's submission. For tutors, give their name and affiliation (MSC, SmartyCats, etc.). For fellow students, give their name and section number. If you did not utilize any outside resources, simply enter "NA."
+
+- **NA**

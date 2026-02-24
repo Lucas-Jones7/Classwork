@@ -1,0 +1,64 @@
+public class MazeSolver {
+    private char[][] maze;
+    private boolean[][] visited;
+    
+    // Constructor to initialize the maze and visited array
+    public MazeSolver(char[][] maze) {
+        this.maze = maze;
+        visited = new boolean[maze.length][maze[0].length];
+    }
+
+    // Recursive method to solve the maze
+    public void make_move(int x, int y, int hand_x, int hand_y) {
+        // Check if the position is out of bounds or already visited
+        if (x < 0 || x >= maze[0].length || y < 0 || y >= maze.length || visited[y][x]) {
+            return; // Stop recursion if out of bounds or already visited
+        }
+
+        // Mark current position as visited
+        visited[y][x] = true;
+
+        // Print current state of the maze
+        print_maze(maze);
+        
+        // If the current position is the exit ('F'), the maze is solved
+        if (maze[y][x] == 'F') {
+            System.out.println("Exit found!");
+            return; // Stop recursion, exit found
+        }
+
+        // Mark the current position with 'X' as part of the path
+        if (maze[y][x] == '.') {
+            maze[y][x] = 'X';
+        }
+
+        // Try to move in different directions: right, down, left, up
+        // Right-hand wall algorithm: always try turning right first
+        if (canMove(x, y + 1)) {  // Move down (right)
+            make_move(x, y + 1, x, y); // Move down
+        } else if (canMove(x + 1, y)) { // Move right
+            make_move(x + 1, y, x, y); // Move right
+        } else if (canMove(x, y - 1)) {  // Move up (left)
+            make_move(x, y - 1, x, y); // Move up
+        } else if (canMove(x - 1, y)) {  // Move left (down)
+            make_move(x - 1, y, x, y); // Move left
+        }
+    }
+
+    // Helper method to check if a move is valid (within bounds and not blocked)
+    private boolean canMove(int x, int y) {
+        return x >= 0 && x < maze[0].length && y >= 0 && y < maze.length && 
+               (maze[y][x] == '.' || maze[y][x] == 'F'); // Can move to open path or exit
+    }
+
+    // Method to print the maze
+    private void print_maze(char[][] maze) {
+        for (int i = 0; i < maze.length; i++) {
+            for (int j = 0; j < maze[i].length; j++) {
+                System.out.print(maze[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println(); // Print an empty line after each maze state
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Information Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+    }
+    label {
+      margin-left: 5px;
+    }
+    .submit-btn {
+      margin-top: 15px;
+      padding: 8px 15px;
+      border: none;
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .submit-btn:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>User Information Form</h1>
+
+  <form action="proccess.php" method="post">
+    
+    <!-- Text Input -->
+    <label for="username">Name:</label><br>
+    <input type="text" name="username" id="username" required><br><br>
+
+    <!-- Radio buttons -->
+    <p>Choose your favorite season:</p>
+    <input type="radio" name="season" value="Spring" id="spring">
+    <label for="spring">Spring</label><br>
+
+    <input type="radio" name="season" value="Summer" id="summer">
+    <label for="summer">Summer</label><br>
+
+    <input type="radio" name="season" value="Winter" id="winter">
+    <label for="winter">Winter</label><br>
+
+    <input type="radio" name="season" value="Fall" id="Fall">
+    <label for="fall">Fall</label><br>
+
+    <!-- Checkboxes -->
+    <p>Pick your hobbies:</p>
+    <input type="checkbox" name="hobbies[]" value="Reading" id="reading">
+    <label for="reading">Reading</label><br>
+
+    <input type="checkbox" name="hobbies[]" value="Sports" id="sports">
+    <label for="sports">Sports</label><br>
+
+    <input type="checkbox" name="hobbies[]" value="Music" id="music">
+    <label for="music">Music</label><br><br>
+
+    <!-- Select one -->
+    <label for="color">Favorite Color:</label><br>
+    <select name="color" id="color">
+      <option value="Red">Red</option>
+      <option value="Blue">Blue</option>
+      <option value="Green">Green</option>
+    </select><br><br>
+
+    <!-- Select multiple -->
+    <label for="foods">Favorite Foods (select multiple):</label><br>
+    <select name="foods[]" id="foods" multiple size="4">
+      <option value="Pizza">Pizza</option>
+      <option value="Burger">Burger</option>
+      <option value="Pasta">Pasta</option>
+      <option value="Salad">Salad</option>
+    </select><br><br>
+
+    <!-- Another input type -->
+    <label for="birthdate">Your Birthdate:</label><br>
+    <input type="date" name="birthdate" id="birthdate"><br><br>
+
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,203 @@
+# Compile of encoder_8to3_binary_TB.vhd was successful.
+# Compile of encoder_8to3_binary.vhd failed with 1 errors.
+# Compile of encoder_8to3_binary.vhd failed with 1 errors.
+# Compile of encoder_8to3_binary.vhd failed with 1 errors.
+# Compile of encoder_8to3_binary.vhd failed with 2 errors.
+# Compile of encoder_8to3_binary.vhd was successful.
+vsim work.encoder_8to3_binary_tb
+# vsim work.encoder_8to3_binary_tb 
+# Start time: 14:03:13 on Nov 07,2025
+# Loading std.standard
+# Loading work.encoder_8to3_binary_tb(encoder_8to3_binary_tb_arch)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.encoder_8to3_binary(selected)
+# ** Fatal: (vsim-3807) Types do not match between component and entity for port "A".
+#    Time: 0 ps  Iteration: 0  Instance: /encoder_8to3_binary_tb/DUT File: C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW6.2/encoder_8to3_binary.vhd Line: 6
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 14:03:14 on Nov 07,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 11
+vsim work.encoder_8to3_binary
+# vsim work.encoder_8to3_binary 
+# Start time: 14:03:29 on Nov 07,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.encoder_8to3_binary(selected)
+add wave sim:/encoder_8to3_binary/*
+run
+quit -sim
+# End time: 14:05:09 on Nov 07,2025, Elapsed time: 0:01:40
+# Errors: 0, Warnings: 1
+# Compile of encoder_8to3_binary.vhd failed with 1 errors.
+# Compile of encoder_8to3_binary.vhd was successful.
+# Compile of encoder_8to3_binary_TB.vhd was successful.
+vsim work.encoder_8to3_binary
+# vsim work.encoder_8to3_binary 
+# Start time: 14:08:03 on Nov 07,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.encoder_8to3_binary(selected)
+add wave sim:/encoder_8to3_binary/*
+run
+quit -sim
+# End time: 14:43:17 on Nov 07,2025, Elapsed time: 0:35:14
+# Errors: 0, Warnings: 4
+# reading C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project PROJECT
+# Compile of mux_8to1_TB.vhd was successful.
+# Compile of mux_8to1.vhd was successful.
+vsim work.mux_8to1_tb
+# vsim work.mux_8to1_tb 
+# Start time: 14:47:39 on Nov 07,2025
+# Loading std.standard
+# Loading work.mux_8to1_tb(mux_8to1_tb_arch)
+# ** Error: (vsim-3173) Entity 'C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW6.3/work.mux_8to1' has no architecture.
+# Load interrupted
+# Error loading design
+# End time: 14:47:40 on Nov 07,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 7
+vsim work.mux_8to1
+# vsim work.mux_8to1 
+# Start time: 14:47:46 on Nov 07,2025
+# Loading std.standard
+# ** Error: (vsim-3173) Entity 'C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW6.3/work.mux_8to1' has no architecture.
+# Error loading design
+# End time: 14:47:47 on Nov 07,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 1
+# Compile of mux_8to1.vhd was successful.
+vsim work.mux_8to1_tb
+# vsim work.mux_8to1_tb 
+# Start time: 14:48:38 on Nov 07,2025
+# Loading std.standard
+# Loading work.mux_8to1_tb(mux_8to1_tb_arch)
+# Loading work.mux_8to1(behavioral)
+add wave sim:/mux_8to1_tb/*
+run
+quit -sim
+# End time: 14:51:20 on Nov 07,2025, Elapsed time: 0:02:42
+# Errors: 0, Warnings: 2
+# reading C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project PROJECT
+# Compile of demux_1to8_TB.vhd was successful.
+# Compile of demux_1to8.vhd failed with 2 errors.
+# Compile of demux_1to8.vhd failed with 2 errors.
+# Compile of demux_1to8.vhd failed with 2 errors.
+# Compile of demux_1to8.vhd failed with 2 errors.
+# Compile of demux_1to8.vhd failed with 2 errors.
+# Compile of demux_1to8.vhd failed with 2 errors.
+# Compile of demux_1to8.vhd failed with 2 errors.
+# Compile of demux_1to8.vhd was successful.
+# Compile of demux_1to8.vhd was successful.
+# Compile of demux_1to8.vhd was successful.
+vsim work.demux_1to8_tb
+# vsim work.demux_1to8_tb 
+# Start time: 15:03:24 on Nov 07,2025
+# Loading std.standard
+# Loading work.demux_1to8_tb(demux_1to8_tb_arch)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.demux_1to8(behavioral)
+# ** Error: (vsim-3344) Signal "/demux_1to8_tb/F_TB(0)" has multiple drivers but is not a resolved signal.
+#    Time: 0 ps  Iteration: 0  Instance: /demux_1to8_tb/DUT
+# ** Note: Signal "/demux_1to8_tb/F_TB(0)" has an existing driver:
+#          Process: /demux_1to8_tb/DUT/line__15
+#    Time: 0 ps  Iteration: 0  Instance: /demux_1to8_tb/DUT
+# Error loading design
+# End time: 15:03:25 on Nov 07,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 16
+vsim work.demux_1to8
+# vsim work.demux_1to8 
+# Start time: 15:03:32 on Nov 07,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.demux_1to8(behavioral)
+# ** Error: (vsim-3344) Signal "/demux_1to8/F(0)" has multiple drivers but is not a resolved signal.
+#    Time: 0 ps  Iteration: 0  Instance: /demux_1to8
+# ** Note: Signal "/demux_1to8/F(0)" has an existing driver:
+#          Process: /demux_1to8/line__15
+#    Time: 0 ps  Iteration: 0  Instance: /demux_1to8
+# Error loading design
+# End time: 15:03:33 on Nov 07,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 1
+# Compile of demux_1to8_TB.vhd was successful.
+# Compile of demux_1to8.vhd was successful.
+vsim work.demux_1to8_tb
+# vsim work.demux_1to8_tb 
+# Start time: 15:04:05 on Nov 07,2025
+# Loading std.standard
+# Loading work.demux_1to8_tb(demux_1to8_tb_arch)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.demux_1to8(behavioral)
+# ** Error: (vsim-3344) Signal "/demux_1to8_tb/F_TB(0)" has multiple drivers but is not a resolved signal.
+#    Time: 0 ps  Iteration: 0  Instance: /demux_1to8_tb/DUT
+# ** Note: Signal "/demux_1to8_tb/F_TB(0)" has an existing driver:
+#          Process: /demux_1to8_tb/DUT/line__15
+#    Time: 0 ps  Iteration: 0  Instance: /demux_1to8_tb/DUT
+# Error loading design
+# End time: 15:04:06 on Nov 07,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 3
+vsim work.demux_1to8_tb(demux_1to8_tb_arch)
+# vsim work.demux_1to8_tb(demux_1to8_tb_arch) 
+# Start time: 15:04:10 on Nov 07,2025
+# Loading std.standard
+# Loading work.demux_1to8_tb(demux_1to8_tb_arch)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.demux_1to8(behavioral)
+# ** Error: (vsim-3344) Signal "/demux_1to8_tb/F_TB(0)" has multiple drivers but is not a resolved signal.
+#    Time: 0 ps  Iteration: 0  Instance: /demux_1to8_tb/DUT
+# ** Note: Signal "/demux_1to8_tb/F_TB(0)" has an existing driver:
+#          Process: /demux_1to8_tb/DUT/line__15
+#    Time: 0 ps  Iteration: 0  Instance: /demux_1to8_tb/DUT
+# Error loading design
+# End time: 15:04:11 on Nov 07,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 1
+vsim work.demux_1to8(behavioral)
+# vsim work.demux_1to8(behavioral) 
+# Start time: 15:04:13 on Nov 07,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.demux_1to8(behavioral)
+# ** Error: (vsim-3344) Signal "/demux_1to8/F(0)" has multiple drivers but is not a resolved signal.
+#    Time: 0 ps  Iteration: 0  Instance: /demux_1to8
+# ** Note: Signal "/demux_1to8/F(0)" has an existing driver:
+#          Process: /demux_1to8/line__15
+#    Time: 0 ps  Iteration: 0  Instance: /demux_1to8
+# Error loading design
+# End time: 15:04:14 on Nov 07,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 1
+vsim work.demux_1to8_tb
+# vsim work.demux_1to8_tb 
+# Start time: 15:04:29 on Nov 07,2025
+# Loading std.standard
+# Loading work.demux_1to8_tb(demux_1to8_tb_arch)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.demux_1to8(behavioral)
+# ** Error: (vsim-3344) Signal "/demux_1to8_tb/F_TB(0)" has multiple drivers but is not a resolved signal.
+#    Time: 0 ps  Iteration: 0  Instance: /demux_1to8_tb/DUT
+# ** Note: Signal "/demux_1to8_tb/F_TB(0)" has an existing driver:
+#          Process: /demux_1to8_tb/DUT/line__15
+#    Time: 0 ps  Iteration: 0  Instance: /demux_1to8_tb/DUT
+# Error loading design
+# End time: 15:04:29 on Nov 07,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# Compile of demux_1to8.vhd was successful.
+vsim work.demux_1to8_tb
+# vsim work.demux_1to8_tb 
+# Start time: 15:05:54 on Nov 07,2025
+# Loading std.standard
+# Loading work.demux_1to8_tb(demux_1to8_tb_arch)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.demux_1to8(behavioral)
+add wave sim:/demux_1to8_tb/*
+run
+# End time: 15:07:48 on Nov 07,2025, Elapsed time: 0:01:54
+# Errors: 0, Warnings: 2

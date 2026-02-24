@@ -1,0 +1,99 @@
+|top
+Clock => dflipflop:DFF0.Clock
+Clock => dflipflop:DFF1.Clock
+Clock => dflipflop:DFF2.Clock
+Clock => dflipflop:DFF3.Clock
+Reset => dflipflop:DFF0.Reset
+Reset => dflipflop:DFF1.Reset
+Reset => dflipflop:DFF2.Reset
+Reset => dflipflop:DFF3.Reset
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+Up => Q_nxt.IN1
+LEDR[0] << dflipflop:DFF0.Q
+LEDR[1] << dflipflop:DFF1.Q
+LEDR[2] << dflipflop:DFF2.Q
+LEDR[3] << dflipflop:DFF3.Q
+Prime << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+SevenSeg[0] << Mux7.DB_MAX_OUTPUT_PORT_TYPE
+SevenSeg[1] << Mux6.DB_MAX_OUTPUT_PORT_TYPE
+SevenSeg[2] << Mux5.DB_MAX_OUTPUT_PORT_TYPE
+SevenSeg[3] << Mux4.DB_MAX_OUTPUT_PORT_TYPE
+SevenSeg[4] << Mux3.DB_MAX_OUTPUT_PORT_TYPE
+SevenSeg[5] << Mux2.DB_MAX_OUTPUT_PORT_TYPE
+SevenSeg[6] << Mux1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|Dflipflop:DFF0
+Clock => Qn~reg0.CLK
+Clock => Q~reg0.CLK
+Reset => Qn~reg0.PRESET
+Reset => Q~reg0.ACLR
+D => Q~reg0.DATAIN
+D => Qn~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qn <= Qn~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|Dflipflop:DFF1
+Clock => Qn~reg0.CLK
+Clock => Q~reg0.CLK
+Reset => Qn~reg0.PRESET
+Reset => Q~reg0.ACLR
+D => Q~reg0.DATAIN
+D => Qn~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qn <= Qn~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|Dflipflop:DFF2
+Clock => Qn~reg0.CLK
+Clock => Q~reg0.CLK
+Reset => Qn~reg0.PRESET
+Reset => Q~reg0.ACLR
+D => Q~reg0.DATAIN
+D => Qn~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qn <= Qn~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|Dflipflop:DFF3
+Clock => Qn~reg0.CLK
+Clock => Q~reg0.CLK
+Reset => Qn~reg0.PRESET
+Reset => Q~reg0.ACLR
+D => Q~reg0.DATAIN
+D => Qn~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qn <= Qn~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

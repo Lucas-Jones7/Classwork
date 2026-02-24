@@ -1,0 +1,125 @@
+// You will likely need to import some stuff up here
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class MazeSolver {
+    private char[][] maze = new char[12][12];
+
+    public char[][] loadMaze(String filename) {
+    	//PART 1: Read in the maze from a text file into a 2D char array
+        try {
+            Scanner scanner = new Scanner(new File(filename));
+            for (int i = 0; i < 12; i++) {
+                maze[i] = scanner.nextLine().toCharArray();
+            }
+            scanner.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found: " + filename);
+        }
+        return maze;
+    }
+
+    private void print_maze(char[][] maze) {
+    	//PART 2: Print out a 2D character maze
+        for (char[] row : maze) {
+            for (char c : row) {
+                System.out.print(c + " ");
+            }
+            System.out.println();
+        }
+        System.out.println(); // Add space between each step
+    }
+
+   
+    public void solveMaze() {
+    	// PART 3: You don't really need to do anything here
+        int start_x = -1;
+        int start_y = -1;
+       
+        for (int x = 0; x < 12; x++) {
+            if (maze[0][x] == '.') {
+                start_x = x;
+                start_y = 0;
+                break;
+            }
+        }
+      
+        if (start_x == -1) {
+            for (int x = 0; x < 12; x++) {
+                if (maze[11][x] == '.') {
+                    start_x = x;
+                    start_y = 11;
+                    break;
+                }
+            }
+        }
+
+        if (start_x == -1) {
+            for (int y = 0; y < 12; y++) {
+                if (maze[y][0] == '.') {
+                    start_x = 0;
+                    start_y = y;
+                    break;
+                }
+            }
+        }
+
+        if (start_x == -1) {
+            for (int y = 0; y < 12; y++) {
+                if (maze[y][11] == '.') {
+                    start_x = 11;
+                    start_y = y;
+                    break;
+                }
+            }
+        }
+
+      
+       
+        if (make_move(start_x, start_y, 0, 0)) {
+            System.out.println("Exit found! Program ending...");
+        } else {
+            System.out.println("No solution found.");
+        }
+    }
+
+   
+    public boolean make_move(int x, int y, int hand_x, int hand_y) {
+    	// Part 4: Making a single move in the maze
+        if (maze[y][x] == 'F') {
+            print_maze(maze); 
+            return true; 
+        }
+        if (maze[y][x] == '#' || maze[y][x] == 'X') {
+            return false;
+        }
+        
+        maze[y][x] = 'X';
+        print_maze(maze); 
+                
+        if (x - 1 >= 0 && maze[y][x - 1] != 'X' && make_move(x - 1, y, 0, 0)) {
+            return true;
+        }
+        if (y + 1 < maze.length && maze[y + 1][x] != 'X' && make_move(x, y + 1, 0, 0)) {
+            return true;
+        }
+
+        if (x + 1 < maze[0].length && maze[y][x + 1] != 'X' && make_move(x + 1, y, 0, 0)) {
+            return true;
+        }
+        if (y - 1 >= 0 && maze[y - 1][x] != 'X' && make_move(x, y - 1, 0, 0)) {
+            return true;
+        }
+        
+        return false; 
+    }
+
+    public static void main(String[] args) {
+        MazeSolver solver = new MazeSolver();
+        solver.loadMaze("maze.txt"); 
+        solver.solveMaze();
+    }
+}
+
+

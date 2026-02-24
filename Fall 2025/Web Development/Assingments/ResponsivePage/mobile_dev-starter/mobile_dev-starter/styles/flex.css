@@ -1,0 +1,99 @@
+/* Base (mobile first) */
+.hero { padding: 1rem; background: #f7f7f7; border: 1px solid #eee; border-radius: .5rem; margin-bottom: 1.5rem; text-align: center; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.nav a:hover,
+.nav a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+header, footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cards {
+  /* FLEX LAYOUT HERE */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: .5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: .5rem;
+}
+
+/* Tablet (≥601px) */
+@media screen and (min-width: 601px){
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .card{
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+/* Desktop (≥1025px) */
+@media screen and (min-width: 1025px) {
+  .cards {
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  .card {
+    flex: 1 1 30%;
+    max-width: 30%;
+  }
+
+  .card img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  body {
+    font-size: 1.1rem;
+  }
+}

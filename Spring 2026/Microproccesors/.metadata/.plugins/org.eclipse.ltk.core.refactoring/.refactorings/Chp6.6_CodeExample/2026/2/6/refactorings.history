@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Chp6.6-6.7_CodeExample/6.6-6.7main.asm&apos; to &apos;6.6main.asm&apos;" description="Rename resource &apos;6.6-6.7main.asm&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="6.6-6.7main.asm" name="6.6main.asm" stamp="1770228358648" updateReferences="true"/>
+</session>

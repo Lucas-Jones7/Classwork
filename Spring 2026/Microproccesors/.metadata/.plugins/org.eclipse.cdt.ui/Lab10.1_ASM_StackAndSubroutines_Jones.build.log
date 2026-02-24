@@ -1,0 +1,8 @@
+
+**** Build of configuration Debug for project Lab10.1_ASM_StackAndSubroutines_Jones ****
+
+"C:\\ti\\ccs1281\\ccs\\utils\\bin\\gmake" -k -j 16 all -O 
+ 
+gmake[1]: 'Lab10.1_ASM_StackAndSubroutines_Jones.out' is up to date.
+
+**** Build Finished ****

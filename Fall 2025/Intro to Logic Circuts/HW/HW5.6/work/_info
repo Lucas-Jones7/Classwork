@@ -1,0 +1,208 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemJ
+Eand3
+Z0 w1761937553
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 4
+Z3 dC:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6
+Z4 8C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6/AND3.vhd
+Z5 FC:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6/AND3.vhd
+l0
+L4 1
+Vi>NW:Ah3IG9YBo8ihdgWm2
+!s100 lQkfQ8Q9i[cPl72[C]a022
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1761937559
+!i10b 1
+Z8 !s108 1761937558.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6/AND3.vhd|
+!s107 C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6/AND3.vhd|
+!i113 1
+Z10 o-work work -2002 -explicit
+Z11 tExplicit 1 CvgOpt 0
+Abehavior
+R1
+R2
+DEx4 work 4 and3 0 22 i>NW:Ah3IG9YBo8ihdgWm2
+!i122 4
+l14
+L13 4
+ViBSVI<`GBUgmk`=glTmO70
+!s100 oX2B]U>:YBTZG1OnnG[7X1
+R6
+32
+R7
+!i10b 1
+R8
+R9
+Z12 !s107 C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6/AND3.vhd|
+!i113 1
+R10
+R11
+Einv1
+Z13 w1761937383
+R1
+R2
+!i122 2
+R3
+Z14 8C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6/INV1.vhd
+Z15 FC:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6/INV1.vhd
+l0
+L4 1
+VkP9XMHdl[?ffYAhN1aKgO0
+!s100 >WYAbE3g?o5d6K4oS@GKP3
+R6
+32
+Z16 !s110 1761937389
+!i10b 1
+Z17 !s108 1761937389.000000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6/INV1.vhd|
+Z19 !s107 C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6/INV1.vhd|
+!i113 1
+R10
+R11
+Abehavior
+R1
+R2
+DEx4 work 4 inv1 0 22 kP9XMHdl[?ffYAhN1aKgO0
+!i122 2
+l9
+L8 4
+V3>:n]U0]SJ@UH[:6`XR=80
+!s100 QIb:A@P;z_H?WjIgf`kMi0
+R6
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R10
+R11
+Eor4
+Z20 w1761937461
+!i122 3
+R3
+Z21 8C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6/OR4.vhd
+Z22 FC:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6/OR4.vhd
+l0
+L1 1
+Vo:n@T3;^C=oUX>J9aCA]e2
+!s100 6>@U6lBAP;Z<50aNZQAaV2
+R6
+32
+Z23 !s110 1761937466
+!i10b 1
+Z24 !s108 1761937466.000000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6/OR4.vhd|
+Z26 !s107 C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6/OR4.vhd|
+!i113 1
+R10
+R11
+Abehavior
+DEx4 work 3 or4 0 22 o:n@T3;^C=oUX>J9aCA]e2
+!i122 3
+l6
+L5 4
+Vd>UiK1WZ?6CAzWCIzPzhL2
+!s100 KHXIKBDBgZ6ABTojiL_PH3
+R6
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R10
+R11
+Esystemh_tb
+Z27 w1761936828
+!i122 1
+R3
+Z28 8C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6/SystemH_TB.vhd
+Z29 FC:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6/SystemH_TB.vhd
+l0
+L1 1
+VaBhXYZoNSNWeLXf15OfN01
+!s100 >`;FGa1;MRi`3nei?LR>^0
+R6
+32
+Z30 !s110 1761937261
+!i10b 1
+Z31 !s108 1761937261.000000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6/SystemH_TB.vhd|
+Z33 !s107 C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6/SystemH_TB.vhd|
+!i113 1
+R10
+R11
+Asystemh_tb_arch
+DEx4 work 10 systemh_tb 0 22 aBhXYZoNSNWeLXf15OfN01
+!i122 1
+l19
+L4 38
+VT;F<jT@5o;cn<>cY0<1h`0
+!s100 ^L62BEA7ahLbDF2>4k6@G2
+R6
+32
+R30
+!i10b 1
+R31
+R32
+R33
+!i113 1
+R10
+R11
+Esystemk
+Z34 w1761937249
+R1
+R2
+!i122 0
+R3
+Z35 8C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6/SystemK.vhd
+Z36 FC:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6/SystemK.vhd
+l0
+L4 1
+VA2Zo5bD]k=5:S?`U:fZ7=2
+!s100 =dmXa2<D`k72<YLkf[O_M3
+R6
+32
+Z37 !s110 1761937255
+!i10b 1
+Z38 !s108 1761937255.000000
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6/SystemK.vhd|
+Z40 !s107 C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.6/SystemK.vhd|
+!i113 1
+R10
+R11
+Astructural
+R1
+R2
+DEx4 work 7 systemk 0 22 A2Zo5bD]k=5:S?`U:fZ7=2
+!i122 0
+l28
+L11 33
+V]G33D0F14nkoi6]MmfGU<1
+!s100 ?_@CzEf6B@BkBz1ISJJc72
+R6
+32
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 1
+R10
+R11

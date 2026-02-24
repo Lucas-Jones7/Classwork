@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flex Layout Demo</title>
+  <!-- Students: create this file -->
+  <link rel="stylesheet" href="styles/flex.css" />
+</head>
+<body>
+  <header>
+    <h1>Flex Layout Demo</h1>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Welcome</h2>
+      <p>This page must use Flexbox in your CSS solution.</p>
+    </section>
+
+    <section class="cards">
+      <!-- Use flex to lay these out -->
+      <article class="card">
+        <img src="images/treats.jpg" alt="pet treats" />
+        <h3>Card One</h3>
+        <p>Short blurb about item treats.</p>
+      </article>
+      <article class="card">
+        <img src="images/meds.jpg" alt="pet meds" />
+        <h3>Card Two</h3>
+        <p>Short blurb about item about meds.</p>
+      </article>
+      <article class="card">
+        <img src="images/house.jpg" alt="pet housing" />
+        <h3>Card Three</h3>
+        <p>Short blurb about item housing.</p>
+      </article>
+    </section>
+  </main>
+
+<footer>
+  <small>Copyright &copy; <span id="year"></span> Flex &amp; Grid Co.</small>
+</footer>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

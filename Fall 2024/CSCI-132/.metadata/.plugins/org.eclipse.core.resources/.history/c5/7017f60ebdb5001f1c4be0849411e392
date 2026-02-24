@@ -1,0 +1,133 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class MazeSolver {
+    private char[][] maze = new char[12][12];
+
+    public MazeSolver() {
+        maze = loadMaze("maze.txt");
+    }
+
+    // Part 1: Load maze from file
+    public char[][] loadMaze(String filename) {
+        char[][] maze = new char[12][12];
+        try (Scanner scanner = new Scanner(new File(filename))) {
+            for (int i = 0; i < 12; i++) {
+                maze[i] = scanner.nextLine().toCharArray();
+            }
+        } catch (FileNotFoundException e) {
+            System.err.println("Maze file not found: " + filename);
+            System.exit(1);
+        }
+        return maze;
+    }
+
+    // Part 2: Print maze
+    private void print_maze(char[][] maze) {
+        for (char[] row : maze) {
+            for (char cell : row) {
+                System.out.print(cell + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    // Part 3: Start solving the maze
+    public void solveMaze() {
+        int start_x = 0;
+        int start_y = 2;
+        int start_hand_x = 0;
+        int start_hand_y = 3;
+
+        make_move(start_x, start_y, start_hand_x, start_hand_y);
+    }
+
+    // Part 4: Make a move
+    public void make_move(int x, int y, int hand_x, int hand_y) {
+        // Check boundaries before accessing the maze array
+        if (x < 0 || x >= maze[0].length || y < 0 || y >= maze.length ||
+            hand_x < 0 || hand_x >= maze[0].length || hand_y < 0 || hand_y >= maze.length) {
+            return; // Stop recursion if out of bounds
+        }
+
+        // If at the exit, print maze and exit
+        if (maze[y][x] == 'F') {
+            print_maze(maze);
+            System.out.println("Exit found! Program ending...");
+            return;
+        }
+
+        // Mark current position with an 'X'
+        if (maze[y][x] == '.') {
+            maze[y][x] = 'X';
+            print_maze(maze);
+        }
+
+        // Determine direction based on the relative position of the hand
+        int direction = determineDirection(x, y, hand_x, hand_y);
+
+        // Logic to decide the next move based on the maze contents
+        switch (direction) {
+            case 0: // Facing North
+                if (canMove(hand_x, hand_y)) {
+                    make_move(hand_x, hand_y, hand_x, hand_y - 1); // Turn right and move
+                } else if (canMove(x, y - 1)) {
+                    make_move(x, y - 1, x + 1, y); // Move forward
+                } else {
+                    make_move(x, y, x - 1, y); // Turn left
+                }
+                break;
+
+            case 1: // Facing East
+                if (canMove(hand_x, hand_y)) {
+                    make_move(hand_x, hand_y, hand_x + 1, hand_y); // Turn right and move
+                } else if (canMove(x + 1, y)) {
+                    make_move(x + 1, y, x, y + 1); // Move forward
+                } else {
+                    make_move(x, y, x, y - 1); // Turn left
+                }
+                break;
+
+            case 2: // Facing South
+                if (canMove(hand_x, hand_y)) {
+                    make_move(hand_x, hand_y, hand_x, hand_y + 1); // Turn right and move
+                } else if (canMove(x, y + 1)) {
+                    make_move(x, y + 1, x - 1, y); // Move forward
+                } else {
+                    make_move(x, y, x + 1, y); // Turn left
+                }
+                break;
+
+            case 3: // Facing West
+                if (canMove(hand_x, hand_y)) {
+                    make_move(hand_x, hand_y, hand_x - 1, hand_y); // Turn right and move
+                } else if (canMove(x - 1, y)) {
+                    make_move(x - 1, y, x, y - 1); // Move forward
+                } else {
+                    make_move(x, y, x, y + 1); // Turn left
+                }
+                break;
+
+            default:
+                // This should never occur if determineDirection is implemented correctly
+                break;
+        }
+    }
+
+    // Helper to determine if a move is valid
+    private boolean canMove(int x, int y) {
+        return x >= 0 && x < maze[0].length && y >= 0 && y < maze.length && 
+               (maze[y][x] == '.' || maze[y][x] == 'F');
+    }
+
+    // Helper to determine the direction based on position of the hand
+    private int determineDirection(int x, int y, int hand_x, int hand_y) {
+        if (hand_x > x) return 0; // Facing North
+        if (hand_y > y) return 1; // Facing East
+        if (hand_x < x) return 2; // Facing South
+        if (hand_y < y) return 3; // Facing West
+        return -1; // Error case
+    }
+}

@@ -1,0 +1,15 @@
+
+**** Clean-only build of configuration Debug for project Practical1_AddressingModes_Jones ****
+
+"C:\\ti\\ccs1281\\ccs\\utils\\bin\\gmake" -k -j 8 clean -O 
+ 
+DEL /F  "Practical1_AddressingModes_Jones.out" 
+DEL /F "Practical1main.obj" 
+DEL /F "Practical1main.d" 
+Could Not Find C:\ALL_STORAGE_HERE\Classwork\Spring 2026\Microproccesors\CCS Workspace\Practical1_AddressingModes_Jones\Debug\Practical1_AddressingModes_Jones.out
+Could Not Find C:\ALL_STORAGE_HERE\Classwork\Spring 2026\Microproccesors\CCS Workspace\Practical1_AddressingModes_Jones\Debug\Practical1main.obj
+Could Not Find C:\ALL_STORAGE_HERE\Classwork\Spring 2026\Microproccesors\CCS Workspace\Practical1_AddressingModes_Jones\Debug\Practical1main.d
+Finished clean
+ 
+
+**** Build Finished ****

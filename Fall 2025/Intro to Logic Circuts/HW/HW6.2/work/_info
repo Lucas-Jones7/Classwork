@@ -1,0 +1,89 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW6.1
+Eencoder_8to3_binary
+Z0 w1762549661
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 6
+Z3 dC:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW6.2
+Z4 8C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW6.2/encoder_8to3_binary.vhd
+Z5 FC:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW6.2/encoder_8to3_binary.vhd
+l0
+L7 1
+Va4VcB;YTNb1JW^dW:0L`U1
+!s100 4g_Uh]=;GkV3SoV^SDE3B0
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1762549666
+!i10b 1
+Z8 !s108 1762549665.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW6.2/encoder_8to3_binary.vhd|
+Z10 !s107 C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW6.2/encoder_8to3_binary.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Aselected
+R1
+R2
+DEx4 work 19 encoder_8to3_binary 0 22 a4VcB;YTNb1JW^dW:0L`U1
+!i122 6
+l15
+L14 14
+VHnmRXg]4QjX`LLMBP]W>n2
+!s100 [ViBiAh<jCQbM[LOaG5ag0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eencoder_8to3_binary_tb
+Z13 w1762547598
+!i122 7
+R3
+Z14 8C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW6.2/encoder_8to3_binary_TB.vhd
+Z15 FC:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW6.2/encoder_8to3_binary_TB.vhd
+l0
+L1 1
+V6;OQoGMIK?SenWl2:IaE:0
+!s100 ?h2GZGPkB7bJkCP^VOdPF3
+R6
+32
+Z16 !s110 1762549671
+!i10b 1
+Z17 !s108 1762549671.000000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW6.2/encoder_8to3_binary_TB.vhd|
+Z19 !s107 C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW6.2/encoder_8to3_binary_TB.vhd|
+!i113 1
+R11
+R12
+Aencoder_8to3_binary_tb_arch
+Z20 DEx4 work 22 encoder_8to3_binary_tb 0 22 6;OQoGMIK?SenWl2:IaE:0
+!i122 7
+l19
+Z21 L4 37
+Z22 VY?Y4?SVWc9:a1eh8MNbYG2
+Z23 !s100 ITe_b?dZ[[<17`Y2AlQ=23
+R6
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12

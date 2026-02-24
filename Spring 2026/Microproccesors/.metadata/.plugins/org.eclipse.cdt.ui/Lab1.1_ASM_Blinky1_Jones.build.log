@@ -1,0 +1,15 @@
+
+**** Clean-only build of configuration Debug for project Lab1.1_ASM_Blinky1_Jones ****
+
+"C:\\ti\\ccs1281\\ccs\\utils\\bin\\gmake" -k -j 8 clean -O 
+ 
+DEL /F  "Lab1.1_ASM_Blinky1_Jones.out" 
+DEL /F "main_Lab1.1.obj" 
+DEL /F "main_Lab1.1.d" 
+Could Not Find C:\ALL_STORAGE_HERE\Classwork\Spring 2026\Microproccesors\CCS Workspace\Lab1.1_ASM_Blinky1_Jones\Debug\Lab1.1_ASM_Blinky1_Jones.out
+Could Not Find C:\ALL_STORAGE_HERE\Classwork\Spring 2026\Microproccesors\CCS Workspace\Lab1.1_ASM_Blinky1_Jones\Debug\main_Lab1.1.obj
+Could Not Find C:\ALL_STORAGE_HERE\Classwork\Spring 2026\Microproccesors\CCS Workspace\Lab1.1_ASM_Blinky1_Jones\Debug\main_Lab1.1.d
+Finished clean
+ 
+
+**** Build Finished ****

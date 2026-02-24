@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+
+    <!-- CSS Styling-->
+    <style>
+        .count, .btnUp, .btnDn {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Counter with Vanilla JS</h1>
+
+    <div class="count">0</div>
+    <button class="btnUp">+</button><button class="btnDn">-</button>
+
+    <div class="count">0</div>
+    <button class="btnUp">+</button><button class="btnDn">-</button>
+
+    <!-- JS -->
+    <script>
+        const count = document.querySelectorAll('.count'); // Must use ALL at the end of query selector since it only gets one input
+        const btnUp = document.getElementsByClassName('btnUp'); 
+        const btnDn = document.getElementsByClassName('btnDn'); 
+
+
+        let count0 = 0;
+        btnUp[0].addEventListener('click', ()=>{count[0].textContent = ++count0});
+        btnDn[0].addEventListener('click', ()=>{count[0].textContent = --count0});
+
+        let count1 = 0;
+        btnUp[1].addEventListener('click', ()=>{count[1].textContent = ++count1});
+        btnDn[1].addEventListener('click', ()=>{count[1].textContent = --count1});
+    </script>
+
+</body>
+</html>

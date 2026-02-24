@@ -1,0 +1,27 @@
+entity SystemJ is
+    port (
+        A : in  bit;
+        B : in  bit;
+        C : in  bit;
+        D : in  bit;
+        F : out bit
+    );
+end entity SystemJ;
+
+architecture Behavioral of SystemJ is
+begin
+    F <= '0' when (
+            ((A = '0') and (B = '0') and (C = '0') and (D = '0')) or
+            ((A = '0') and (B = '0') and (C = '0') and (D = '1')) or
+            ((A = '0') and (B = '0') and (C = '1') and (D = '0')) or
+            ((A = '0') and (B = '0') and (C = '1') and (D = '1')) or
+            ((A = '0') and (B = '1') and (C = '1') and (D = '0')) or
+            ((A = '1') and (B = '0') and (C = '0') and (D = '0')) or
+            ((A = '1') and (B = '0') and (C = '0') and (D = '1')) or
+            ((A = '1') and (B = '0') and (C = '1') and (D = '0')) or
+            ((A = '1') and (B = '0') and (C = '1') and (D = '1')) or
+            ((A = '1') and (B = '1') and (C = '1') and (D = '0'))
+        ) else
+        '1';
+end architecture Behavioral;
+

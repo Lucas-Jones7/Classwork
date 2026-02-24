@@ -1,0 +1,15 @@
+
+**** Clean-only build of configuration Debug for project Lab6.1_ASM_RegImmAbsMode_Jones ****
+
+"C:\\ti\\ccs1281\\ccs\\utils\\bin\\gmake" -k -j 8 clean -O 
+ 
+DEL /F  "Lab6.1_ASM_RegImmAbsMode_Jones.out" 
+DEL /F "Lab6.1main.obj" 
+DEL /F "Lab6.1main.d" 
+Could Not Find C:\ALL_STORAGE_HERE\Classwork\Spring 2026\Microproccesors\CCS Workspace\Lab6.1_ASM_RegImmAbsMode_Jones\Debug\Lab6.1_ASM_RegImmAbsMode_Jones.out
+Could Not Find C:\ALL_STORAGE_HERE\Classwork\Spring 2026\Microproccesors\CCS Workspace\Lab6.1_ASM_RegImmAbsMode_Jones\Debug\Lab6.1main.obj
+Could Not Find C:\ALL_STORAGE_HERE\Classwork\Spring 2026\Microproccesors\CCS Workspace\Lab6.1_ASM_RegImmAbsMode_Jones\Debug\Lab6.1main.d
+Finished clean
+ 
+
+**** Build Finished ****

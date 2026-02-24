@@ -1,0 +1,25 @@
+INDEX VERSION 1.134+C:\Users\jones\OneDrive\Desktop\Classwork\CSCI 232\.metadata\.plugins\org.eclipse.jdt.core
+2725142083.index
+199933270.index
+1358862176.index
+1865797976.index
+2692560559.index
+3896570115.index
+3417049623.index
+2095943104.index
+811042279.index
+1322126748.index
+3288360665.index
+215282741.index
+3580456661.index
+1764480499.index
+2267395295.index
+2620941534.index
+996610041.index
+1281376111.index
+3805975833.index
+1773027110.index
+497917024.index
+514396080.index
+3946796104.index
+3466199747.index

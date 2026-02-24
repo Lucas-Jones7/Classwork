@@ -1,0 +1,13 @@
+{C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemJ/SystemJ_TB.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemJ/SystemJ_TB.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling entity SystemJ_TB
+-- Compiling architecture SystemJ_TB_arch of SystemJ_TB
+
+} {} {}} {C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemJ/SystemJ.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemJ/SystemJ.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling entity SystemJ
+-- Compiling architecture Behavioral of SystemJ
+
+} {} {}}

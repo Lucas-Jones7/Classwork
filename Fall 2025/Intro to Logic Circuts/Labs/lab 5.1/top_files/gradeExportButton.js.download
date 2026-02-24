@@ -1,0 +1,183 @@
+const TENANT = "montana";
+const FETCH_ACTIVE_COURSES =
+  "false".toLowerCase() === "true";
+
+function remove_navigation_item(className) {
+  const navItem = document.getElementsByClassName(className);
+  if (!!navItem && navItem.length > 0 && !!navItem[0]) {
+    navItem[0].remove();
+  }
+}
+
+async function fetchJsonFromS3(url) {
+  let data = null;
+  const dataUrl =
+    url ||
+    `https://s3.us-west-1.amazonaws.com/ddl.public/${TENANT}/activeCourses.json`;
+
+  if (!dataUrl) {
+    console.debug("No data URL provided");
+    return data;
+  }
+
+  try {
+    const response = await fetch(dataUrl);
+
+    if (!response.ok) {
+      throw new Error("Network response was not ok " + response.statusText);
+    }
+
+    data = await response.json();
+    console.debug("Fetched JSON data:", data);
+  } catch (error) {
+    console.error("Failed to fetch JSON:", error);
+  }
+  return data;
+}
+
+function isCoursePage() {
+  return window.location.pathname.includes("/courses/");
+}
+
+function getCourseId() {
+  const path = window.location.pathname;
+  if (!path.includes("/courses/")) {
+    return NaN;
+  }
+  return parseInt(path.split("/")[2], 10);
+}
+
+function isActiveCourse(courseList) {
+  if (!courseList || courseList.length === 0) {
+    return true;
+  }
+  const courseId = getCourseId();
+  if (isNaN(courseId)) {
+    return true;
+  }
+  const isActive = courseList.includes(courseId);
+  console.debug("Course Active: ", isActive);
+  return isActive;
+}
+
+function waitForElm(selector) {
+  return new Promise((resolve) => {
+    const el = document.querySelector(selector);
+    if (el) {
+      return resolve(el);
+    }
+
+    const observer = new MutationObserver(() => {
+      const el = document.querySelector(selector);
+      if (el) {
+        observer.disconnect();
+        resolve(el);
+      }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+  });
+}
+
+window.addEventListener("load", async function () {
+  const PROD_TOOL_ID = 478; // eslint-disable-line
+  const BETA_TOOL_ID = 441; // eslint-disable-line
+
+  // account IDs for which the tool should be active
+  // if empty, tool will be active for all accounts
+  // list of STRINGS, not numbers
+  // eslint-disable-next-line
+  const ACTIVE_ACCOUNT_IDS = []; // ["14", "15"];
+
+  // user IDs for which the tool should be active
+  // if empty, tool will be active for all users
+  // list of STRINGS, not numbers
+  // eslint-disable-next-line
+  const ACTIVE_USER_IDS = []; // ["55"]
+
+  let data = null;
+  if (FETCH_ACTIVE_COURSES) {
+    data = await fetchJsonFromS3();
+  }
+  const courseList = data ? data.activeCourses : null;
+  const courseActive = isActiveCourse(courseList);
+
+  const location = window.location.origin;
+  const isBeta = location.includes(".beta.");
+  const isTest = location.includes(".test.");
+  const isProd = !isBeta && !isTest;
+  const isProdTurnedOn = isProd && !!PROD_TOOL_ID;
+
+  console.log((isProd ? "Prod" : isBeta ? "Beta" : "Test") + " Environment");
+
+  const DDL_TOOL_ID = isProd ? PROD_TOOL_ID : BETA_TOOL_ID;
+
+  const DDL_EXTERNAL_TOOL_PATH = `/external_tools/${DDL_TOOL_ID}?display=borderless`;
+
+  const isStudent =
+    window.ENV["current_user_is_student"] ||
+    window.ENV["current_user_roles"].includes("fake_student");
+  const isActiveAccount =
+    ACTIVE_ACCOUNT_IDS.length === 0 ||
+    ACTIVE_ACCOUNT_IDS.includes(window.ENV.ACCOUNT_ID);
+  const isActiveUser =
+    ACTIVE_USER_IDS.length === 0 ||
+    ACTIVE_USER_IDS.includes(window.ENV["current_user_id"]);
+
+  if (
+    (isBeta || isProdTurnedOn) &&
+    !isStudent &&
+    isActiveAccount &&
+    isActiveUser &&
+    courseActive
+  ) {
+    waitForElm("div.management-header").then((managementHeaderEl) => {
+      const importButton = managementHeaderEl
+        .getElementsByTagName("span")[0]
+        .getElementsByTagName("div")[1]
+        .getElementsByTagName("button")[0];
+      if (importButton) {
+        importButton.remove();
+      }
+
+      const ddl_url = window.ENV.CONTEXT_URL_ROOT + DDL_EXTERNAL_TOOL_PATH;
+      const outcomeToolbar = managementHeaderEl
+        .getElementsByTagName("span")[0]
+        .getElementsByTagName("div")[1];
+      const a = document.createElement("a");
+      const link = document.createTextNode("Manage Outcomes");
+      a.appendChild(link);
+      a.title = "Link to Manage Outcomes";
+      a.target = "_blank";
+      a.href = ddl_url;
+      a.style =
+        "background: #f5f5f5;color: #2d3b45; width: auto; border: 1px solid; border-color: #c7cdd1;  border-radius: 3px;   transition: background-color .2s ease-in-out;     display: inline-block;      position: relative;      padding: 8px 14px;      margin: 0 0 0 0.8rem;      font-size: 16px;      font-size: 1rem;      line-height: 20px;      text-align: center;      vertical-align: middle;      cursor: pointer;      text-decoration: none;      overflow: hidden;      text-shadow: none;      -webkit-user-select: none;      user-select: none;";
+      outcomeToolbar.appendChild(a);
+    });
+
+    if (document.getElementsByClassName("find_outcome")[0]) {
+      let findButton = document.getElementsByClassName("find_outcome")[0];
+      findButton.remove();
+    }
+
+    if (document.getElementsByClassName("operation-view")[0]) {
+      const ddl_url =
+        window.ENV.GRADEBOOK_OPTIONS.context_url + DDL_EXTERNAL_TOOL_PATH;
+      let exportButton = document.getElementsByClassName("operation-view")[0];
+    }
+  }
+  if (
+    !courseActive ||
+    ((isProd || isTest || isStudent || !isActiveAccount || !isActiveUser) &&
+      BETA_TOOL_ID)
+  ) {
+    remove_navigation_item("context_external_tool_" + BETA_TOOL_ID);
+  }
+  if (
+    !courseActive ||
+    ((isBeta || isTest || isStudent || !isActiveAccount || !isActiveUser) &&
+      PROD_TOOL_ID)
+  ) {
+    remove_navigation_item("context_external_tool_" + PROD_TOOL_ID);
+  }
+});

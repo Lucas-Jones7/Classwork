@@ -1,0 +1,21 @@
+Quartus Prime Archive log --	C:/Users/Lucas-Cool/Desktop/QuartusStuff/Lab_06p1_SevenSegDecoder/Lab_06p1_SevenSegDecoder_tmp_archive.qarlog
+
+Archive:	C:/Users/Lucas-Cool/Desktop/QuartusStuff/Lab_06p1_SevenSegDecoder/Lab_06p1_SevenSegDecoder_tmp_archive.qar
+Date:		Sat Nov 22 12:28:51 2025
+Quartus Prime		25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/Lucas-Cool/Desktop/QuartusStuff/Lab_06p1_SevenSegDecoder/Lab_06p1_SevenSegDecoder.qpf
+C:/Users/Lucas-Cool/Desktop/QuartusStuff/Lab_06p1_SevenSegDecoder/assignment_defaults.qdf
+C:/Users/Lucas-Cool/Desktop/QuartusStuff/Lab_06p1_SevenSegDecoder/top.qsf
+C:/Users/Lucas-Cool/Desktop/QuartusStuff/Lab_06p1_SevenSegDecoder/top.vhd
+	======= Total: 4 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Sat Nov 22 12:28:52 2025
+Source archive file:	C:/Users/Lucas-Cool/Desktop/QuartusStuff/Lab_06p1_SevenSegDecoder/Lab_06p1_SevenSegDecoder_tmp_archive.qar
+Archive was extracted into	C:/Users/Lucas-Cool/Desktop/QuartusStuff/Lab_07p3_4bit_Cnt_FSM/
+		 - successfully.

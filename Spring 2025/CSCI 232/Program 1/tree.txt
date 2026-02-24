@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_COUNTIES 100
+#define MAX_LINE_LENGTH 500
+
+void sort(char arr[][MAX_LINE_LENGTH], int size) {
+    int min_index;
+    for (int i = 0; i < size - 1; i++) {
+        min_index = i;
+        for (int j = i + 1; j < size; j++) {
+            if (strcmp(arr[j], arr[min_index]) < 0) {
+                char temp[MAX_LINE_LENGTH];
+                strcpy(temp, arr[i]);
+                strcpy(arr[i], arr[min_index]);
+                strcpy(arr[min_index], temp);
+            }
+        }
+    }
+}
+
+int main() {
+    FILE *inpt = fopen("/public/labs/lab7/counties1.txt", "r");
+    if (inpt == NULL) {
+        return 1;
+    }
+
+    char counties[MAX_COUNTIES][MAX_LINE_LENGTH];
+    int count = 0;
+
+    while (count < MAX_COUNTIES && fgets(counties[count], MAX_LINE_LENGTH, inpt)) {
+        // Remove trailing newline if present
+        size_t len = strlen(counties[count]);
+        if (len > 0 && counties[count][len - 1] == '\n') {
+            counties[count][len - 1] = '\0';
+        }
+        count++;
+    }
+
+    fclose(inpt);
+
+    sort(counties, count);
+
+    FILE *outp = fopen("outdata_strings.txt", "w");
+    if (outp == NULL) {
+        return 1;
+    }
+
+    for (int i = 0; i < count; i++) {
+        char *name = strtok(counties[i], "|");
+        char *seat = strtok(NULL, "|");
+        strtok(NULL, "|");  // Skip date
+        strtok(NULL, "|");  // Skip explanation
+        char *population = strtok(NULL, "|");
+
+        if (name && seat && population) {
+            fprintf(outp, "%s has population %s and seat %s\n", name, population, seat);
+        }
+    }
+
+    fclose(outp);
+    return 0;
+}

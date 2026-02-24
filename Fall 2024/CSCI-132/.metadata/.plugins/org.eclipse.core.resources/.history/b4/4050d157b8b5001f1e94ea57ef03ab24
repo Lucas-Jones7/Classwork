@@ -1,0 +1,78 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+public class MazeSolver {
+   private char[][] maze = new char[12][12];
+   // Load the maze from a file
+   public char[][] loadMaze(String filename) {
+       try {
+           Scanner scanner = new Scanner(new File(filename));
+           for (int i = 0; i < 12; i++) {
+               maze[i] = scanner.nextLine().toCharArray();
+           }
+           scanner.close();
+       } catch (FileNotFoundException e) {
+           System.out.println("File not found: " + filename);
+       }
+       return maze;
+   }
+   // Print the maze to the console
+   private void printMaze(char[][] maze) {
+       for (char[] row : maze) {
+           for (char c : row) {
+               System.out.print(c + " ");
+           }
+           System.out.println();
+       }
+       System.out.println(); // Add space between each step
+   }
+   // Solve the maze
+   public void solveMaze() {
+       // Starting position in maze.txt (adjust as per your maze)
+       int start_x = 1;  // Starting X position (change as needed)
+       int start_y = 1;  // Starting Y position (change as needed)
+       // Start solving the maze
+       if (make_move(start_x, start_y)) {
+           System.out.println("Exit found! Program ending...");
+       } else {
+           System.out.println("No solution found.");
+       }
+   }
+   // Recursive method to solve the maze
+   public boolean make_move(int x, int y) {
+       // Base case: Exit found
+       if (maze[y][x] == 'F') {
+           printMaze(maze); // Print final maze when exit is found
+           return true; // Exit found, end recursion
+       }
+       // If the current position is a wall (#) or already visited ('X'), return false
+       if (maze[y][x] == '#' || maze[y][x] == 'X') {
+           return false;
+       }
+       // Mark the current position with an 'X' to indicate it's visited
+       maze[y][x] = 'X';
+       printMaze(maze); // Print the maze state after marking the current position
+       // Try moving in the four possible directions: right, down, left, up
+       if (x + 1 < maze[0].length && make_move(x + 1, y)) {  // Move right
+           return true;
+       }
+       if (y + 1 < maze.length && make_move(x, y + 1)) {  // Move down
+           return true;
+       }
+       if (x - 1 >= 0 && make_move(x - 1, y)) {  // Move left
+           return true;
+       }
+       if (y - 1 >= 0 && make_move(x, y - 1)) {  // Move up
+           return true;
+       }
+       // If no move is possible, backtrack: we do not unmark the visited 'X' here
+       return false; // Backtrack
+   }
+   public static void main(String[] args) {
+       MazeSolver solver = new MazeSolver();
+       solver.loadMaze("maze.txt"); // Provide the correct path to your maze file
+       solver.solveMaze();
+   }
+}
+
+

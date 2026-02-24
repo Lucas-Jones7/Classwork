@@ -1,0 +1,4 @@
+entity decoder_1hot_4to16 is
+     port (A : in bit_vector (3 downto 0);
+           F : out bit_vector (15 downto 0));
+end entity;

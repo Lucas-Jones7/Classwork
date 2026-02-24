@@ -1,0 +1,15 @@
+
+**** Clean-only build of configuration Debug for project Chp9.1_CodeExample ****
+
+"C:\\ti\\ccs1281\\ccs\\utils\\bin\\gmake" -k -j 8 clean -O 
+ 
+DEL /F  "Chp9.1_CodeExample.out" 
+DEL /F "9.1main.obj" 
+DEL /F "9.1main.d" 
+Could Not Find C:\ALL_STORAGE_HERE\Classwork\Spring 2026\Microproccesors\CCS Workspace\Chp9.1_CodeExample\Debug\Chp9.1_CodeExample.out
+Could Not Find C:\ALL_STORAGE_HERE\Classwork\Spring 2026\Microproccesors\CCS Workspace\Chp9.1_CodeExample\Debug\9.1main.obj
+Could Not Find C:\ALL_STORAGE_HERE\Classwork\Spring 2026\Microproccesors\CCS Workspace\Chp9.1_CodeExample\Debug\9.1main.d
+Finished clean
+ 
+
+**** Build Finished ****

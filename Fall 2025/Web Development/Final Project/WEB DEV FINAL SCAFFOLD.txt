@@ -1,0 +1,468 @@
+// Project: nextjs-preorder-shop
+// This document contains a compact scaffold for a Next.js app (App Router) you can paste into a project.
+// File paths are shown as comments. Create these files in your project accordingly.
+
+// package.json
+{
+  "name": "nextjs-preorder-shop",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "14.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
+}
+
+// next.config.js
+/**
+ * Minimal next.config.js — adjust as needed for your environment
+ */
+const nextConfig = {
+  reactStrictMode: true,
+}
+module.exports = nextConfig;
+
+// app/layout.js
+export const metadata = {
+  title: 'Preorder Shop',
+  description: 'A small Next.js shop with pre-order flow and simple auth',
+}
+
+import './globals.css'
+
+export default function RootLayout({ children }) {
+  return (
+    <html>
+      <body className="global-body">
+        <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+          {children}
+        </div>
+      </body>
+    </html>
+  )
+}
+
+// app/globals.css
+/* Global responsive styles */
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+section {
+  padding: 24px;
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 16px;
+  }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+  p, li, input, textarea, button { font-size: 1rem; }
+  header {
+    flex-direction: column !important;
+    gap: 12px;
+  }
+  nav {
+    flex-wrap: wrap !important;
+    justify-content: center;
+    gap: 10px !important;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  section { padding: 20px; }
+}
+
+@media (min-width: 1025px) {
+  h1 { font-size: 2.4rem; }
+  h2 { font-size: 1.7rem; }
+}
+
+// components/Header.jsx
+'use client'
+import Link from 'next/link'
+import { useState, useEffect } from 'react'
+
+export default function Header(){
+  const [user, setUser] = useState(null)
+  useEffect(()=>{
+    const t = localStorage.getItem('authUser')
+    if(t) setUser(JSON.parse(t))
+  },[])
+
+  function logout(){
+    localStorage.removeItem('authToken')
+    localStorage.removeItem('authUser')
+    setUser(null)
+    // simple reload to update client state
+    window.location.href = '/'
+  }
+
+  return (
+    <header style={{ padding: '18px 28px', borderBottom: '1px solid #eee', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <div>
+        <Link href='/' style={{ fontWeight: 700, fontSize: 20, textDecoration: 'none', color: '#111' }}>Preorder Shop</Link>
+      </div>
+      <nav style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
+        <Link href='/product'>About Product</Link>
+        <Link href='/creators'>About Creators</Link>
+        <Link href='/preorder'>Pre-order</Link>
+        {user ? (
+          <>
+            <span style={{ marginLeft: 8 }}>{user.email}</span>
+            <button onClick={logout} style={{ marginLeft: 8 }}>Logout</button>
+          </>
+        ) : (
+          <>
+            <Link href='/preorder?mode=login'>Login</Link>
+            <Link href='/preorder?mode=register'>Sign up</Link>
+          </>
+        )}
+      </nav>
+    </header>
+  )
+}
+
+// lib/authClient.js (client-only simple auth using localStorage)
+export function register({ email, password }){
+  // store users array as simple demo auth — NEVER use in production
+  const raw = localStorage.getItem('users')
+  const users = raw ? JSON.parse(raw) : []
+  if(users.find(u=>u.email === email)){
+    throw new Error('User already exists')
+  }
+  const user = { id: Date.now(), email, password }
+  users.push(user)
+  localStorage.setItem('users', JSON.stringify(users))
+  // auto-login
+  const token = 'demo-token-' + Date.now()
+  localStorage.setItem('authToken', token)
+  localStorage.setItem('authUser', JSON.stringify({ id: user.id, email: user.email }))
+  return { user, token }
+}
+
+export function login({ email, password }){
+  const raw = localStorage.getItem('users')
+  const users = raw ? JSON.parse(raw) : []
+  const user = users.find(u=>u.email===email && u.password===password)
+  if(!user) throw new Error('Invalid credentials')
+  const token = 'demo-token-' + Date.now()
+  localStorage.setItem('authToken', token)
+  localStorage.setItem('authUser', JSON.stringify({ id: user.id, email: user.email }))
+  return { user: { id: user.id, email: user.email }, token }
+}
+
+export function getAuth(){
+  const token = localStorage.getItem('authToken')
+  const user = localStorage.getItem('authUser')
+  if(token && user) return { token, user: JSON.parse(user) }
+  return null
+}
+
+export function ensureAuth(){
+  const a = getAuth()
+  if(!a) throw new Error('Not authenticated')
+  return a
+}
+
+// components/AuthForm.jsx
+'use client'
+import { useState, useEffect } from 'react'
+import { register, login, getAuth } from '../lib/authClient'
+import { useRouter } from 'next/navigation'
+
+export default function AuthForm({ mode = 'login' }){
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
+  const router = useRouter()
+
+  useEffect(()=>{
+    const a = getAuth()
+    if(a) router.push('/preorder')
+  },[])
+
+  async function onSubmit(e){
+    e.preventDefault()
+    try{
+      setError('')
+      if(mode === 'register'){
+        register({ email, password })
+      } else {
+        login({ email, password })
+      }
+      router.push('/preorder')
+    }catch(err){
+      setError(err.message)
+    }
+  }
+
+  return (
+    <form onSubmit={onSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 12, width: 320 }}>
+      <label>
+        Email
+        <input value={email} onChange={e=>setEmail(e.target.value)} required style={{ width: '100%', padding: 8 }} />
+      </label>
+      <label>
+        Password
+        <input value={password} onChange={e=>setPassword(e.target.value)} type='password' required style={{ width: '100%', padding: 8 }} />
+      </label>
+      {error && <div style={{ color: 'crimson' }}>{error}</div>}
+      <button type='submit' style={{ padding: '10px 14px' }}>{mode === 'register' ? 'Create account' : 'Login'}</button>
+    </form>
+  )
+}
+
+// app/page.js (Home)
+import Header from '../components/Header'
+
+export default function Home(){
+  return (
+    <main>
+      <Header />
+      <section style={{ padding: 28 }}>
+        <h1>Welcome to Preorder Shop</h1>
+        <p style={{ maxWidth: 750 }}>We make a thoughtfully designed product. Use the links above to learn about the product, the creators, or pre-order a unit.</p>
+      </section>
+    </main>
+  )
+}
+
+// app/product/page.js
+import Header from '../../components/Header'
+
+export default function ProductPage(){
+  return (
+    <main>
+      <Header />
+      <section style={{ padding: 28, maxWidth: 900 }}>
+        <h1>About the product</h1>
+        <p>The product is a premium, limited-run item — beautifully crafted and engineered. This page explains features, specs and why people love it.</p>
+        <ul>
+          <li>Feature A — clear benefit</li>
+          <li>Feature B — clear benefit</li>
+          <li>Limited quantity</li>
+        </ul>
+        <h2>Specs</h2>
+        <table style={{ borderCollapse: 'collapse' }}>
+          <tbody>
+            <tr><td style={{ padding: 6, border: '1px solid #eee' }}>Weight</td><td style={{ padding: 6, border: '1px solid #eee' }}>350 g</td></tr>
+            <tr><td style={{ padding: 6, border: '1px solid #eee' }}>Dimensions</td><td style={{ padding: 6, border: '1px solid #eee' }}>120 × 60 × 30 mm</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  )
+}
+
+// app/creators/page.js
+import Header from '../../components/Header'
+
+export default function CreatorsPage(){
+  return (
+    <main>
+      <Header />
+      <section style={{ padding: 28, maxWidth: 900 }}>
+        <h1>About the creators</h1>
+        <p>We are a small team of designers and engineers who wanted to build something useful and beautiful. Here's our story.</p>
+        <h2>Team</h2>
+        <ul>
+          <li>Alex — Product Designer</li>
+          <li>Jordan — Hardware Engineer</li>
+          <li>Taylor — Operations</li>
+        </ul>
+      </section>
+    </main>
+  )
+}
+
+// app/preorder/page.js
+'use client'
+import Header from '../../components/Header'
+import AuthForm from '../../components/AuthForm'
+import { useSearchParams } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import { getAuth, ensureAuth } from '../../lib/authClient'
+
+export default function PreorderPage(){
+  const params = useSearchParams()
+  const mode = params.get('mode') || null
+  const [authed, setAuthed] = useState(false)
+
+  useEffect(()=>{
+    const a = getAuth()
+    setAuthed(Boolean(a))
+  },[])
+
+  if(!authed){
+    // show login/register if not authed
+    return (
+      <main>
+        <Header />
+        <section style={{ padding: 28 }}>
+          <h1>Pre-order (Sign in required)</h1>
+          <p>To place a pre-order you need an account. Create one or log in below.</p>
+          <AuthForm mode={mode === 'register' ? 'register' : 'login'} />
+        </section>
+      </main>
+    )
+  }
+
+  // Simple pre-order form for authenticated users
+  const [position, setPosition] = useState(null)
+
+  useEffect(()=>{
+    // compute waitlist position if already preordered
+    try{
+      const a = ensureAuth()
+      const raw = localStorage.getItem('preorders')
+      const orders = raw ? JSON.parse(raw) : []
+      const idx = orders.findIndex(o=>o.userId === a.user.id)
+      if(idx !== -1) setPosition(idx+1)
+    }catch{}
+  },[])
+
+  return (
+    <main>
+      <Header />
+      <section style={{ padding: 28, maxWidth: 800 }}>
+        <h1>Pre-order</h1>
+        {position && (
+          <div style={{ marginBottom: 20, padding: 12, background: '#f5f5f5', borderRadius: 8 }}>
+            You are <strong>#{position}</strong> in the waitlist.
+          </div>
+        )}
+        <p>You're signed in and eligible to pre-order. This demo uses a placeholder payment flow.</p>
+        <form onSubmit={(e)=>{ e.preventDefault(); // save preorder to waitlist
+            const a = ensureAuth()
+            const raw = localStorage.getItem('preorders')
+            const list = raw ? JSON.parse(raw) : []
+            if(!list.find(o=>o.userId===a.user.id)){
+              list.push({ userId: a.user.id, email: a.user.email, ts: Date.now() })
+              localStorage.setItem('preorders', JSON.stringify(list))
+              const idx = list.findIndex(o=>o.userId===a.user.id)
+              setPosition(idx+1)
+              alert('Pre-order placed! You are #' + (idx+1) + ' in the waitlist.')
+            } else {
+              alert('You already placed a pre-order. Your position is #' + position)
+            } }} style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+          <label>
+            Full name
+            <input required style={{ width: '100%', padding: 8 }} />
+          </label>
+          <label>
+            Shipping address
+            <textarea required style={{ width: '100%', padding: 8 }} />
+          </label>
+          <label>
+            Quantity
+            <input type='number' defaultValue={1} min={1} style={{ width: 120, padding: 8 }} />
+          </label>
+          <button type='submit' style={{ padding: '10px 14px' }}>Place pre-order</button>
+        </form>
+      </section>
+    </main>
+  )
+}
+
+// app/admin/waitlist/page.js
+'use client'
+import Header from '../../../components/Header'
+import { useEffect, useState } from 'react'
+
+export default function AdminWaitlistPage(){
+  const [list, setList] = useState([])
+
+  useEffect(()=>{
+    const raw = localStorage.getItem('preorders')
+    const orders = raw ? JSON.parse(raw) : []
+    orders.sort((a,b)=> a.ts - b.ts) // auto-sort by timestamp
+    setList(orders)
+  },[])
+
+  return (
+    <main>
+      <Header />
+      <section style={{ padding: 28 }}>
+        <h1>Admin Waitlist View</h1>
+        <p>This is a mock admin page showing all preorders.</p>
+        <table style={{ borderCollapse:'collapse', marginTop:20 }}>
+          <thead>
+            <tr>
+              <th style={{border:'1px solid #ccc', padding:8}}>#</th>
+              <th style={{border:'1px solid #ccc', padding:8}}>Email</th>
+              <th style={{border:'1px solid #ccc', padding:8}}>Timestamp</th>
+            </tr>
+          </thead>
+          <tbody>
+            {list.map((o,i)=>(
+              <tr key={o.userId}>
+                <td style={{border:'1px solid #ccc', padding:8}}>{i+1}</td>
+                <td style={{border:'1px solid #ccc', padding:8}}>{o.email}</td>
+                <td style={{border:'1px solid #ccc', padding:8}}>{new Date(o.ts).toLocaleString()}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
+    </main>
+  )
+}
+
+// lib/emailMock.js
+export function sendEmailMock(to, subject, body){
+  console.log('--- MOCK EMAIL ---')
+  console.log('To:', to)
+  console.log('Subject:', subject)
+  console.log('Body:', body)
+  console.log('------------------')
+}
+
+// server backend mock: app/api/preorder/route.js
+import { NextResponse } from 'next/server'
+
+// simple in-memory store for demo persistence across reloads during dev
+let serverOrders = []
+
+export async function GET(){
+  // return full sorted list
+  serverOrders.sort((a,b)=> a.ts - b.ts)
+  return NextResponse.json(serverOrders)
+}
+
+export async function POST(req){
+  const data = await req.json()
+  const exists = serverOrders.find(o=>o.userId === data.userId)
+  if(!exists){
+    serverOrders.push({ ...data, ts: Date.now() })
+  }
+  serverOrders.sort((a,b)=> a.ts - b.ts)
+  return NextResponse.json({ success:true })
+}
+
+// Update preorder page to call backend + send mock email
+// (Developer: splice into preorder form handler)
+// sendEmailMock(a.user.email, 'Preorder Confirmation', `You are #${idx+1} in the waitlist.`)
+
+// README (how to run)
+# nextjs-preorder-shop
+
+1. Create a new folder and paste the files above preserving the paths (app/, components/, lib/, package.json, next.config.js).
+2. Run `npm install` then `npm run dev`.
+
+// NOTES
+// - This scaffold uses localStorage-based demo auth for simplicity; do NOT use this for production.
+// - Replace the placeholder pre-order form with a real payment provider (Stripe, PayPal) and server-side order handling.
+// - Add proper styling (Tailwind or CSS) and accessibility improvements as needed.
+
+// End of scaffold

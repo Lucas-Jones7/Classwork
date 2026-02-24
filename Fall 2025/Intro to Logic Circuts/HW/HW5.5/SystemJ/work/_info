@@ -1,0 +1,85 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemK
+Esystemj
+Z0 w1761349450
+!i122 3
+Z1 dC:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemJ
+Z2 8C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemJ/SystemJ.vhd
+Z3 FC:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemJ/SystemJ.vhd
+l0
+L1 1
+Vc^C=?Lak]KdjEWhV?f6XT2
+!s100 kJh7JZZ]=a?J6EdB_jfjf0
+Z4 OV;C;2020.1;71
+32
+Z5 !s110 1761349453
+!i10b 1
+Z6 !s108 1761349453.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemJ/SystemJ.vhd|
+Z8 !s107 C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemJ/SystemJ.vhd|
+!i113 1
+Z9 o-work work -2002 -explicit
+Z10 tExplicit 1 CvgOpt 0
+Abehavioral
+DEx4 work 7 systemj 0 22 c^C=?Lak]KdjEWhV?f6XT2
+!i122 3
+l12
+L11 16
+ViJn0;U_``c<;<eKlgVYeW2
+!s100 A^RJf9W<j5UDWeSnYQReB3
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Esystemj_tb
+Z11 w1761246727
+!i122 0
+R1
+Z12 8C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemJ/SystemJ_TB.vhd
+Z13 FC:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemJ/SystemJ_TB.vhd
+l0
+L1 1
+V?eo;KiJ=>bZo`h;n5ln8P1
+!s100 WjVk?4XiKFd]0z:_[2>8C0
+R4
+32
+Z14 !s110 1761349305
+!i10b 1
+Z15 !s108 1761349305.000000
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemJ/SystemJ_TB.vhd|
+Z17 !s107 C:/-- ALL STORAGE HERE --/Fall 2025 Classwork/Intro to Logic Circuts/HW/HW5.5/SystemJ/SystemJ_TB.vhd|
+!i113 1
+R9
+R10
+Asystemj_tb_arch
+DEx4 work 10 systemj_tb 0 22 ?eo;KiJ=>bZo`h;n5ln8P1
+!i122 0
+l19
+L4 49
+VV12@zbcGG@^GdD56dZ8NF3
+!s100 ?@:_f;S`Ia92XKBG<TQ_V1
+R4
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R9
+R10
