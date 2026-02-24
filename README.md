@@ -1,2 +1,5 @@
-# Classwork
-Repository that has all of my college classwork in it
+# Classwork REPO
+Repository containing all of my coding assingments done at Montana State University
+
+# Coursework Included
+- 
