@@ -1,7 +1,6 @@
 # Lucas Jones Coursework REPO
-All of my coding assingments from my courses at Montana State University.
+All of my coding assingments from my courses at Montana State University. The files are grouped in folders titled after the semesters when I took the courses.
 
-# Coursework Included
 # Fall 2024
 - CSCI-127 | Joy and Beauty of Data
 - CSCI-132 | Basic Data Structures/Algorithms
