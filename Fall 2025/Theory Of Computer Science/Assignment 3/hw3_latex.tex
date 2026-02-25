@@ -1,0 +1,98 @@
+\documentclass{article}
+% Document configurations
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{6.8in}
+\setlength{\parindent}{0in}
+\setlength{\parskip}{\baselineskip}
+% New commands
+\newcommand{\assignmentnumber}{03~}
+\newcommand{\assignmentduedate}{October 10, 2025}
+
+% Import packages
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\title{CSCI-338-Computer Science Theory\\Fall 2025 \\HW~\assignmentnumber}
+\author{Instructor: Adiesha Liyanage \\
+Student Name: }
+\date{}
+\begin{document}
+
+\maketitle
+This assignment is \textbf{due} on \textbf{\assignmentduedate}. You will need to use Latex to generate a single pdf file and upload it under Assignment \assignmentnumber on Canvas. There will be a penalty of not using Latex (to finish the assignment). This is not a group-assignment, so you must finish the assignment by yourself. \textbf{Figures can be hand drawn and inserted to the pdf.}
+
+
+\section{Problem 01}
+\noindent
+Prove if the following language is regular or not. \(A=\{ w |~ w \text{ contains the same }\\ \text{number of 01 and 10 as substrings.}\}\). For example, \(\epsilon, 1110101, 10001\) are in the language but \(1010\) is not. 
+
+Hint: If a language is regular, then there exists a DFA or NFA that recognizes the language. If language is not regular then you can use pumping lemma to prove that it is non-regular.
+
+
+\section{Problem 02}
+Prove that following language is not regular.
+
+\[B = \{1^n |~n \text{ is a prime.}\}\]
+
+\section{Problem 03}
+Suppose you want to prove that the language
+\[C = \{www: w \in \Sigma^*\}.\]
+is not regular using the pumping lemma.
+
+You assume that the pumping length is \(p\) and choose the string \(s=0^p0^p0^p\) as a candidate that might violate the lemma. 
+
+Is this a suitable choice for proving that \(C\) is not regular. Explain your reasoning.
+
+\section{Problem 04}
+Design context-free grammars for the following languages.
+\begin{enumerate}
+    \item \(A = \{ a^nb^m~|~n\neq 2m\}\), where \(\Sigma = \{a,b\}\).
+    \item \(B = \{ w~|~w\text{ contains at least three }1s\}\), where \(\Sigma = \{0,1\}\).
+    \item \(C = \{ w~|~w=w^\mathcal{R}\text{, that is, }w\text{ is a palindrome}\}\), where \(\Sigma = \{0,1\}\).
+    \item \(D = \{ a^nb^m~|~n = 3m\}\), where \(\Sigma = \{a,b\}\).
+\end{enumerate}
+
+
+\section{Problem 05}
+Decide whether the following grammar is ambiguous.
+
+\(S \rightarrow AB | aaB\)
+
+\(A \rightarrow a | Aa\)
+
+\(B \rightarrow b\)
+
+
+\section{Problem 06}
+Create the following CFG G to an equivalent PDA.
+
+\(R \rightarrow XRX~|~S\)
+
+\(S \rightarrow aTb~|~bTa\)
+
+\(T \rightarrow XTX~|~X~|~\epsilon\)
+
+\(X \rightarrow a~|~b\)
+
+\section{Problem 06}
+Convert the following CFG into an equivalent CFG in Chomsky normal form, using the procedure given in Theorem 2.9 (in the book).
+
+\(A \rightarrow BAB ~| ~B~|~ \epsilon\)
+
+\(B \rightarrow 00 ~|~ \epsilon\)
+
+
+\section{Problem 07}
+Let \(G = (V, \Sigma, R, S)\) be the following grammar. \(V = \{S, T, U \}; \Sigma = \{0, \#\}\); and $R$ is the set of rules:
+
+\(S \rightarrow TT~|~U\)
+
+\(T \rightarrow 0T~|~T0~|~\#\)
+
+\(U \rightarrow 0U00~|~\#\)
+
+\textbf{Describe \(L(G) \) in English.}
+
+\end{document}

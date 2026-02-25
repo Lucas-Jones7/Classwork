@@ -1,0 +1,20 @@
+TEST 1 (20 points): make compiles the executable lab13 without warnings
+PASS
+
+TEST 2 (80 points): correct outputs for each input
+	for input: 55 132352 4 1
+		output matches
+		PASS
+	for input: 6534 31 2 2
+		output matches
+		PASS
+	for input: 10000 125661313 3 3
+		output matches
+		PASS
+	for input: 10000 125661313 25 3
+		output matches
+		PASS
+
+Total score: 100/100
+Last updated on:
+Fri May  2 09:28:07 MDT 2025

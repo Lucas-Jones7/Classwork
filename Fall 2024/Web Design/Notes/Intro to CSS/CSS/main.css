@@ -1,0 +1,36 @@
+h1 {
+    text-align: center;
+}
+
+h1:hover {
+    font-variant: small-caps;
+    font-style: italic;
+    font-size: 50px;
+}
+
+p{
+    background-color: aqua;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+img{
+    width: 50%;
+    margin: auto;
+    display: block;
+    border: 10px solid aqua;
+    border-radius: 20%;
+}
+
+img:hover {
+    border: 20px dashed aqua;
+    border-radius: 50%;
+}
+
+body {
+    color: yellowgreen;
+    font-size: 20px;
+    border: 2px solid gray;
+    width: 50%;
+}

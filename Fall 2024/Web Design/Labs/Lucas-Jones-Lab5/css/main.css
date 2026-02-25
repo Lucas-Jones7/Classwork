@@ -1,0 +1,77 @@
+/*Add the styling needed to match the mockup. Refer to the styleguide for font and color info*/
+body {
+    background-color: #F33947;
+}
+
+p {
+    margin: auto;
+    font-family: 'Roboto';
+    width: 450px;
+    text-align: left;
+    background-color: #D9C35A;
+    padding-bottom: 10px;
+}
+
+h1 {
+    font-family: 'Luckiest Guy', cursive;
+    color: #125DC0;
+    font-size: 45px;
+    text-align: center;
+    background-color: #F2E85E;
+}
+
+h2 {
+    font-family: 'Luckiest Guy', cursive;
+    color: #125DC0;
+    padding-left: 30px;
+    font-size: 35px;
+    text-align: left;
+    background-color: #F2E85E;
+    width: 450px
+}
+
+img {
+    border: 5px solid #333333;
+    width: 450px;
+    margin: auto;
+    display: block;
+}
+
+#top {
+    background-color: #39D0F2;
+    color: #125DC0;
+    border-bottom: 7px solid #333333;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    text-indent: 30px;
+    font-weight: bold;
+}
+
+#bottom {
+    text-align: right;
+    border-top: 7px solid #333333;
+    padding-top: 15px;
+    padding-bottom: 15px;;
+    background-color: #39D0F2;
+    color: #125DC0;
+    padding-right: 30px;
+    font-weight: bold;
+}
+
+section {
+    width: 480px;
+    text-align: right;
+    margin: auto;
+    background-color: #D9C35A;
+    border-left: 7px solid #333333;
+    border-right: 7px solid #333333;
+    padding-top: 7px;
+    padding-bottom: 20px;
+}
+
+
+.important {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+}

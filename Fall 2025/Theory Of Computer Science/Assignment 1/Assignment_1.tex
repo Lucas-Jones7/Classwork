@@ -1,0 +1,53 @@
+\documentclass{article}
+% Document configurations
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{6.8in}
+\setlength{\parindent}{0in}
+\setlength{\parskip}{\baselineskip}
+% New commands
+\newcommand{\assignmentnumber}{01~}
+
+% Import packages
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\title{CSCI-338-Computer-Science-Theory\\Fall 2025 \\HW~\assignmentnumber}
+\author{Instructor: Adiesha Liyanage }
+\date{}
+\begin{document}
+
+\maketitle
+This assignment is \textbf{due} on \textbf{September 09, 2025}. You will need to use Latex to generate a single pdf file and upload it under Assignment \assignmentnumber on Canvas. There will be a penalty of not using Latex (to finish the assignment). This is not a group-assignment, so you must finish the assignment by yourself. \textbf{Figures can be hand drawn and inserted to the pdf.}
+
+\section{Problem 01}
+Prove that \(S(n) = 1^3 + 2^3 + 3^3 + \cdots + n^3 = \frac{1}{4}n^2(n+1)^2\). Use induction.
+
+\section{Problem 02}
+Find the error in the following proof that 2 = 1.
+Consider the equation \(a = b\). Multiply both sides by a to obtain $a^2 = ab$. Subtract $b^2$ from both sides to get $a^2 - b^2 = ab - b^2$. Now factor each side, $(a+b)(a-b) = b(a-b)$, and divide each side by $(a-b)$ to get $a+b = b$. Finally, let a and b equal 1, which shows that 2 = 1.
+
+
+\section{Problem 03}
+Given a simple planar graph $P = (V, E)$, we have Euler’s formula: $|V | + |F | - |E| = 2$, where $F$ is the set of faces of $P$ and $E$ is the set of edges of $P$ . Let $|V | = n$, where $V$ is the set of vertices of $P$. Prove that $|F|$ is at most $2n$.
+
+\section{Problem 04}
+Prove that in any simple graph there is a path from any vertex of odd degree to some other vertex of odd degree.
+
+
+\section{Problem 05}
+A fully binary tree $T$ is a tree such that all internal nodes have two children. Prove that a fully binary tree with $n$ internal nodes in total has $2n + 1$ nodes.
+
+\section{Problem 06}
+Given an undirected Tree \(T = (V,E)\), the breadth-first search starting at \(v\in V\) (\(bfs(v)\) for short) finds the shortest path tree starting at vertex \(v \in V\). The diameter of the graph \(G\) is the longest of all the shortest paths, denoted as \(\delta(u,v), u, v \in V\).
+Suppose you have the following algorithm proposed to compute the diameter of the graph \(G\).
+\begin{enumerate}
+    \item Run \(bfs(w), w \in V\) and compute the vertex \(x \in V\) furthest from \(w\).
+    \item Run \(bfs(x)\) and compute the vertex \(y \in V\) furthest from \(x\).
+    \item Return \(\delta(x,y)\) as the diameter of G.
+\end{enumerate}
+
+Prove that this algorithm returns the correct diameter of the graph \(G\).
+
+\end{document}

@@ -1,0 +1,37 @@
+nav {
+    padding: 25px;
+    display: flex;
+    background-color: #034001;
+    flex-direction: row-reverse
+}
+
+nav ul {
+    display: flex;
+    padding: 0px;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li a {
+    text-decoration: none;
+    padding: 1rem;
+    background-color: #034001;
+    color: #D4D7DC;
+    text-transform: uppercase;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #034001;
+}
+
+.active {
+    background-color: #D4D7DC;
+    color: black;
+}
+
+
+

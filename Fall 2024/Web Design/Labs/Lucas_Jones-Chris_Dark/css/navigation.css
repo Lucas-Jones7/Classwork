@@ -1,0 +1,53 @@
+nav {
+    display: flex;
+    background-color: #2f6391;
+    flex-direction: row-reverse;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li a {
+    text-decoration: none;
+    padding: 1rem;
+    background-color: #0a3a16;
+    color: rgb(153, 143, 143);
+}
+
+.active {
+    background-color: #903080;
+    color: #9aa6a6;
+}
+
+.burger {
+    background-image: url("../images/burger.jpg");
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.house {
+    background-image: url("../images/house.jpg");
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.dog {
+    background-image: url("../images/dog.jpg");
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}

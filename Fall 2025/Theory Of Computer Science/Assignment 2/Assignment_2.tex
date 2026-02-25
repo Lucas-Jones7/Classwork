@@ -1,0 +1,72 @@
+\documentclass{article}
+% Document configurations
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{6.8in}
+\setlength{\parindent}{0in}
+\setlength{\parskip}{\baselineskip}
+% New commands
+\newcommand{\assignmentnumber}{02~}
+\newcommand{\assignmentduedate}{September 23, 2025}
+
+% Import packages
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\title{CSCI-338-Computer Science Theory\\Fall 2025 \\HW~\assignmentnumber}
+\author{Instructor: Adiesha Liyanage }
+\date{}
+\begin{document}
+
+\maketitle
+This assignment is \textbf{due} on \textbf{\assignmentduedate}. You will need to use Latex to generate a single pdf file and upload it under Assignment \assignmentnumber on Canvas. There will be a penalty of not using Latex (to finish the assignment). This is not a group-assignment, so you must finish the assignment by yourself. \textbf{Figures can be hand drawn and inserted to the pdf.}
+
+\section{Problem 01}
+\noindent
+Give state diagrams of DFAs (finite automaton) that recognizes the following languages. Consider the alphabet is \(\Sigma = \{0,1\}\).
+\begin{enumerate}
+    \item \(A = \{ \epsilon, 0\}\)
+    \item \(B = \{ w : w \text{ has length at least 3 and its third symbol is a 0}\}\)
+    \item \(C = \{ w \text{ starts with 0 and has odd length, or starts with 1 and has even length}\}\)
+\end{enumerate}
+
+
+\section{Problem 02}
+Give state diagrams of NFAs with the specified number of states recognizing each of the following languages. In all parts, the alphabet is 
+ \(\Sigma = \{0,1\}\) 
+ \begin{enumerate}
+     \item The language \(\{\epsilon\}\).
+     \item The language \(0^*1^*0^+\) with three states.
+     \item The language \(A = \{w : w \text{ contains an even number of 0s, or contains exactly two 1s}\}\) with $6$ states.
+ \end{enumerate}
+
+\section{Problem 03}
+Use the procedure described in Lemma 1.55 to convert the following regular expressions to nondeterministic finite automata.
+\begin{itemize}
+    \item \((0 \cup 1)^*000(0 \cup 1)^*\)
+    \item \((((00)^*(11)) \cup 01)^*\)
+    \item \(\emptyset^*\)
+\end{itemize}
+
+
+\section{Problem 04}
+Use the procedure described in Lemma 1.60 to convert the following finite automata to regular expressions.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/hw2/1.21b.png}
+    \caption{Finite automaton}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\section{Problem 05}
+For each of the following languages, give two strings that are members and two strings that are not members--a total of four strings for each part. Assume the alphabet \(\Sigma = \{a,b\}\) in all parts.
+\begin{enumerate}
+    \item \(a^*b^*\)
+    \item \(aba \cup bab\)
+    \item \((\epsilon \cup a)b\)
+    \item \((a \cup ba \cup bb)\Sigma^*\)
+    
+\end{enumerate}
+\end{document}

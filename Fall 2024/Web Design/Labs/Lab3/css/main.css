@@ -1,0 +1,60 @@
+/*
+    Modify this CSS (Cascading Style Sheets) file to style
+    the HTML page for Lab 3 to the specifications listed
+    on for the assignment. You won't need to change anything
+    in the HTML, but you will have to add some element selectors
+    and several style attributes to this CSS file. 
+
+    To get started, remove the comment marks from around the color: gray
+    css rule below, and check that the HTML file is rendering all the text
+    in gray instead of black.
+*/
+h1 {
+    font-size: 70px;
+    color: skyblue;
+    text-align: center;
+}
+
+h2 {
+    font-family: sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    color: #FCAAFF;
+}
+
+body {
+    color: gray;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+img {
+    border: 10px dotted #CF15B9;
+    border-radius: 30%;
+    width: 50%;
+    margin: auto;
+    display: block;
+}
+
+a:hover {
+    color: gold;
+    background-color: blue;
+}
+
+ul {
+    margin-bottom: 8px;
+}
+
+em {
+    letter-spacing: 0.2em;
+    color: crimson;
+}
+
+strong {
+    letter-spacing: 0.2em;
+    color: crimson;
+}

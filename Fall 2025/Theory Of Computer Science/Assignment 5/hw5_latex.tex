@@ -1,0 +1,60 @@
+\documentclass{article}
+% Document configurations
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{6.8in}
+\setlength{\parindent}{0in}
+\setlength{\parskip}{\baselineskip}
+% New commands
+\newcommand{\assignmentnumber}{05~}
+\newcommand{\assignmentduedate}{November 18, 2025}
+
+% Import packages
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\title{CSCI-338-Computer Science Theory\\Fall 2025 \\HW~\assignmentnumber}
+\author{Instructor: Adiesha Liyanage \\
+Student Name: }
+\date{}
+\begin{document}
+
+\maketitle
+This assignment is \textbf{due} on \textbf{\assignmentduedate}. You will need to use Latex to generate a single pdf file and upload it under Assignment \assignmentnumber on Canvas. There will be a penalty of not using Latex (to finish the assignment). This is not a group-assignment, so you must finish the assignment by yourself. \textbf{Figures can be hand drawn and inserted to the pdf.}
+
+
+\section{Problem 01}
+\noindent
+Provide a implementation-level description of TM that decides the following language: \(L = \{\text{Same number of 0's and 1's}\}\). 
+
+When I say implementation level description, what I mean is for you to give an algorithm on how the Turing machine moves its head and way it is stored data when it decides the given language. Refer the implementation-level description  related to \(A = \{0^{2^n}| n \geq 0\}\). (You do not need to draw the Turing machine)
+
+\section{Problem 02}
+Let \(\Sigma = \{a, b\}\). We define the language \(EVEN_{TM}\) as follows:
+
+\[EVEN_{TM} = \{<M> | M \text{ is a TM and } L(M) \text{ contains only strings of even length.}\}\]
+
+Prove that \(EVEN_{TM}\) is undecidable.
+
+\section{Problem 03}
+Show that \(EQ_{CFG}\) is undecidable.
+
+\section{Problem 04}
+Show that \(EQ_{CFG}\) is co-Turing recognizable. 
+
+
+\section{Problem 05}
+Find a match in the following instance of the Post Correspondence Problem.
+\[\left[ \frac{ab}{abab} \right], \left[ \frac{b}{a} \right], \left[ \frac{aba}{b} \right], \left[ \frac{aa}{a} \right]\]
+
+\section{Problem 06}
+Show that \(ALL_{DFA} = \{\langle A\rangle\} | \text{$A$ is a DFA and $L(A) = \Sigma^*$}\) is decidable.
+
+\section{Problem 07}
+Show that \(A_{\epsilon CFG} = \{ \langle G\rangle | \text{$G$ is CFG that generates $\epsilon$}\}\) is decidable.
+
+\section{Problem 08}
+Let \(\mathcal{B}\) be the set of all infinite sequences over \(\{0,1\}\). Show that \(\mathcal{B}\) is uncountable using proof by diagonalization.
+
+\end{document}

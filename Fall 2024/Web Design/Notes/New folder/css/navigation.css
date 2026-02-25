@@ -1,0 +1,25 @@
+nav{
+    display: flex;
+    background-color: #777;
+}
+
+
+nav ul {
+    display: flex
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li a {
+    text-decoration: none;
+    padding: 1em;
+    background-color: #222;
+    color: #ddd;
+}
+
+.active{
+    background-color: red;
+    color: white;
+}

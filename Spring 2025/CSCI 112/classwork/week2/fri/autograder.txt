@@ -1,0 +1,12 @@
+TEST 1: your /home/g76d615/csci112_spring2025 exists
+PASS
+
+TEST 2: it is a git repository
+PASS
+
+TEST 3: there is a commit with tag my_first_tag
+PASS
+
+full credit
+Last updated on:
+Sun Jan 26 10:59:05 MST 2025
