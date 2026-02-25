@@ -1,0 +1,7 @@
+git add .
+git commit -m ""
+git push
+
+If fails:
+git pull --rebase origin main
+git push
