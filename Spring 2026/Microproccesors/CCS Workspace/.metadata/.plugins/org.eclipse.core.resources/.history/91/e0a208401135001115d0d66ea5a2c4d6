@@ -1,0 +1,18 @@
+//-----------------------------------------------------
+// Lucas Jones, EELE 371, Final Project: Day 1, 04/10/2026
+//-----------------------------------------------------
+
+#include <msp430.h> 
+
+// global variables
+volatile unsigned int ADCvalue = 0;
+#define OFFSET   15
+#define LOW_MAX  (XXX  - OFFSET)    // 1v
+#define HIGH_MAX (XXX - OFFSET)    // 2v
+
+int main(void)
+{
+	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
+	
+	return 0;
+}

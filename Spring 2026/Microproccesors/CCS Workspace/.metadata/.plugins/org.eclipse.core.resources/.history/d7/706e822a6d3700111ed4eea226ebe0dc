@@ -1,0 +1,23 @@
+//-----------------------------------------------------
+// Lucas Jones, EELE 371, Final Project: Day 2, 04/13/2026
+//-----------------------------------------------------
+
+#include <msp430.h> 
+
+// global vars (Set to 1:10 April 13th, 2026)
+#define START_REG 0x03          // start register
+#define SEC 0x00                // seconds 0-59
+#define MIN 0x10                // mins 0-59
+#define HOUR 0x1               // hours 0-23
+#define DAY 0x13                // days 1-31
+#define WEEKDAY 0x03            // day of week 0-6, 0=sun
+#define MONTH 0x04              // months 1-12
+#define YEAR 0x26               // year
+
+
+int main(void)
+{
+	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
+	
+	return 0;
+}

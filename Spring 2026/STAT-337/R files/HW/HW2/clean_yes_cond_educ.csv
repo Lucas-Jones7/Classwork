@@ -1,0 +1,999 @@
+id,YES,condname,education
+1,1,No TOSA or warning,HS_or_less
+2,15,No TOSA or warning,Graduate
+3,1,No TOSA or warning,HS_or_less
+4,14,No TOSA or warning,Graduate
+5,14,No TOSA or warning,HS_or_less
+6,8,No TOSA or warning,HS_or_less
+7,10,No TOSA or warning,HS_or_less
+8,15,No TOSA or warning,HS_or_less
+9,11,No TOSA or warning,Bachelors
+10,12,No TOSA or warning,Bachelors
+11,19,No TOSA or warning,HS_or_less
+12,15,No TOSA or warning,HS_or_less
+13,6,No TOSA or warning,HS_or_less
+14,15,No TOSA or warning,Bachelors
+15,6,No TOSA or warning,Bachelors
+16,15,No TOSA or warning,HS_or_less
+17,13,No TOSA or warning,HS_or_less
+18,7,No TOSA or warning,Bachelors
+19,19,No TOSA or warning,HS_or_less
+20,14,No TOSA or warning,HS_or_less
+21,2,No TOSA or warning,Associate
+22,15,No TOSA or warning,Bachelors
+23,8,No TOSA or warning,Bachelors
+24,9,No TOSA or warning,Graduate
+25,8,No TOSA or warning,HS_or_less
+26,17,No TOSA or warning,Bachelors
+27,17,No TOSA or warning,Bachelors
+28,19,No TOSA or warning,Associate
+29,16,No TOSA or warning,Bachelors
+30,11,No TOSA or warning,HS_or_less
+31,3,No TOSA or warning,HS_or_less
+32,9,No TOSA or warning,Bachelors
+33,5,No TOSA or warning,HS_or_less
+34,4,No TOSA or warning,Bachelors
+35,11,No TOSA or warning,HS_or_less
+36,17,No TOSA or warning,HS_or_less
+37,8,No TOSA or warning,Bachelors
+38,12,No TOSA or warning,Bachelors
+39,3,No TOSA or warning,Bachelors
+40,18,No TOSA or warning,Associate
+41,9,No TOSA or warning,HS_or_less
+42,3,No TOSA or warning,HS_or_less
+43,14,No TOSA or warning,HS_or_less
+44,3,No TOSA or warning,Bachelors
+45,15,No TOSA or warning,Bachelors
+46,7,No TOSA or warning,Associate
+47,14,No TOSA or warning,Associate
+48,7,No TOSA or warning,HS_or_less
+49,7,No TOSA or warning,HS_or_less
+50,9,No TOSA or warning,Bachelors
+51,7,No TOSA or warning,Associate
+52,1,No TOSA or warning,Associate
+53,2,No TOSA or warning,Graduate
+54,8,No TOSA or warning,HS_or_less
+55,14,No TOSA or warning,HS_or_less
+56,9,No TOSA or warning,HS_or_less
+57,0,No TOSA or warning,Bachelors
+58,11,No TOSA or warning,Bachelors
+59,7,No TOSA or warning,HS_or_less
+60,17,No TOSA or warning,HS_or_less
+61,14,No TOSA or warning,Bachelors
+62,12,No TOSA or warning,Bachelors
+63,15,No TOSA or warning,Bachelors
+64,11,No TOSA or warning,Graduate
+65,12,No TOSA or warning,Associate
+66,8,No TOSA or warning,Bachelors
+67,10,No TOSA or warning,Bachelors
+68,4,No TOSA or warning,Associate
+69,3,No TOSA or warning,Associate
+70,8,No TOSA or warning,Associate
+71,9,No TOSA or warning,Associate
+72,12,No TOSA or warning,Associate
+73,14,No TOSA or warning,HS_or_less
+74,0,No TOSA or warning,HS_or_less
+75,8,No TOSA or warning,HS_or_less
+76,19,No TOSA or warning,Associate
+77,7,No TOSA or warning,Associate
+78,13,No TOSA or warning,HS_or_less
+79,18,No TOSA or warning,Bachelors
+80,12,No TOSA or warning,Graduate
+81,8,No TOSA or warning,HS_or_less
+82,11,No TOSA or warning,Bachelors
+83,8,No TOSA or warning,Bachelors
+84,6,No TOSA or warning,Bachelors
+85,22,No TOSA or warning,HS_or_less
+86,14,No TOSA or warning,HS_or_less
+87,7,No TOSA or warning,Bachelors
+88,8,No TOSA or warning,Bachelors
+89,4,No TOSA or warning,Associate
+90,17,No TOSA or warning,HS_or_less
+91,0,No TOSA or warning,HS_or_less
+92,8,No TOSA or warning,HS_or_less
+93,18,No TOSA or warning,Bachelors
+94,2,No TOSA or warning,Graduate
+95,4,No TOSA or warning,Bachelors
+96,16,No TOSA or warning,Graduate
+97,19,No TOSA or warning,Bachelors
+98,11,No TOSA or warning,Bachelors
+99,16,No TOSA or warning,Associate
+100,18,No TOSA or warning,HS_or_less
+101,19,No TOSA or warning,Bachelors
+102,2,No TOSA or warning,Associate
+103,6,No TOSA or warning,HS_or_less
+104,10,No TOSA or warning,HS_or_less
+105,13,No TOSA or warning,Associate
+106,17,No TOSA or warning,Bachelors
+107,12,No TOSA or warning,Bachelors
+108,4,No TOSA or warning,HS_or_less
+109,11,No TOSA or warning,HS_or_less
+110,11,No TOSA or warning,Bachelors
+111,10,No TOSA or warning,HS_or_less
+112,15,No TOSA or warning,Associate
+113,15,No TOSA or warning,Associate
+114,14,No TOSA or warning,Bachelors
+115,12,No TOSA or warning,HS_or_less
+116,13,No TOSA or warning,Bachelors
+117,4,No TOSA or warning,Bachelors
+118,15,No TOSA or warning,HS_or_less
+119,7,No TOSA or warning,Associate
+120,15,No TOSA or warning,HS_or_less
+121,18,No TOSA or warning,HS_or_less
+122,14,No TOSA or warning,Bachelors
+123,12,No TOSA or warning,HS_or_less
+124,18,No TOSA or warning,Bachelors
+125,14,No TOSA or warning,Bachelors
+126,9,No TOSA or warning,HS_or_less
+127,11,No TOSA or warning,Associate
+128,19,No TOSA or warning,HS_or_less
+129,13,No TOSA or warning,HS_or_less
+130,15,No TOSA or warning,HS_or_less
+131,5,No TOSA or warning,HS_or_less
+132,0,No TOSA or warning,Bachelors
+133,5,No TOSA or warning,Graduate
+134,3,No TOSA or warning,Graduate
+135,10,No TOSA or warning,HS_or_less
+136,13,No TOSA or warning,HS_or_less
+137,1,No TOSA or warning,Bachelors
+138,18,No TOSA or warning,Graduate
+139,18,No TOSA or warning,HS_or_less
+140,14,No TOSA or warning,Associate
+141,13,No TOSA or warning,Associate
+142,10,No TOSA or warning,HS_or_less
+143,15,No TOSA or warning,Bachelors
+144,14,No TOSA or warning,Associate
+145,6,No TOSA or warning,Bachelors
+146,6,No TOSA or warning,HS_or_less
+147,16,No TOSA or warning,Graduate
+148,11,No TOSA or warning,Graduate
+149,8,No TOSA or warning,Associate
+150,6,No TOSA or warning,Bachelors
+151,1,No TOSA or warning,HS_or_less
+152,17,No TOSA or warning,Bachelors
+153,15,No TOSA or warning,HS_or_less
+154,9,No TOSA or warning,HS_or_less
+155,21,No TOSA or warning,HS_or_less
+156,7,No TOSA or warning,HS_or_less
+157,1,No TOSA or warning,HS_or_less
+158,4,No TOSA or warning,Graduate
+159,10,No TOSA or warning,Associate
+160,8,No TOSA or warning,Bachelors
+161,4,No TOSA or warning,Bachelors
+162,16,No TOSA or warning,HS_or_less
+163,3,No TOSA or warning,HS_or_less
+164,10,No TOSA or warning,Bachelors
+165,9,No TOSA or warning,HS_or_less
+166,19,No TOSA or warning,Bachelors
+167,8,No TOSA or warning,Bachelors
+168,23,No TOSA or warning,HS_or_less
+169,12,No TOSA or warning,Associate
+170,5,No TOSA or warning,Associate
+171,15,No TOSA or warning,HS_or_less
+172,15,No TOSA or warning,HS_or_less
+173,11,No TOSA or warning,Bachelors
+174,21,No TOSA or warning,Associate
+175,16,No TOSA or warning,HS_or_less
+176,6,No TOSA or warning,Associate
+177,12,No TOSA or warning,HS_or_less
+178,12,No TOSA or warning,HS_or_less
+179,2,No TOSA or warning,Associate
+180,9,No TOSA or warning,Graduate
+181,7,No TOSA or warning,Bachelors
+182,17,No TOSA or warning,Associate
+183,6,No TOSA or warning,Associate
+184,9,No TOSA or warning,Associate
+185,10,No TOSA or warning,Bachelors
+186,9,No TOSA or warning,Bachelors
+187,14,No TOSA or warning,HS_or_less
+188,15,No TOSA or warning,Associate
+189,9,No TOSA or warning,Bachelors
+190,4,No TOSA or warning,HS_or_less
+191,16,No TOSA or warning,Bachelors
+192,21,No TOSA or warning,Associate
+193,12,No TOSA or warning,HS_or_less
+194,11,No TOSA or warning,Associate
+195,7,No TOSA or warning,HS_or_less
+196,13,No TOSA or warning,Bachelors
+197,11,No TOSA or warning,HS_or_less
+198,8,No TOSA or warning,Associate
+199,6,No TOSA or warning,Graduate
+200,13,No TOSA or warning,Associate
+201,12,No TOSA or warning,Bachelors
+202,7,No TOSA or warning,Bachelors
+203,13,No TOSA or warning,Associate
+204,6,No TOSA or warning,Associate
+205,10,No TOSA or warning,Bachelors
+206,16,No TOSA or warning,Bachelors
+207,17,No TOSA or warning,HS_or_less
+208,4,No TOSA or warning,HS_or_less
+209,16,No TOSA or warning,Bachelors
+210,7,No TOSA or warning,Bachelors
+211,20,No TOSA or warning,HS_or_less
+212,7,No TOSA or warning,Graduate
+213,8,No TOSA or warning,HS_or_less
+214,14,No TOSA or warning,HS_or_less
+215,11,No TOSA or warning,Bachelors
+216,2,No TOSA or warning,Bachelors
+217,17,No TOSA or warning,Associate
+218,8,No TOSA or warning,HS_or_less
+219,13,No TOSA or warning,HS_or_less
+220,5,No TOSA or warning,Graduate
+221,8,No TOSA or warning,Graduate
+222,4,No TOSA or warning,Bachelors
+223,10,No TOSA or warning,Associate
+224,4,No TOSA or warning,Bachelors
+225,10,No TOSA or warning,Associate
+226,16,No TOSA or warning,HS_or_less
+227,4,No TOSA or warning,Associate
+228,19,No TOSA or warning,HS_or_less
+229,9,No TOSA or warning,Bachelors
+230,14,No TOSA or warning,HS_or_less
+231,16,No TOSA or warning,Bachelors
+232,12,No TOSA or warning,Associate
+233,10,No TOSA or warning,HS_or_less
+234,10,No TOSA or warning,Bachelors
+235,3,No TOSA or warning,HS_or_less
+236,3,No TOSA or warning,Bachelors
+237,10,No TOSA or warning,HS_or_less
+238,16,No TOSA or warning,Bachelors
+239,8,No TOSA or warning,HS_or_less
+240,11,No TOSA or warning,Bachelors
+241,15,No TOSA or warning,Bachelors
+242,6,No TOSA or warning,Bachelors
+243,17,No TOSA or warning,Associate
+244,15,No TOSA or warning,HS_or_less
+245,14,No TOSA or warning,Bachelors
+246,20,No TOSA or warning,HS_or_less
+247,10,No TOSA or warning,HS_or_less
+248,10,No TOSA or warning,Graduate
+249,14,No TOSA or warning,Graduate
+250,13,No TOSA or warning,HS_or_less
+251,5,No TOSA or warning,HS_or_less
+252,14,No TOSA or warning,Graduate
+253,10,No TOSA or warning,HS_or_less
+254,13,No TOSA or warning,Associate
+255,12,No TOSA or warning,Bachelors
+256,15,No TOSA or warning,HS_or_less
+257,1,No TOSA or warning,HS_or_less
+258,12,No TOSA or warning,HS_or_less
+259,11,No TOSA or warning,Associate
+260,15,No TOSA or warning,Associate
+261,5,No TOSA or warning,Bachelors
+262,21,No TOSA or warning,Bachelors
+263,16,No TOSA or warning,Bachelors
+264,4,No TOSA or warning,Bachelors
+265,16,No TOSA or warning,Bachelors
+266,17,No TOSA or warning,HS_or_less
+267,8,No TOSA or warning,Bachelors
+268,0,No TOSA or warning,Associate
+269,0,No TOSA or warning,HS_or_less
+270,10,No TOSA or warning,Bachelors
+271,13,No TOSA or warning,Bachelors
+272,5,No TOSA or warning,Bachelors
+273,11,No TOSA or warning,Bachelors
+274,17,No TOSA or warning,Associate
+275,14,No TOSA or warning,Bachelors
+276,12,No TOSA or warning,Bachelors
+277,20,No TOSA or warning,Associate
+278,13,No TOSA or warning,HS_or_less
+279,7,No TOSA or warning,Bachelors
+280,9,No TOSA or warning,HS_or_less
+281,6,No TOSA or warning,HS_or_less
+282,13,No TOSA or warning,Bachelors
+283,12,No TOSA or warning,Associate
+284,11,No TOSA or warning,HS_or_less
+285,17,No TOSA or warning,HS_or_less
+286,10,No TOSA or warning,Bachelors
+287,7,No TOSA or warning,Bachelors
+288,6,No TOSA or warning,Bachelors
+289,15,No TOSA or warning,HS_or_less
+290,7,No TOSA or warning,Graduate
+291,11,No TOSA or warning,Graduate
+292,17,No TOSA or warning,Bachelors
+293,9,No TOSA or warning,Graduate
+294,3,No TOSA or warning,Bachelors
+295,4,No TOSA or warning,Graduate
+296,12,No TOSA or warning,Graduate
+297,15,No TOSA or warning,Associate
+298,20,No TOSA or warning,HS_or_less
+299,15,No TOSA or warning,Bachelors
+300,17,No TOSA or warning,Bachelors
+301,17,No TOSA or warning,Associate
+302,10,No TOSA or warning,Bachelors
+303,6,No TOSA or warning,Bachelors
+304,9,No TOSA or warning,Associate
+305,0,No TOSA or warning,HS_or_less
+306,0,No TOSA or warning,Bachelors
+307,14,TOSA warning - NO click required,Bachelors
+308,10,TOSA warning - NO click required,Graduate
+309,0,TOSA warning - NO click required,Bachelors
+310,8,TOSA warning - NO click required,Bachelors
+311,9,TOSA warning - NO click required,Bachelors
+312,8,TOSA warning - NO click required,HS_or_less
+313,15,TOSA warning - NO click required,HS_or_less
+314,0,TOSA warning - NO click required,Bachelors
+315,14,TOSA warning - NO click required,Bachelors
+316,2,TOSA warning - NO click required,HS_or_less
+317,13,TOSA warning - NO click required,Bachelors
+318,18,TOSA warning - NO click required,Associate
+319,8,TOSA warning - NO click required,HS_or_less
+320,14,TOSA warning - NO click required,HS_or_less
+321,2,TOSA warning - NO click required,Bachelors
+322,19,TOSA warning - NO click required,Bachelors
+323,8,TOSA warning - NO click required,HS_or_less
+324,16,TOSA warning - NO click required,Associate
+325,12,TOSA warning - NO click required,HS_or_less
+326,15,TOSA warning - NO click required,Bachelors
+327,15,TOSA warning - NO click required,Bachelors
+328,7,TOSA warning - NO click required,HS_or_less
+329,3,TOSA warning - NO click required,HS_or_less
+330,14,TOSA warning - NO click required,Bachelors
+331,20,TOSA warning - NO click required,HS_or_less
+332,11,TOSA warning - NO click required,HS_or_less
+333,5,TOSA warning - NO click required,Graduate
+334,6,TOSA warning - NO click required,Associate
+335,8,TOSA warning - NO click required,Associate
+336,2,TOSA warning - NO click required,Bachelors
+337,9,TOSA warning - NO click required,HS_or_less
+338,7,TOSA warning - NO click required,HS_or_less
+339,15,TOSA warning - NO click required,Bachelors
+340,11,TOSA warning - NO click required,Associate
+341,11,TOSA warning - NO click required,Associate
+342,12,TOSA warning - NO click required,Associate
+343,8,TOSA warning - NO click required,Associate
+344,15,TOSA warning - NO click required,Bachelors
+345,13,TOSA warning - NO click required,HS_or_less
+346,13,TOSA warning - NO click required,HS_or_less
+347,15,TOSA warning - NO click required,Associate
+348,6,TOSA warning - NO click required,Bachelors
+349,20,TOSA warning - NO click required,Bachelors
+350,13,TOSA warning - NO click required,Associate
+351,9,TOSA warning - NO click required,Bachelors
+352,9,TOSA warning - NO click required,HS_or_less
+353,16,TOSA warning - NO click required,Associate
+354,12,TOSA warning - NO click required,Bachelors
+355,16,TOSA warning - NO click required,HS_or_less
+356,13,TOSA warning - NO click required,HS_or_less
+357,13,TOSA warning - NO click required,Associate
+358,12,TOSA warning - NO click required,HS_or_less
+359,4,TOSA warning - NO click required,HS_or_less
+360,7,TOSA warning - NO click required,HS_or_less
+361,13,TOSA warning - NO click required,Graduate
+362,1,TOSA warning - NO click required,Bachelors
+363,1,TOSA warning - NO click required,Bachelors
+364,5,TOSA warning - NO click required,Bachelors
+365,9,TOSA warning - NO click required,Graduate
+366,0,TOSA warning - NO click required,Bachelors
+367,10,TOSA warning - NO click required,HS_or_less
+368,5,TOSA warning - NO click required,HS_or_less
+369,17,TOSA warning - NO click required,HS_or_less
+370,3,TOSA warning - NO click required,Associate
+371,13,TOSA warning - NO click required,HS_or_less
+372,11,TOSA warning - NO click required,Associate
+373,18,TOSA warning - NO click required,Graduate
+374,7,TOSA warning - NO click required,Graduate
+375,0,TOSA warning - NO click required,Associate
+376,6,TOSA warning - NO click required,Bachelors
+377,13,TOSA warning - NO click required,Bachelors
+378,19,TOSA warning - NO click required,HS_or_less
+379,11,TOSA warning - NO click required,HS_or_less
+380,13,TOSA warning - NO click required,Bachelors
+381,8,TOSA warning - NO click required,Bachelors
+382,3,TOSA warning - NO click required,HS_or_less
+383,12,TOSA warning - NO click required,HS_or_less
+384,17,TOSA warning - NO click required,Bachelors
+385,10,TOSA warning - NO click required,HS_or_less
+386,19,TOSA warning - NO click required,Bachelors
+387,10,TOSA warning - NO click required,HS_or_less
+388,12,TOSA warning - NO click required,Bachelors
+389,19,TOSA warning - NO click required,Associate
+390,12,TOSA warning - NO click required,Bachelors
+391,9,TOSA warning - NO click required,HS_or_less
+392,7,TOSA warning - NO click required,Bachelors
+393,11,TOSA warning - NO click required,Bachelors
+394,4,TOSA warning - NO click required,HS_or_less
+395,4,TOSA warning - NO click required,Graduate
+396,10,TOSA warning - NO click required,Graduate
+397,13,TOSA warning - NO click required,Associate
+398,11,TOSA warning - NO click required,Bachelors
+399,12,TOSA warning - NO click required,HS_or_less
+400,6,TOSA warning - NO click required,Bachelors
+401,6,TOSA warning - NO click required,HS_or_less
+402,18,TOSA warning - NO click required,Bachelors
+403,2,TOSA warning - NO click required,Bachelors
+404,13,TOSA warning - NO click required,Graduate
+405,5,TOSA warning - NO click required,Bachelors
+406,11,TOSA warning - NO click required,Graduate
+407,8,TOSA warning - NO click required,Bachelors
+408,0,TOSA warning - NO click required,Bachelors
+409,12,TOSA warning - NO click required,Associate
+410,6,TOSA warning - NO click required,Bachelors
+411,13,TOSA warning - NO click required,Bachelors
+412,3,TOSA warning - NO click required,Graduate
+413,0,TOSA warning - NO click required,Bachelors
+414,8,TOSA warning - NO click required,Graduate
+415,16,TOSA warning - NO click required,Bachelors
+416,11,TOSA warning - NO click required,Bachelors
+417,18,TOSA warning - NO click required,HS_or_less
+418,9,TOSA warning - NO click required,Bachelors
+419,18,TOSA warning - NO click required,HS_or_less
+420,16,TOSA warning - NO click required,HS_or_less
+421,3,TOSA warning - NO click required,HS_or_less
+422,7,TOSA warning - NO click required,Bachelors
+423,11,TOSA warning - NO click required,HS_or_less
+424,17,TOSA warning - NO click required,Bachelors
+425,15,TOSA warning - NO click required,HS_or_less
+426,7,TOSA warning - NO click required,HS_or_less
+427,4,TOSA warning - NO click required,Bachelors
+428,1,TOSA warning - NO click required,HS_or_less
+429,1,TOSA warning - NO click required,HS_or_less
+430,16,TOSA warning - NO click required,Associate
+431,9,TOSA warning - NO click required,HS_or_less
+432,8,TOSA warning - NO click required,HS_or_less
+433,13,TOSA warning - NO click required,HS_or_less
+434,20,TOSA warning - NO click required,Associate
+435,9,TOSA warning - NO click required,Bachelors
+436,18,TOSA warning - NO click required,HS_or_less
+437,19,TOSA warning - NO click required,Associate
+438,13,TOSA warning - NO click required,Bachelors
+439,14,TOSA warning - NO click required,Bachelors
+440,19,TOSA warning - NO click required,Bachelors
+441,15,TOSA warning - NO click required,HS_or_less
+442,10,TOSA warning - NO click required,Bachelors
+443,2,TOSA warning - NO click required,Bachelors
+444,17,TOSA warning - NO click required,Bachelors
+445,3,TOSA warning - NO click required,Associate
+446,14,TOSA warning - NO click required,Graduate
+447,9,TOSA warning - NO click required,HS_or_less
+448,16,TOSA warning - NO click required,Bachelors
+449,8,TOSA warning - NO click required,Bachelors
+450,13,TOSA warning - NO click required,HS_or_less
+451,23,TOSA warning - NO click required,HS_or_less
+452,8,TOSA warning - NO click required,Bachelors
+453,2,TOSA warning - NO click required,Bachelors
+454,20,TOSA warning - NO click required,HS_or_less
+455,21,TOSA warning - NO click required,Associate
+456,11,TOSA warning - NO click required,Bachelors
+457,11,TOSA warning - NO click required,Bachelors
+458,8,TOSA warning - NO click required,Associate
+459,6,TOSA warning - NO click required,Bachelors
+460,14,TOSA warning - NO click required,Bachelors
+461,16,TOSA warning - NO click required,Bachelors
+462,6,TOSA warning - NO click required,Bachelors
+463,8,TOSA warning - NO click required,Bachelors
+464,9,TOSA warning - NO click required,HS_or_less
+465,14,TOSA warning - NO click required,Bachelors
+466,8,TOSA warning - NO click required,Bachelors
+467,9,TOSA warning - NO click required,Associate
+468,16,TOSA warning - NO click required,Associate
+469,20,TOSA warning - NO click required,Bachelors
+470,12,TOSA warning - NO click required,HS_or_less
+471,7,TOSA warning - NO click required,Graduate
+472,10,TOSA warning - NO click required,Bachelors
+473,3,TOSA warning - NO click required,Graduate
+474,0,TOSA warning - NO click required,Bachelors
+475,20,TOSA warning - NO click required,HS_or_less
+476,8,TOSA warning - NO click required,Bachelors
+477,10,TOSA warning - NO click required,HS_or_less
+478,17,TOSA warning - NO click required,HS_or_less
+479,8,TOSA warning - NO click required,Graduate
+480,8,TOSA warning - NO click required,HS_or_less
+481,17,TOSA warning - NO click required,Bachelors
+482,19,TOSA warning - NO click required,Bachelors
+483,15,TOSA warning - NO click required,Bachelors
+484,6,TOSA warning - NO click required,Bachelors
+485,16,TOSA warning - NO click required,Bachelors
+486,12,TOSA warning - NO click required,Bachelors
+487,2,TOSA warning - NO click required,Bachelors
+488,12,TOSA warning - NO click required,Bachelors
+489,10,TOSA warning - NO click required,Associate
+490,10,TOSA warning - NO click required,Bachelors
+491,6,TOSA warning - NO click required,HS_or_less
+492,14,TOSA warning - NO click required,Bachelors
+493,13,TOSA warning - NO click required,Associate
+494,10,TOSA warning - NO click required,Graduate
+495,15,TOSA warning - NO click required,HS_or_less
+496,13,TOSA warning - NO click required,Graduate
+497,10,TOSA warning - NO click required,Bachelors
+498,8,TOSA warning - NO click required,Bachelors
+499,14,TOSA warning - NO click required,HS_or_less
+500,11,TOSA warning - NO click required,Bachelors
+501,9,TOSA warning - NO click required,Bachelors
+502,12,TOSA warning - NO click required,Bachelors
+503,6,TOSA warning - NO click required,Bachelors
+504,2,TOSA warning - NO click required,Bachelors
+505,10,TOSA warning - NO click required,Bachelors
+506,2,TOSA warning - NO click required,Graduate
+507,10,TOSA warning - NO click required,Bachelors
+508,7,TOSA warning - NO click required,HS_or_less
+509,13,TOSA warning - NO click required,Bachelors
+510,5,TOSA warning - NO click required,HS_or_less
+511,0,TOSA warning - NO click required,HS_or_less
+512,11,TOSA warning - NO click required,Bachelors
+513,9,TOSA warning - NO click required,Bachelors
+514,16,TOSA warning - NO click required,HS_or_less
+515,6,TOSA warning - NO click required,HS_or_less
+516,7,TOSA warning - NO click required,Associate
+517,6,TOSA warning - NO click required,Bachelors
+518,15,TOSA warning - NO click required,Bachelors
+519,15,TOSA warning - NO click required,Bachelors
+520,1,TOSA warning - NO click required,Bachelors
+521,5,TOSA warning - NO click required,HS_or_less
+522,14,TOSA warning - NO click required,Associate
+523,5,TOSA warning - NO click required,Associate
+524,16,TOSA warning - NO click required,Bachelors
+525,9,TOSA warning - NO click required,Associate
+526,0,TOSA warning - NO click required,Bachelors
+527,8,TOSA warning - NO click required,Associate
+528,14,TOSA warning - NO click required,Bachelors
+529,13,TOSA warning - NO click required,Graduate
+530,14,TOSA warning - NO click required,Bachelors
+531,9,TOSA warning - NO click required,Associate
+532,13,TOSA warning - NO click required,Associate
+533,6,TOSA warning - NO click required,HS_or_less
+534,16,TOSA warning - NO click required,HS_or_less
+535,6,TOSA warning - NO click required,Bachelors
+536,2,TOSA warning - NO click required,HS_or_less
+537,21,TOSA warning - NO click required,HS_or_less
+538,13,TOSA warning - NO click required,Bachelors
+539,7,TOSA warning - NO click required,Bachelors
+540,14,TOSA warning - NO click required,HS_or_less
+541,11,TOSA warning - NO click required,Bachelors
+542,6,TOSA warning - NO click required,Bachelors
+543,6,TOSA warning - NO click required,Bachelors
+544,0,TOSA warning - NO click required,Bachelors
+545,4,TOSA warning - NO click required,Bachelors
+546,3,TOSA warning - NO click required,Bachelors
+547,6,TOSA warning - NO click required,HS_or_less
+548,10,TOSA warning - NO click required,Bachelors
+549,13,TOSA warning - NO click required,Bachelors
+550,9,TOSA warning - NO click required,Associate
+551,13,TOSA warning - NO click required,Bachelors
+552,11,TOSA warning - NO click required,Graduate
+553,6,TOSA warning - NO click required,Bachelors
+554,13,TOSA warning - NO click required,Bachelors
+555,0,TOSA warning - NO click required,Graduate
+556,10,TOSA warning - NO click required,Bachelors
+557,8,TOSA warning - NO click required,Graduate
+558,14,TOSA warning - NO click required,Associate
+559,12,TOSA warning - NO click required,Bachelors
+560,8,TOSA warning - NO click required,Associate
+561,14,TOSA warning - NO click required,HS_or_less
+562,1,TOSA warning - NO click required,Graduate
+563,6,TOSA warning - NO click required,Bachelors
+564,0,TOSA warning - NO click required,Bachelors
+565,5,TOSA warning - NO click required,Bachelors
+566,16,TOSA warning - NO click required,HS_or_less
+567,10,TOSA warning - NO click required,Graduate
+568,15,TOSA warning - NO click required,Bachelors
+569,12,TOSA warning - NO click required,HS_or_less
+570,10,TOSA warning - NO click required,HS_or_less
+571,20,TOSA warning - NO click required,HS_or_less
+572,8,TOSA warning - NO click required,Associate
+573,4,TOSA warning - NO click required,Bachelors
+574,2,TOSA warning - NO click required,Bachelors
+575,11,TOSA warning - NO click required,Associate
+576,11,TOSA warning - NO click required,Bachelors
+577,16,TOSA warning - NO click required,Bachelors
+578,9,TOSA warning - NO click required,Bachelors
+579,8,TOSA warning - NO click required,Associate
+580,11,TOSA warning - NO click required,Bachelors
+581,2,TOSA warning - NO click required,Associate
+582,10,TOSA warning - NO click required,HS_or_less
+583,18,TOSA warning - NO click required,Bachelors
+584,17,TOSA warning - NO click required,Bachelors
+585,11,TOSA warning - NO click required,HS_or_less
+586,13,TOSA warning - NO click required,Associate
+587,10,TOSA warning - NO click required,Associate
+588,7,TOSA warning - NO click required,Graduate
+589,8,TOSA warning - NO click required,Bachelors
+590,6,TOSA warning - NO click required,Bachelors
+591,13,TOSA warning - NO click required,Bachelors
+592,11,TOSA warning - NO click required,Graduate
+593,2,TOSA warning - NO click required,Bachelors
+594,11,TOSA warning - NO click required,Bachelors
+595,6,TOSA warning - NO click required,HS_or_less
+596,14,TOSA warning - NO click required,HS_or_less
+597,7,TOSA warning - NO click required,Graduate
+598,2,TOSA warning - NO click required,Graduate
+599,18,TOSA warning - NO click required,Bachelors
+600,13,TOSA warning - NO click required,HS_or_less
+601,2,TOSA warning - NO click required,Graduate
+602,10,TOSA warning - NO click required,Graduate
+603,10,TOSA warning - NO click required,HS_or_less
+604,3,TOSA warning - NO click required,Bachelors
+605,14,TOSA warning - NO click required,Bachelors
+606,2,TOSA warning - NO click required,Bachelors
+607,17,TOSA warning - NO click required,Bachelors
+608,7,TOSA warning - NO click required,HS_or_less
+609,13,TOSA warning - NO click required,Bachelors
+610,11,TOSA warning - NO click required,Bachelors
+611,0,TOSA warning - NO click required,Bachelors
+612,0,TOSA warning - NO click required,Associate
+613,0,TOSA warning - NO click required,Graduate
+614,14,TOSA warning - click required,HS_or_less
+615,4,TOSA warning - click required,HS_or_less
+616,0,TOSA warning - click required,Bachelors
+617,5,TOSA warning - click required,Bachelors
+618,11,TOSA warning - click required,HS_or_less
+619,17,TOSA warning - click required,HS_or_less
+620,4,TOSA warning - click required,Bachelors
+621,13,TOSA warning - click required,Bachelors
+622,10,TOSA warning - click required,Bachelors
+623,11,TOSA warning - click required,Bachelors
+624,6,TOSA warning - click required,Graduate
+625,15,TOSA warning - click required,Bachelors
+626,1,TOSA warning - click required,Bachelors
+627,0,TOSA warning - click required,Associate
+628,0,TOSA warning - click required,Associate
+629,2,TOSA warning - click required,Bachelors
+630,1,TOSA warning - click required,Bachelors
+631,8,TOSA warning - click required,Bachelors
+632,1,TOSA warning - click required,Graduate
+633,1,TOSA warning - click required,Bachelors
+634,0,TOSA warning - click required,HS_or_less
+635,12,TOSA warning - click required,Bachelors
+636,15,TOSA warning - click required,Graduate
+637,14,TOSA warning - click required,Graduate
+638,3,TOSA warning - click required,Graduate
+639,12,TOSA warning - click required,HS_or_less
+640,6,TOSA warning - click required,HS_or_less
+641,9,TOSA warning - click required,Bachelors
+642,5,TOSA warning - click required,Associate
+643,14,TOSA warning - click required,Associate
+644,10,TOSA warning - click required,Bachelors
+645,13,TOSA warning - click required,Bachelors
+646,16,TOSA warning - click required,HS_or_less
+647,9,TOSA warning - click required,Bachelors
+648,9,TOSA warning - click required,HS_or_less
+649,8,TOSA warning - click required,Bachelors
+650,4,TOSA warning - click required,Bachelors
+651,5,TOSA warning - click required,Bachelors
+652,6,TOSA warning - click required,HS_or_less
+653,6,TOSA warning - click required,HS_or_less
+654,10,TOSA warning - click required,Graduate
+655,13,TOSA warning - click required,HS_or_less
+656,4,TOSA warning - click required,Associate
+657,13,TOSA warning - click required,Graduate
+658,6,TOSA warning - click required,Graduate
+659,7,TOSA warning - click required,Graduate
+660,14,TOSA warning - click required,Bachelors
+661,4,TOSA warning - click required,Graduate
+662,15,TOSA warning - click required,HS_or_less
+663,10,TOSA warning - click required,Bachelors
+664,5,TOSA warning - click required,Bachelors
+665,16,TOSA warning - click required,HS_or_less
+666,6,TOSA warning - click required,Bachelors
+667,12,TOSA warning - click required,Bachelors
+668,7,TOSA warning - click required,Bachelors
+669,18,TOSA warning - click required,HS_or_less
+670,10,TOSA warning - click required,Associate
+671,0,TOSA warning - click required,Bachelors
+672,1,TOSA warning - click required,Associate
+673,1,TOSA warning - click required,Bachelors
+674,11,TOSA warning - click required,Associate
+675,5,TOSA warning - click required,HS_or_less
+676,14,TOSA warning - click required,HS_or_less
+677,15,TOSA warning - click required,HS_or_less
+678,2,TOSA warning - click required,Bachelors
+679,12,TOSA warning - click required,Bachelors
+680,8,TOSA warning - click required,HS_or_less
+681,9,TOSA warning - click required,HS_or_less
+682,14,TOSA warning - click required,Bachelors
+683,9,TOSA warning - click required,Associate
+684,13,TOSA warning - click required,Graduate
+685,0,TOSA warning - click required,Bachelors
+686,4,TOSA warning - click required,Graduate
+687,5,TOSA warning - click required,Graduate
+688,11,TOSA warning - click required,Graduate
+689,7,TOSA warning - click required,Associate
+690,20,TOSA warning - click required,Bachelors
+691,8,TOSA warning - click required,Bachelors
+692,2,TOSA warning - click required,Bachelors
+693,4,TOSA warning - click required,Bachelors
+694,16,TOSA warning - click required,HS_or_less
+695,0,TOSA warning - click required,Bachelors
+696,15,TOSA warning - click required,Bachelors
+697,16,TOSA warning - click required,Associate
+698,13,TOSA warning - click required,HS_or_less
+699,4,TOSA warning - click required,HS_or_less
+700,4,TOSA warning - click required,Bachelors
+701,14,TOSA warning - click required,Bachelors
+702,0,TOSA warning - click required,Bachelors
+703,14,TOSA warning - click required,Graduate
+704,7,TOSA warning - click required,Bachelors
+705,14,TOSA warning - click required,Bachelors
+706,2,TOSA warning - click required,Bachelors
+707,5,TOSA warning - click required,Bachelors
+708,2,TOSA warning - click required,Associate
+709,10,TOSA warning - click required,Bachelors
+710,3,TOSA warning - click required,HS_or_less
+711,4,TOSA warning - click required,Associate
+712,7,TOSA warning - click required,Bachelors
+713,7,TOSA warning - click required,Bachelors
+714,1,TOSA warning - click required,Bachelors
+715,8,TOSA warning - click required,Graduate
+716,6,TOSA warning - click required,Bachelors
+717,5,TOSA warning - click required,Graduate
+718,5,TOSA warning - click required,Bachelors
+719,7,TOSA warning - click required,Graduate
+720,2,TOSA warning - click required,Associate
+721,6,TOSA warning - click required,Associate
+722,6,TOSA warning - click required,Bachelors
+723,0,TOSA warning - click required,Bachelors
+724,11,TOSA warning - click required,HS_or_less
+725,4,TOSA warning - click required,Graduate
+726,11,TOSA warning - click required,Graduate
+727,21,TOSA warning - click required,HS_or_less
+728,3,TOSA warning - click required,Bachelors
+729,10,TOSA warning - click required,Bachelors
+730,12,TOSA warning - click required,HS_or_less
+731,12,TOSA warning - click required,HS_or_less
+732,20,TOSA warning - click required,Bachelors
+733,5,TOSA warning - click required,Bachelors
+734,9,TOSA warning - click required,HS_or_less
+735,8,TOSA warning - click required,Bachelors
+736,1,TOSA warning - click required,Bachelors
+737,9,TOSA warning - click required,HS_or_less
+738,11,TOSA warning - click required,HS_or_less
+739,1,TOSA warning - click required,Graduate
+740,4,TOSA warning - click required,HS_or_less
+741,2,TOSA warning - click required,Graduate
+742,1,TOSA warning - click required,Associate
+743,17,TOSA warning - click required,Graduate
+744,15,TOSA warning - click required,Associate
+745,17,TOSA warning - click required,Bachelors
+746,10,TOSA warning - click required,Bachelors
+747,1,TOSA warning - click required,Bachelors
+748,4,TOSA warning - click required,Graduate
+749,11,TOSA warning - click required,Bachelors
+750,7,TOSA warning - click required,Graduate
+751,2,TOSA warning - click required,HS_or_less
+752,9,TOSA warning - click required,Bachelors
+753,12,TOSA warning - click required,Associate
+754,11,TOSA warning - click required,HS_or_less
+755,14,TOSA warning - click required,Bachelors
+756,1,TOSA warning - click required,Graduate
+757,15,TOSA warning - click required,Bachelors
+758,4,TOSA warning - click required,Graduate
+759,1,TOSA warning - click required,Graduate
+760,3,TOSA warning - click required,Bachelors
+761,14,TOSA warning - click required,Associate
+762,1,TOSA warning - click required,Associate
+763,2,TOSA warning - click required,Bachelors
+764,6,TOSA warning - click required,Graduate
+765,6,TOSA warning - click required,Graduate
+766,19,TOSA warning - click required,Associate
+767,2,TOSA warning - click required,Bachelors
+768,8,TOSA warning - click required,Bachelors
+769,17,TOSA warning - click required,Bachelors
+770,16,TOSA warning - click required,HS_or_less
+771,0,TOSA warning - click required,Bachelors
+772,14,TOSA warning - click required,Graduate
+773,1,TOSA warning - click required,Graduate
+774,1,TOSA warning - click required,Bachelors
+775,7,TOSA warning - click required,Associate
+776,5,TOSA warning - click required,HS_or_less
+777,12,TOSA warning - click required,Bachelors
+778,18,TOSA warning - click required,Graduate
+779,1,TOSA warning - click required,Bachelors
+780,13,TOSA warning - click required,Bachelors
+781,1,TOSA warning - click required,Graduate
+782,5,TOSA warning - click required,Graduate
+783,0,TOSA warning - click required,Bachelors
+784,1,TOSA warning - click required,Bachelors
+785,0,TOSA warning - click required,Bachelors
+786,18,TOSA warning - click required,Graduate
+787,7,TOSA warning - click required,HS_or_less
+788,0,TOSA warning - click required,Bachelors
+789,11,TOSA warning - click required,Associate
+790,14,TOSA warning - click required,Graduate
+791,12,TOSA warning - click required,Bachelors
+792,2,TOSA warning - click required,Bachelors
+793,4,TOSA warning - click required,Graduate
+794,9,TOSA warning - click required,Bachelors
+795,9,TOSA warning - click required,Graduate
+796,13,TOSA warning - click required,Bachelors
+797,4,TOSA warning - click required,HS_or_less
+798,16,TOSA warning - click required,Bachelors
+799,8,TOSA warning - click required,Associate
+800,11,TOSA warning - click required,Associate
+801,14,TOSA warning - click required,Bachelors
+802,10,TOSA warning - click required,Associate
+803,11,TOSA warning - click required,Bachelors
+804,4,TOSA warning - click required,Bachelors
+805,18,TOSA warning - click required,Bachelors
+806,11,TOSA warning - click required,HS_or_less
+807,14,TOSA warning - click required,HS_or_less
+808,7,TOSA warning - click required,Bachelors
+809,12,TOSA warning - click required,HS_or_less
+810,8,TOSA warning - click required,Bachelors
+811,5,TOSA warning - click required,Bachelors
+812,12,TOSA warning - click required,Bachelors
+813,3,TOSA warning - click required,Graduate
+814,7,TOSA warning - click required,HS_or_less
+815,0,TOSA warning - click required,Associate
+816,16,TOSA warning - click required,Graduate
+817,10,TOSA warning - click required,Bachelors
+818,1,TOSA warning - click required,Graduate
+819,2,TOSA warning - click required,Bachelors
+820,14,TOSA warning - click required,Bachelors
+821,12,TOSA warning - click required,Associate
+822,18,TOSA warning - click required,Bachelors
+823,13,TOSA warning - click required,HS_or_less
+824,16,TOSA warning - click required,HS_or_less
+825,7,TOSA warning - click required,Bachelors
+826,9,TOSA warning - click required,Bachelors
+827,7,TOSA warning - click required,Bachelors
+828,0,TOSA warning - click required,Bachelors
+829,0,TOSA warning - click required,HS_or_less
+830,9,TOSA warning - click required,Bachelors
+831,8,TOSA warning - click required,Bachelors
+832,10,TOSA warning - click required,Bachelors
+833,0,TOSA warning - click required,Graduate
+834,0,TOSA warning - click required,Bachelors
+835,9,TOSA warning - click required,Bachelors
+836,8,TOSA warning - click required,Associate
+837,13,TOSA warning - click required,Bachelors
+838,0,TOSA warning - click required,Bachelors
+839,5,TOSA warning - click required,Graduate
+840,8,TOSA warning - click required,Graduate
+841,15,TOSA warning - click required,HS_or_less
+842,9,TOSA warning - click required,HS_or_less
+843,1,TOSA warning - click required,HS_or_less
+844,16,TOSA warning - click required,Bachelors
+845,14,TOSA warning - click required,Bachelors
+846,11,TOSA warning - click required,Bachelors
+847,12,TOSA warning - click required,Associate
+848,3,TOSA warning - click required,Bachelors
+849,8,TOSA warning - click required,Graduate
+850,8,TOSA warning - click required,Bachelors
+851,0,TOSA warning - click required,Bachelors
+852,11,TOSA warning - click required,Graduate
+853,10,TOSA warning - click required,Bachelors
+854,5,TOSA warning - click required,Bachelors
+855,3,TOSA warning - click required,Bachelors
+856,11,TOSA warning - click required,Bachelors
+857,9,TOSA warning - click required,Bachelors
+858,0,TOSA warning - click required,Bachelors
+859,12,TOSA warning - click required,Bachelors
+860,1,TOSA warning - click required,Associate
+861,14,TOSA warning - click required,Bachelors
+862,7,TOSA warning - click required,Bachelors
+863,4,TOSA warning - click required,Bachelors
+864,4,TOSA warning - click required,Associate
+865,5,TOSA warning - click required,Bachelors
+866,12,TOSA warning - click required,HS_or_less
+867,11,TOSA warning - click required,HS_or_less
+868,18,TOSA warning - click required,Bachelors
+869,5,TOSA warning - click required,Bachelors
+870,9,TOSA warning - click required,Associate
+871,13,TOSA warning - click required,Graduate
+872,9,TOSA warning - click required,HS_or_less
+873,14,TOSA warning - click required,Associate
+874,13,TOSA warning - click required,Bachelors
+875,6,TOSA warning - click required,Bachelors
+876,6,TOSA warning - click required,Graduate
+877,1,TOSA warning - click required,Bachelors
+878,7,TOSA warning - click required,Bachelors
+879,5,TOSA warning - click required,Associate
+880,8,TOSA warning - click required,Bachelors
+881,14,TOSA warning - click required,Graduate
+882,8,TOSA warning - click required,Bachelors
+883,6,TOSA warning - click required,Bachelors
+884,16,TOSA warning - click required,Associate
+885,13,TOSA warning - click required,Bachelors
+886,6,TOSA warning - click required,HS_or_less
+887,6,TOSA warning - click required,Bachelors
+888,13,TOSA warning - click required,Associate
+889,8,TOSA warning - click required,Graduate
+890,9,TOSA warning - click required,Associate
+891,15,TOSA warning - click required,HS_or_less
+892,4,TOSA warning - click required,HS_or_less
+893,18,TOSA warning - click required,Associate
+894,10,TOSA warning - click required,Bachelors
+895,2,TOSA warning - click required,Graduate
+896,10,TOSA warning - click required,Bachelors
+897,9,TOSA warning - click required,HS_or_less
+898,1,TOSA warning - click required,Graduate
+899,7,TOSA warning - click required,HS_or_less
+900,4,TOSA warning - click required,Bachelors
+901,7,TOSA warning - click required,HS_or_less
+902,0,TOSA warning - click required,Graduate
+903,3,TOSA warning - click required,Graduate
+904,18,TOSA warning - click required,HS_or_less
+905,19,TOSA warning - click required,HS_or_less
+906,10,TOSA warning - click required,Graduate
+907,8,TOSA warning - click required,HS_or_less
+908,12,TOSA warning - click required,Associate
+909,5,TOSA warning - click required,Graduate
+910,12,TOSA warning - click required,Bachelors
+911,5,TOSA warning - click required,Bachelors
+912,0,TOSA warning - click required,Bachelors
+913,13,TOSA warning - click required,Bachelors
+914,12,TOSA warning - click required,Bachelors
+915,3,TOSA warning - click required,Graduate
+916,5,TOSA warning - click required,Bachelors
+917,0,TOSA warning - click required,Bachelors
+918,0,TOSA warning - click required,HS_or_less
+919,0,TOSA warning - click required,Graduate
+920,0,TOSA warning - click required,Bachelors
+921,0,TOSA warning - click required,Graduate
+922,0,TOSA warning - click required,Bachelors
+923,0,TOSA warning - click required,Bachelors
+924,0,TOSA warning - click required,HS_or_less
+925,0,TOSA warning - click required,Graduate
+926,0,TOSA warning - click required,Bachelors
+927,0,TOSA warning - click required,HS_or_less
+928,3,TOSA warning - click required,Bachelors
+929,0,TOSA warning - click required,Graduate
+930,0,TOSA warning - click required,Graduate
+931,12,TOSA warning - click required,Graduate
+932,11,TOSA warning - click required,Graduate
+933,15,TOSA warning - click required,Bachelors
+934,14,TOSA warning - click required,HS_or_less
+935,2,TOSA warning - click required,Bachelors
+936,7,TOSA warning - click required,Bachelors
+938,4,TOSA warning - click required,Bachelors
+939,0,TOSA warning - click required,Graduate
+940,0,TOSA warning - click required,Bachelors
+941,13,Beginning warning - NO click required,HS_or_less
+942,18,Beginning warning - NO click required,Bachelors
+943,11,Beginning warning - NO click required,Bachelors
+944,0,Beginning warning - NO click required,Bachelors
+945,18,Beginning warning - NO click required,Bachelors
+946,1,Beginning warning - NO click required,Bachelors
+947,12,Beginning warning - NO click required,Bachelors
+948,24,Beginning warning - NO click required,Associate
+949,5,Beginning warning - NO click required,HS_or_less
+950,7,Beginning warning - NO click required,HS_or_less
+951,4,Beginning warning - NO click required,Associate
+952,20,Beginning warning - NO click required,Associate
+953,6,Beginning warning - NO click required,Associate
+954,2,Beginning warning - NO click required,Bachelors
+955,8,Beginning warning - NO click required,Associate
+956,11,Beginning warning - NO click required,Bachelors
+957,12,Beginning warning - NO click required,HS_or_less
+958,10,Beginning warning - NO click required,Graduate
+959,16,Beginning warning - NO click required,HS_or_less
+960,8,Beginning warning - NO click required,HS_or_less
+961,4,Beginning warning - NO click required,Graduate
+962,0,Beginning warning - NO click required,Bachelors
+963,9,Beginning warning - NO click required,Bachelors
+964,9,Beginning warning - NO click required,Bachelors
+965,19,Beginning warning - NO click required,Associate
+966,13,Beginning warning - NO click required,Graduate
+967,12,Beginning warning - NO click required,Bachelors
+968,5,Beginning warning - NO click required,HS_or_less
+969,9,Beginning warning - NO click required,Associate
+970,3,Beginning warning - NO click required,Graduate
+971,2,Beginning warning - NO click required,HS_or_less
+972,11,Beginning warning - NO click required,Graduate
+973,15,Beginning warning - NO click required,Bachelors
+974,1,Beginning warning - NO click required,Bachelors
+975,14,Beginning warning - NO click required,Associate
+976,12,Beginning warning - NO click required,Associate
+977,14,Beginning warning - NO click required,Associate
+978,14,Beginning warning - NO click required,Bachelors
+979,1,Beginning warning - NO click required,Bachelors
+980,8,Beginning warning - NO click required,Graduate
+981,8,Beginning warning - NO click required,Bachelors
+982,16,Beginning warning - NO click required,HS_or_less
+983,11,Beginning warning - NO click required,Bachelors
+984,19,Beginning warning - NO click required,HS_or_less
+985,16,Beginning warning - NO click required,HS_or_less
+986,16,Beginning warning - NO click required,HS_or_less
+987,12,Beginning warning - NO click required,Bachelors
+988,16,Beginning warning - NO click required,Bachelors
+989,11,Beginning warning - NO click required,HS_or_less
+990,13,Beginning warning - NO click required,Bachelors
+991,10,Beginning warning - NO click required,Graduate
+992,1,Beginning warning - NO click required,Bachelors
+993,0,Beginning warning - NO click required,Graduate
+994,16,Beginning warning - NO click required,HS_or_less
+995,11,Beginning warning - NO click required,HS_or_less
+996,5,Beginning warning - NO click required,Bachelors
+997,12,Beginning warning - NO click required,HS_or_less
+998,14,Beginning warning - NO click required,HS_or_less
+999,5,Beginning warning - NO click required,Graduate

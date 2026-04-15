@@ -1,0 +1,44 @@
+#include <msp430.h>
+
+int main(void)
+{
+    WDTCTL = WDTPW | WDTHOLD;   // Stop watchdog
+
+    PM5CTL0 &= ~LOCKLPM5;       // Unlock GPIO (CRITICAL)
+
+    // ---------------------------
+    // Configure LED pins (P3.0–P3.3) as OUTPUT
+    // ---------------------------
+    P3DIR |= BIT0 | BIT1 | BIT2 | BIT3;
+    P3OUT &= ~(BIT0 | BIT1 | BIT2); // Start OFF
+    P3OUT |= BIT3;
+
+    // ---------------------------
+    // Configure input pins (P5.0–P5.3)
+    // ---------------------------
+    P5DIR &= ~(BIT0 | BIT1 | BIT2 | BIT3); // Set as INPUT
+
+    // Enable internal pull-down resistors
+    P5REN |= BIT0 | BIT1 | BIT2 | BIT3;    // Enable resistor
+    P5OUT &= ~(BIT0 | BIT1 | BIT2 | BIT3); // Pull-down (0 = pull-down)
+
+    while (1)
+    {
+        // Clear all LEDs first
+        P3OUT &= ~(BIT0 | BIT1 | BIT2 | BIT3);
+
+        // Check each input and set corresponding LED
+
+        if (P5IN & BIT0)
+            P3OUT |= BIT0;
+
+        if (P5IN & BIT1)
+            P3OUT |= BIT1;
+
+        if (P5IN & BIT2)
+            P3OUT |= BIT2;
+
+        if (P5IN & BIT3)
+            P3OUT |= BIT3;
+    }
+}

@@ -1,0 +1,247 @@
+---
+title: "Scatterplot Activity"
+author: "Lucas Jones"
+date: "Due Tuesday, April 7th, 2022 by 11:59pm in Gradescope"
+output:
+  word_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      Method = FALSE,
+                      warnings = FALSE, 
+                      eval = T)
+options(show.signif.stars = FALSE)
+library(readr)
+```
+
+## Instructions
+
+**Include all code and generated plots to receive full credit for each question. Be sure to bold your answers to questions where relevant, and write in complete sentences. Answers to multiple choice questions may be indicated by typing the selected letter below the choices and bolding it. You should spell check your RMD file by going to "edit-> check spelling." Also, be sure to proofread your knitted document to ensure all images and formatting are correctly implemented. Once finished, submit your completed work as a PDF on Gradescope.**
+
+***If you work in a group (of up to four people), please make sure ALL group member names are listed in line 4 and in the Gradescope submission! Each group only needs to submit one PDF to Gradescope.***
+
+
+## Background
+
+Rent prices in Montana have been rapidly increasing over the past several years. Prices in the housing market are determined by many factors, however the underling hypothesis about the drivers of prices is the theory of supply and demand, first developed by Alfred Marshall in 1890. Some markets are quick to respond to changes in supply and demand. However, housing markets are generally slow to respond, as building projects are often costly and lengthy.
+
+If demand for housing increases faster than the supply can support, this will lead to an increase in price until or unless the supply is able to catch up. Montana specifically is seeing a lot of population growth as people are leaving their crowded city lifestyles for a more rural and open one. The advent of COVID-19 and the rise of telecommuting further fueled this growth. As the population in Montana increases, more people are looking for homes and apartments, meaning the demand for homes is increasing. As previously mentioned, unless supply is able to keep up with demand, we would expect to see an increase in rent prices as a direct result.
+
+Additionally, we may expect specific rental markets to act differently than others. For example, Bozeman, MT has become a "hot-spot" for people looking to relocate because of the college, outdoor recreation opportunities, and natural beauty. Missoula, Kalispell and Cut Bank are similar in this regard as well. It may be reasonable to expect that in these "tourist" areas, rent prices may increase at a faster rate than areas that are classified as "urban" or "rural" in Montana. These discrepancies could also be explained by many things such as demographics, geography, politics, etc.
+
+Our data set contains average rent prices for the 56 Montana counties as measured by the "Fair Market Rent Price Index" as well as the average population of each Montana county from the years 2013-2021. Other variables include the percent rent increase from baseline year 2013, percent population increase from baseline year 2013, and the classifications for each county ("Tourist," "Urban," or "Rural"). Note that there are two versions of this classification: the first classification (`Class`) is determined by the USDA urbanization classification and the second (`Class2`) is determined by population density.
+
+To test this, _we are going to explore the relationship between population increase and rent increases, and whether or not a county's classification (`Tourist`,`Urban`, or `Rural`) affects this relationship_. In addition, we will also compare the relationship between population increase and rent increase by county.
+
+
+This dataset contains the following variables:
+
+* `Year`: The year the observation was recorded (2013-2021).
+
+* `State`: Name of the state the county is in (in this version of the data, the only state listed is Montana).
+
+* `county_name`: County name.
+
+* `Rent`: Avg rent for a 3 bedroom dwelling by county, measured in nominal dollars. 
+
+* `Pop`: Population of the county for a given year.
+
+* `RentInc`: Percent increase in rent measured from baseline year of 2013.
+
+* `PopInc`: Percent increase in population measured from baseline year of 2013.
+
+* `Class`: Classification of the county (`Rural`, `Urban`, `Tourist`), based on USDA measurements.
+
+* `Class2`: Classification of the county (`Rural`, `Urban`, `Tourist`), adjusted from the USDA classification using empirical knowledge.
+
+*Data courtesy of USDA, rentdata.org, and Max Magers*
+
+
+## Exploratory Data Analysis
+
+Review the "Grammar of Graphics" section on page 16 in Section 1.5 in your textbook. Afterwards, read through the following examples and explanations of some of the different features available in ggplots.
+
+1. This dataset requires a little wrangling. In the code chunk below, mutate the variables **State**, **county_name**, **Class**, and **Class2** to declare them as factors by replacing the ### with the appropriate variable names. 
+
+```{r message = F, warning = F, fig.height = 4, fig.width = 7}
+library(tidyverse)
+library(readr)
+load.data <- read_csv("RentData4.csv")
+#Here we read the data set into load.data
+
+#Below we will mutate the categorical variables so they read as categorical
+RentData <- load.data %>%
+  mutate(
+    State = as.factor(State),
+    county_name = as.factor(county_name),
+    Class = as.factor(Class),
+    Class2 = as.factor(Class)
+  )
+
+```
+
+1a. In the code below, replace the ### with the names of the two variables of interest associated with the primary research question to create a scatterplot. Make sure that percent rent increase is displayed as a function of percent population increase. 
+
+```{r}
+RentData %>% 
+  ggplot(mapping = aes(y = RentInc, x = PopInc)) +
+  geom_point() + ## makes a scatterplot
+  theme_bw()
+
+```
+
+1b. The above plot is informative about the relationship between these two variables, but there are other aspects of the counties classifications that might add information to this pairwise comparison; we can use ggplot features to incorporate additional information. For example, we may want to see on our plot how the relationship between `RentInc` and `PopInc` differs across the three original classifications in the study. To do this, we can color points on our plot based on the class by including the argument `color = Class` in the aesthetic mapping of our ggplot to tell R how to color the points. By including this argument in the ggplot mapping, we are declaring _globally_, meaning this will be applied to all subsequent layers without us having to do this step for each layer. We can also add the command `scale_colour_viridis_d()` to instruct ggplot to use a colorblind friendly palette instead of the default color scheme. 
+
+Replace the ### with the variable names and run the code below to display the plot.
+
+```{r fig.height = 4, fig.width = 7, message = F, warning = F}
+#install.packages("viridis") #Uncomment to install and re-comment out before knitting
+library(viridis)
+
+RentData %>%
+  ggplot(mapping = aes(y = RentInc, x = PopInc, color = Class)) +
+  geom_point() +
+  scale_colour_viridis_d() +
+  theme_bw()
+```
+
+Coloring the observed values on our scatterplot by their class type helps us to get a better visual understanding of the relationship between `RentInc` and `PopInc` across the different classifications, but we may also want more information about the density of observations on our scatterplot.
+
+1c. The argument `size =` will adjust the size of the points on the scatterplot and the argument `alpha =` will adjust the transparency of the points on the scatterplot when we include them in the `geom_point()` function. We can increase the size of the points by setting `size` to a value larger than 1 and we can increase the transparency of the points by setting `alpha` to a value less than 1. The closer `alpha` is to zero, the more transparent the points will appear on the plot.
+
+Replace the ### with the variable names and run the code below to display the plot.
+
+```{r fig.height = 4, fig.width = 7}
+RentData %>% 
+  ggplot(mapping = aes(y = RentInc, x = PopInc, 
+                       color = Class)) +
+  geom_point(size = 4, alpha = .4) +
+  #`size =` changes the size of the points & `alpha =` changes the transparency
+  scale_colour_viridis_d() +
+  theme_bw()
+```
+
+1d. The `ggplot2` package also has a feature called "faceting," which allows us to split our plot into multiple smaller plots based on a factor in our dataset; each individual faceted plot is associated with a level of the factor. This is added by layering in the `facet_wrap(facets = vars())` function, where the factor you want to facet by goes into the `vars()` function. Then we can also add informative labels to our plot by adding the `labs()` function to the plot code.
+
+Replace the ### with the variable names and run the code below to display the plot.
+
+```{r fig.height = 4, fig.width = 7}
+RentData %>% 
+  ggplot(mapping = aes(y = RentInc, x = PopInc, 
+                       color = Class)) +
+  geom_point(size = 4, alpha = .4) +
+  facet_wrap(facets = vars(Class))+
+  #facets our plot by the factor `Class`
+  labs(title = "Rent Increase by Population Increase by Classification",
+         y = "% Rent Increase ",
+         x = "% Population Increase" ) +
+  #adds labels to our plot
+  scale_colour_viridis_d() +
+  theme_bw()
+
+```
+
+2. Based on personal experience, we believe the initial USDA classifications are not an accurate categorization of the counties in Montana, so we will now use the adjusted class variable (`Class2`). Create a scatterplot of these data by completing the code below (replace each ### in the code below). Color the observed values by the `Class2` variable and select a value to increase the size and transparency of the points on your graph that enhances the plots (**Note: you will only earn points for using a valid number other than the ones previously used in the preceding examples**). Try various values for both size and alpha until you feel it displays the data density well. Then facet the plot by `Class2` and give it informative labels. Please note that we will use the `Class2` variable for the remainder of this activity.
+
+Additionally, change the color of the points by exploring the different palettes within the `viridis` package. To view the palettes, navigate to the viridis package under the Packages tab and click on the package name. Then click on "User guides, package vignettes, and other documentation." Click on "viridis::intro-to-viridis" and then select "The Color Scales" in the table of contents. Replace the ??? with the name of your chosen palette. Note that you can choose where the color spectrum ends by including `end = ` and entering a value between 0 and 1 (or you can use `begin = ` to change where the spectrum begins). 
+
+```{r fig.height = 4, fig.width = 7}
+RentData %>%
+  ggplot(mapping = aes(y = RentInc, x = PopInc, 
+                       color = Class2)) +
+  geom_point(size = 3, alpha = 0.5) +
+  facet_wrap(facets = vars(Class2)) +
+  labs(title = "Rent Increase by Population Increase by Classification",
+         y = "% Rent Increase ",
+         x = "% Population Increase") +
+  scale_colour_viridis_d(option = "magma", end = 0.85) +
+  theme_bw()  
+```
+
+
+3. Using the plots you created in the previous question, describe the strength, direction, and linearity  of the relationship between percent rent increase and percent population increase for counties that are classified as `Urban`.
+
+**Looking at the Urban panel, we can see weak or moderate strength in the data, a positive/increasing direction, and a roughly linear, with some variability of data points, relationship between rent increase and percent population.**
+
+
+4. For fun, let's now look at how the relationship between `RentInc` and `PopInc` differs by county. In the code below, you will expand on the plot you made in Question 5 by replacing the @@@ with the appropriate level to create a plot for each `Urban` classified county in Montana. 
+
+```{r fig.height = 4, fig.width = 7}
+
+RentData %>%
+  filter(Class2 == "Urban")%>%
+  ggplot(mapping = aes(y = RentInc, x = PopInc, 
+                       color = county_name)) +
+  geom_point(size = 2.5, alpha = 0.67) +
+  facet_wrap(facets = vars(county_name)) +
+  labs(title = "Rent vs. Population Increase for Urban Montana Counties",
+         y = "% Rent Increase",
+         x = "% Population Increase") +
+  scale_colour_viridis_d(option = "plasma") +
+  theme_bw()   
+  
+    
+```
+
+
+5. Using the plots you created in Question 7, compare the relationship between `RentInc` and `PopInc` for Park County and Ravalli County. In which county does the percent population increase seem to have a smaller effect on the percent rent increase? Describe how the relationship between `RentInc` and `PopInc` differs for this county relative to the other county. (Hint: which plot seems to show a smaller slope?) You may find it helpful to add in another plot layer to show the regression line for each group (`geom_smooth(method="lm", se = F`), although this is not required.
+
+**Park counties relationship between RentInc and PopInc increases a lot faster than Ravalli county.**
+
+
+6. Bonus: Create a `ggpairs` plot by running the provided code. Is the correlation coefficient for the relationship between a county's classification and the percent of rent increase meaningful? Explain why or why not, in the context of the problem.
+
+
+```{r message=FALSE, warning=FALSE, fig.height = 7, fig.width = 7}
+#install.packages("GGally") #Comment out before knitting
+library(GGally)
+RentData1 <- RentData[ -c(1:3,8,10,11) ]
+RentData1 %>%
+  mutate(Class2 = as.numeric(Class2)) %>% 
+  ggpairs(upper = list(continuous = GGally::wrap(ggally_cor, stars = F))) +
+  theme_bw()
+```
+
+7. Now you will create a plot of your own using the `penguins` dataset found in the `palmerpenguins` package (you may need to install this package). First, use the Packages tab to explore the dataset (click on the name of the package, and then the name of the dataset to see what it contains). Then, create a scatterplot between two quantitative variables of your choosing. Use another variables to color the points (do not use the default ggplot colors!). Adjust the transparency and size in a manner that makes the relationship between the variables clear and enhances the readability of the plot. You are encouraged to use faceting to help further enhance your plot. Your plot should also be clearly titled/labeled and your code should be commented indicating what is happening in each layer. A code chunk with some useful library lines has been provided to get you started.
+
+Feel free to further tweak your plot as you see fit. Some resource links have been provided below:
+
+- To see the built-in ggplot themes: https://r-charts.com/ggplot2/themes/
+
+- Short tutorial for customizing scatterplots when you have a grouping variable: https://r-charts.com/correlation/scatter-plot-group-ggplot2/
+
+- The paletteer gallery (with code): https://pmassicotte.github.io/paletteer_gallery/#discrete-palettes
+
+
+```{r warning = F, message = F}
+library(tidyverse)
+library(palmerpenguins)
+library(viridis)
+data("penguins")
+
+penguins %>%
+  drop_na() %>%                                      # removes rows with missing values
+  ggplot(mapping = aes(x = flipper_length_mm,        # flipper length on x-axis
+                       y = body_mass_g,              # body mass on y-axis
+                       color = species)) +           # color points by penguin species
+  geom_point(size = 2.5, alpha = 0.6) +              # semi-transparent points to show density
+  facet_wrap(facets = vars(island)) +                # separate panel for each island
+  labs(title = "Flipper Length vs. Body Mass by Species and Island",
+       x = "Flipper Length (mm)",
+       y = "Body Mass (g)",
+       color = "Species") +                          # renames the legend title
+  scale_colour_viridis_d(option = "turbo") +         # colorblind-friendly palette, not default
+  theme_bw()                                         # clean white background theme
+
+```
+
+
+8. Briefly interpret your plot by explaining the "story" the data tell. What patterns, relationships, or group differences stand out, and what do they suggest about the variables being studied? Be specific in referencing features of the plot
+
+**The plot shows a strong, positive, and roughly linear relationship between flipper length and body mass across all islands. It also shows penguins with longer flippers consistently have greater body mass. The plot aslo shows the differences between species showing that Gentoo penguins are the largest.**
+
+9. Please list anyone that you worked on any part of this activity with if their name is not already part of this group's submission. For tutors, give their name and affiliation (MSC, SmartyCats, etc.). For fellow students, give their name and section number. If you did not utilize any outside resources, simply enter "NA."
+
+**NA**
