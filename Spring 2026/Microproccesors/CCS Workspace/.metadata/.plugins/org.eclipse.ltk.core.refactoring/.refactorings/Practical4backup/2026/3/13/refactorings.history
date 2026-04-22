@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;Practical4backup/Practical4main.c&apos; to &apos;BACKUPPractical4main.c&apos;" description="Rename resource &apos;Practical4main.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Practical4main.c" name="BACKUPPractical4main.c" stamp="1774640148548" updateReferences="true"/>
-</session>

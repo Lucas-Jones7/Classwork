@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;FP_D4-5BACKUP(1)/FP_D4-5main.c&apos; to &apos;FP_D4-5BACKUP(1)main.c&apos;" description="Rename resource &apos;FP_D4-5main.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="FP_D4-5main.c" name="FP_D4-5BACKUP(1)main.c" stamp="1776453625796" updateReferences="true"/>
-</session>

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;Lab6.2_ASM_SymIndMode_Jones/main.asm&apos; to &apos;Lab6.2main.asm&apos;" description="Rename resource &apos;main.asm&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="main.asm" name="Lab6.2main.asm" stamp="1769622444773" updateReferences="true"/>
-</session>

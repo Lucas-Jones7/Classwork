@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;Z_FP_D4_Finished/FP_D4-5main.c&apos; to &apos;FinalProject_Day4(Finished)main.c&apos;" description="Rename resource &apos;FP_D4-5main.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="FP_D4-5main.c" name="FinalProject_Day4(Finished)main.c" stamp="1776566688554" updateReferences="true"/>
-</session>

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;Lab12.1_ASM_TimerOverflows_Jones/main.asm&apos; to &apos;Lab12.1main.asm&apos;" description="Rename resource &apos;main.asm&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="main.asm" name="Lab12.1main.asm" stamp="1772486437406" updateReferences="true"/>
-</session>

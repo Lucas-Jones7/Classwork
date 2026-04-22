@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Lab12.4-12.5_CodeExample&apos; to &apos;Chp12.4-12.5_CodeExample&apos;" description="Rename resource &apos;Lab12.4-12.5_CodeExample&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Lab12.4-12.5_CodeExample" name="Chp12.4-12.5_CodeExample" stamp="1772649791742" updateReferences="true"/>&#x0A;<refactoring comment="Delete resource &apos;Lab8.1_ASM_Jumps_v2_Jones&apos;" deleteContents="false" description="Delete resource &apos;Lab8.1_ASM_Jumps_v2_Jones&apos;" element1="/Lab8.1_ASM_Jumps_v2_Jones" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1772754656892"/>
-</session>
