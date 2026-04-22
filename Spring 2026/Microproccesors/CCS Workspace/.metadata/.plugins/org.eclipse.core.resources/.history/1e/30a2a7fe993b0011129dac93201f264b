@@ -1,0 +1,22 @@
+//-----------------------------------------------------
+// Lucas Jones, EELE 371, Final Project Part 7, 04/20/2026
+//
+// Timer Configuration:
+//   SMCLK = 1,000,000 Hz
+//   ID__4 = divide by 4 = 250,000 Hz
+//   TBIDEX__4 = divide by 4 = 62,500 Hz
+//   CCR0 = 15624 = period = 0.25s
+//   (62,500 / 15,625 = 4 Hz = 0.25s period)
+//-----------------------------------------------------
+
+#include <msp430.h> 
+
+// global vars
+volatile int timerFlag = 0;
+
+int main(void)
+{
+	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
+	
+	return 0;
+}

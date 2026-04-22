@@ -1,0 +1,12 @@
+//-----------------------------------------------------
+// Lucas Jones, EELE 371, Final Project: Day 4-5, 04/17/2026
+//-----------------------------------------------------
+
+#include <msp430.h> 
+
+int main(void)
+{
+	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
+	
+	return 0;
+}

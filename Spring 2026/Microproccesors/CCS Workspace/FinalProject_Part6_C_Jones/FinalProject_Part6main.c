@@ -1,0 +1,54 @@
+//-----------------------------------------------------
+// Lucas Jones, EELE 371, Final Project Part 7, 04/20/2026
+//
+// ADC pin assingment: P1.4
+//
+// Maximum Resolution Error:
+//   LSB voltage = 3.3 V / 4095 = 0.000806V = 0.806mV per count
+//   Maximum error = (+/-)0.5LSB = (+/-)0.403mV
+//
+// Voltage Range Thresholds:
+//    DC offset = 15 DN
+//    LOW_MAX(1v) = (1 * 4095 / 3.3) - 15 = 1226
+//    HIGH_MAX(2v) = (2 * 4095 / 3.3) - 15 = 2467
+//-----------------------------------------------------
+
+#include <msp430.h> 
+
+// rtc init time (Class start: 1:10, April 13, 2026)
+#define START_REG   0x03
+#define SEC_INIT    0x00
+#define MIN_INIT    0x10
+#define HOUR_INIT   0x01
+#define DAY_INIT    0x13
+#define WDAY_INIT   0x03
+#define MONTH_INIT  0x04
+#define YEAR_INIT   0x26
+
+// tx packet array
+unsigned char txPacket[8] = {
+    START_REG, SEC_INIT, MIN_INIT, HOUR_INIT,
+    DAY_INIT, WDAY_INIT, MONTH_INIT, YEAR_INIT
+};
+
+// global vars
+// Day 2
+volatile int txIndex        = 0;
+volatile int rxIndex        = 0;
+volatile int buttonPressed  = 0;
+volatile int doingTxInit    = 0;    // 1 = writing init, 0 = writing reg pointer
+volatile unsigned char rxBuffer[2]        = {0, 0};
+volatile unsigned char timestamp_seconds  = 0;
+volatile unsigned char timestamp_minutes  = 0;
+// Day 1
+volatile unsigned int ADCvalue = 0;
+#define OFFSET   15
+#define LOW_MAX  (1226 - OFFSET)    // 1v (DN = 1226)
+#define HIGH_MAX (2467 - OFFSET)    // 2v (DN = 2467)
+
+int main(void)
+{
+	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
+	
+	return 0;
+}
