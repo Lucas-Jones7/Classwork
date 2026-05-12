@@ -1,0 +1,88 @@
+//-----------------------------------------------------
+// Lucas Jones, EELE 371, Final Project: Day 4-5, 04/17/2026
+//-----------------------------------------------------
+
+#include <msp430.h> 
+
+int main(void)
+{
+	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
+	
+	// put USCI_A1 into software reset
+	UCA1CTLW0 |= UCSWRST;
+
+	// configure USCI_A1
+	UCA1CTLW0 |= UCSSEL__SMCLK; // clock source SMCLK
+	UCA1BRW = 6;                // buad rate divider for oversampling mode
+	UCA1MCTLW = UCOS16 | UCBRF_8 | 0xAA00;  // enable oversampling mode, and set modulation
+
+	// configure ports
+	P4DIR &= ~BIT1;             // S1 input
+	P4REN |= BIT1;
+	P4OUT |= BIT1;              // pull up
+	P4IES |= BIT1;              // falling edge
+
+	P2DIR &= ~BIT3;             // S2 input
+	P2REN |= BIT3;
+	P2OUT |= BIT3;              // pull up
+	P2IES |= BIT3;              // falling edge
+
+	P4SEL1 &= ~(BIT3 | BIT2);   // UART pins
+	P4SEL0 |= (BIT3 | BIT2);
+
+	P1DIR |= BIT0;              // led1
+	P1OUT |= BIT0;              // led1 on to start
+	P6DIR |= BIT6;              // led2
+	P6OUT &= ~BIT6;             // led2 off to start
+
+	PM5CTL0 &= ~LOCKLPM5;       // enable gpio
+
+	// take USCI_A1 out of software reset
+	UCA1CTLW0 &= ~UCSWRST;
+
+	// config IRQs
+	P4IFG &= ~BIT1;
+	P4IE |= BIT1;
+	P2IFG &= ~BIT3;
+	P2IE |= BIT3;
+
+	__enable_interrupt();
+
+// -------------------------------- MAIN LOOP ---------------------------------------------------------
+	return 0;
+}
+
+
+//-----------------------------------------------------
+// Interrupt Service Routines
+//-----------------------------------------------------
+// service s1 press
+#pragma vector = PORT4_VECTOR
+__interrupt void ISR_Port4_S1(void)
+{
+    position = 0;
+    sendingLast = 0;
+
+    UCA1IE |= UCTXCPTIE;            // enable TX-complete IRQ
+    UCA1IFG &= ~UCTXCPTIFG;         // clear TX-complete flag
+    UCA1TXBUF = FirstName[position]; // load first character
+
+    P4IFG &= ~BIT1;                 // clear port flag
+}
+// ----------------------- END S1 ISR -------------------------
+
+// service s2 press
+#pragma vector = PORT2_VECTOR
+__interrupt void ISR_Port2_S2(void)
+{
+// last name "Jones" starts at sizeof(FirstName) in FullName
+    position = sizeof(FirstName) - 1;
+    sendingLast = 1;
+
+    UCA1IE |= UCTXCPTIE;
+    UCA1IFG &= ~UCTXCPTIFG;
+    UCA1TXBUF = FullName[position];
+
+    P2IFG &= ~BIT3;                 // clear port flag
+}
+// ----------------------- END S2 ISR  ------------------------

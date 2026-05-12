@@ -1,0 +1,148 @@
+///-----------------------------------------------------
+// Lucas Jones, EELE 371, Final Project: Day 2, 04/13/2026
+//-----------------------------------------------------
+
+#include <msp430.h>
+
+
+// rtc init time (Class start: 1:10, April 13, 2026)
+#define START_REG   0x03
+#define SEC_INIT    0x00
+#define MIN_INIT    0x10
+#define HOUR_INIT   0x01
+#define DAY_INIT    0x13
+#define WDAY_INIT   0x03
+#define MONTH_INIT  0x04
+#define YEAR_INIT   0x26
+
+// tx packet array
+unsigned char txPacket[8] = {
+    START_REG, SEC_INIT, MIN_INIT, HOUR_INIT,
+    DAY_INIT, WDAY_INIT, MONTH_INIT, YEAR_INIT
+};
+
+// global vars
+volatile int txIndex        = 0;
+volatile int rxIndex        = 0;
+volatile int buttonPressed  = 0;
+volatile int doingTxInit    = 0;    // 1 = writing init, 0 = writing reg pointer
+volatile unsigned char rxBuffer[2]        = {0, 0};
+volatile unsigned char timestamp_seconds  = 0;
+volatile unsigned char timestamp_minutes  = 0;
+
+//--------------------------- MAIN LOOP ---------------------------------------
+
+int main(void)
+{
+    WDTCTL = WDTPW | WDTHOLD;
+
+    // config I2C
+    UCB0CTLW0 |= UCSWRST;               // put into sw resett mode
+    UCB0CTLW0 |= UCSSEL__SMCLK;         // pick SMCLK clock source
+    UCB0BRW    = 10;                    // divide SMCLK by 10 for SCL
+    UCB0CTLW0 |= UCMODE_3;              // put into I2C mode
+    UCB0CTLW0 |= UCMST;                 // put into master mode
+    UCB0I2CSA  = 0x0068;                // slave address RTC
+    UCB0CTLW1 |= UCASTP_2;
+
+    // cofig I2C ports
+    // P1.3 = SCL
+    P1SEL1 &= ~BIT3;
+    P1SEL0 |= BIT3;
+    // P1.2 = SDA
+    P1SEL1 &= ~BIT2;
+    P1SEL0 |= BIT2;
+
+    //config s1
+    P4DIR &= ~BIT1;                     // p4.1 as input
+    P4REN |=  BIT1;                     // enable resistor
+    P4OUT |=  BIT1;                     // pull up resistor
+    P4IES |=  BIT1;                     // H - L
+    P4IFG &= ~BIT1;                     // clear flag
+    P4IE  |=  BIT1;                     // enable interrupt
+
+    // disable high z
+    PM5CTL0 &= ~LOCKLPM5;
+
+    // take out of sw reset
+    UCB0CTLW0 &= ~UCSWRST;
+
+    //enable tx and rx IRQs
+    UCB0IE |= UCTXIE0;
+    UCB0IE |= UCRXIE0;
+    __enable_interrupt();
+
+    //write initial time to rtc
+    UCB0TBCNT = 0x08;
+    txIndex    = 0;
+    doingTxInit = 1;
+    UCB0CTLW0 |= UCTR;
+    UCB0CTLW0 |= UCTXSTT;
+    while((UCB0IFG & UCSTPIFG) == 0){}
+    UCB0IFG &= ~UCSTPIFG;
+
+//---------------------------- MAIN LOOP --------------------------------------------------------
+    while(1)
+    {
+        if(buttonPressed)
+        {
+            buttonPressed = 0;
+            rxIndex = 0;
+
+            //send register pointer
+            UCB0TBCNT   = 0x01;
+            doingTxInit = 0;
+            UCB0CTLW0  |= UCTR;
+            UCB0CTLW0  |= UCTXSTT;
+            while((UCB0IFG & UCSTPIFG) == 0){}
+            UCB0IFG &= ~UCSTPIFG;
+
+            //read 2 bytes (seconds, minutes)
+            UCB0TBCNT   = 0x02;
+            UCB0CTLW0  &= ~UCTR;
+            UCB0CTLW0  |=  UCTXSTT;
+            while((UCB0IFG & UCSTPIFG) == 0){}
+            UCB0IFG &= ~UCSTPIFG;
+
+            timestamp_seconds = rxBuffer[0];
+            timestamp_minutes = rxBuffer[1];
+        }
+    }
+
+    return 0;
+}
+
+//-----------------------------------------------------
+// Interrupt Service Routines
+//-----------------------------------------------------
+#pragma vector = EUSCI_B0_VECTOR
+__interrupt void EUSCI_B0_ISR(void)
+{
+    switch(UCB0IV)
+    {
+        case 0x16:                          // RXIFG0
+            rxBuffer[rxIndex] = UCB0RXBUF;
+            rxIndex++;
+            break;
+        case 0x18:                          // TXIFG0
+            if(doingTxInit)
+            {
+                UCB0TXBUF = txPacket[txIndex];
+                txIndex++;
+            }
+            else
+            {
+                UCB0TXBUF = START_REG;      // register pointer for read
+            }
+            break;
+        default:
+            break;
+    }
+}
+
+#pragma vector = PORT4_VECTOR
+__interrupt void PORT4_ISR(void)
+{
+    P4IFG &= ~BIT1;
+    buttonPressed = 1;
+}

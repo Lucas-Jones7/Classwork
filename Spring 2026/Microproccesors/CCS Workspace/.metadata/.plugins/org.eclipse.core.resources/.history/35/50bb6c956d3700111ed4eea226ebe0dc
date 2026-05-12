@@ -1,0 +1,27 @@
+//-----------------------------------------------------
+// Lucas Jones, EELE 371, Final Project: Day 2, 04/13/2026
+//-----------------------------------------------------
+
+#include <msp430.h> 
+
+// global vars (Set to 1:10 April 13th, 2026)
+#define START_REG 0x03          // start register
+#define SEC 0x00                // seconds 0-59 (0)
+#define MIN 0x10                // mins 0-59 (10)
+#define HOUR 0x1               // hours 0-23 (1)
+#define DAY 0x13                // days 1-31 (13)
+#define WEEKDAY 0x03            // day of week 0-6, (3=wed)
+#define MONTH 0x04              // months 1-12 (4=april)
+#define YEAR 0x26               // year (2026)
+
+//packet array
+unsigned char packet[8] = {START_REG, SEC, MIN, HOUR, DAY, WEEKDAY, MONTH, YEAR};
+int txIndex= 0;                 // index to track which byte is being transmitted
+
+
+int main(void)
+{
+	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
+	
+	return 0;
+}

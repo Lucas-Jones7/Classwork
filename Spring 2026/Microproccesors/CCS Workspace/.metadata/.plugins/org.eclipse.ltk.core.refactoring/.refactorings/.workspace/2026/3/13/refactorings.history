@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Practical4_CodingWithC_Jones&apos; to &apos;Practical4_SwitchingToC_Jones&apos;" description="Rename resource &apos;Practical4_CodingWithC_Jones&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Practical4_CodingWithC_Jones" name="Practical4_SwitchingToC_Jones" stamp="1774638727563" updateReferences="true"/>
+</session>
