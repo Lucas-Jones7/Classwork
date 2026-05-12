@@ -1,0 +1,247 @@
+---
+title: "STAT 337 - Multiple Linear Regression Activity"
+author: "Lucas Jones"
+date: "Due Tuesday, April 28, 2026 by 11.59pm"
+output:
+  word_document: default
+  pdf_document:
+    includes:
+      in_header: "header-s26.tex"
+fontsize: 11pt
+editor_options:
+  markdown:
+    wrap: 72
+---
+
+```{r setup, echo = F}
+knitr::opts_chunk$set(echo = TRUE, 
+                      Method = FALSE,
+                      warnings = FALSE, 
+                      eval = T)
+options(show.signif.stars = FALSE)
+```
+\setlength{\parskip}{1em}
+
+## Instructions
+
+Like all other activities, please use the following workflow to minimize frustration debugging! 
+
+1. Run the code in each chunk line-by-line to make sure it works locally. 
+2. After Step 1, change `eval = FALSE` to `eval = TRUE` in the code chunk you're working on.
+3. Comment the code in each chunk to indicate what it is doing. Keep in mind you may want to revisit this code in the future, so comment the code in such a way that six months from now, you will be able to understand what each line does. Answer any questions associated with the code chunk where prompted. 
+4. Repeat 1-4 for each code chunk in the activity! 
+
+Before submitting, make sure all plots and relevant code snippets are included in your knitted file to receive all credit and **be sure to use spell check!** 
+
+**If collaborating as a team, ensure that ALL team member names are listed above and on the Gradescope submission. If submitting as a group, do not list other teammates as collaborators. Only one PDF submission is required per team in Gradescope. Make sure to assign pages to problems appropriately!**
+
+## Background
+
+The World Happiness Report is a survey produced by Gallup World Poll assessing the state of global happiness. Measures like this can help gauge the progress of nations, so this report is of great interest worldwide. The scores in this dataset are based off the primary "life evaluation" question, where participants are asked to rate their current life on a 1-10 scale, where 1 is the worst life possible, and 10 is the best life possible. For each of the 153 countries represented in this dataset (out of the current 195 recognized countries of the world), a nationally representative sample was collected, and scores were averaged.
+
+This dataset includes several variables, including:
+
+* `Country name` - The name of the country.
+
+* `Ladder score` - The happiness score (in points).
+
+* `Logged GDP per capita` - A country's economic output per person, measured in log(USD).
+
+* `Social support` - Measured as the country's average of binary responses, where 1 indicates a person feels they have a social support network and 0 indicates they don't.
+
+* `Healthy life expectancy` - How long an average healthy person can expect to live (in years).
+
+* `Freedom to make life choices` - Measured as a country's average of binary responses, where 1 indicates they feel they are satisfied with the freedom to choose what they do with their lives and 0 indicates they do not.
+
+* `Perceptions of corruption` - the average of the responses to the two questions "Is corruption widespread throughout the government or not" and "Is corruption widespread within businesses or not?”, where responses were binary with 0 = no, 1 = yes.
+
+Note that happiness score was calculated using additional variables, but the explanation of what those variables represented and how their values were calculated was vague while being simultaneously complicated, so we will not use them in our analysis. 
+
+### Research Question
+
+Researchers aim to explore the linear relationship between a country's happiness score and healthy life expectancy, examining whether this relationship varies across different continents. 
+
+ 
+*data and background courtesy Kaggle (https://www.kaggle.com/unsdsn/world-happiness) and the World Happiness Report (https://happiness-report.s3.amazonaws.com/2020/WHR20_Ch2_Statistical_Appendix.pdf)*
+
+
+### Variables and Model
+
+1. Identify the variables of interest for our research question. Label each variable as categorical or quantitative **and** as a response or explanatory variable.
+
+- **Country name - Categorical - Explanatory variable**
+- **Healthy life expectancy - Quantitative - Explanatory variable**
+- **Ladder score - Quantitative - Response variable**
+
+
+2. What is the population (theoretical) MLR model that allows you to address the research question? __Define all variables (i.e., define any indicator variables and use context).__ You may need to write your model on several lines to ensure everything is visible.
+
+ <!-- you may need these, $y_i$, $\beta_0$, $\epsilon_i$, $\sim$ -->
+
+- **$$y_i = \beta_0 + \beta_1 x_{1i} + \beta_2 x_{2i} + \beta_3 x_{3i} + \beta_4 x_{4i} + \beta_5 x_{5i} \\
+\quad + \beta_6(x_{1i} \cdot x_{2i}) + \beta_7(x_{1i} \cdot x_{3i}) + \beta_8(x_{1i} \cdot x_{4i}) + \beta_9(x_{1i} \cdot x_{5i}) + \epsilon_i$$**
+
+- $y_i$ = happiness score for country i
+- $x_{1i}$= healthy life expectency for country i
+- $\x_{2i}$= 1 if country i is in the Americas, 0 otw.
+- $x_{3i}$= 1 if country i is in the Asia, 0 otw.
+- $x_{4i}$= 1 if country i is in the Europe, 0 otw.
+- $x_{5i}$= 1 if country i is in the Oceania, 0 otw.
+- Africa is the baseline continent
+- $\epsilon_i$~ N(0, $\sigma^2$)
+
+### Data Wrangling
+
+3. These data have already been mostly cleaned and the dataset does not require much wrangling. However, the variables all have long names and it would be helpful if they were abbreviated. Use the following code chunk to read in the dataset and rename the variables.
+
+```{r q3-wrangle, eval = TRUE, warning = FALSE, message = FALSE}
+library(tidyverse)
+library(dplyr)
+
+load.data <- read_csv("happiness_new.csv")
+
+happiness <- load.data %>% 
+  rename(Country = `Country name`, 
+         Score = `Ladder score`,
+         LogGDP = `Logged GDP per capita`,
+         Support = `Social support`, 
+         HLE = `Healthy life expectancy`,
+         Freedom = `Freedom to make life choices`,
+         Corruption = `Perceptions of corruption`)
+```
+
+4. We will add a `Continent` variable in order to group countries by their respective continents. The code below will do this, and will store the wrangled dataset in an object called `happy`. You will use this object for the remainder of this lab. There is a missing observation in the Continent variable. Which country does it correspond to? Let's find out. 
+
+```{r q4-continent, eval=TRUE, message = F, warning = F}
+# Install the package if you need, but only do it once!
+# If using the code below, make sure to re-comment it 
+# out once the package is installed to avoid errors when knitting.
+#install.packages("countrycode")
+library(countrycode)
+happy <- happiness %>% 
+  mutate(Continent = countrycode(Country, "country.name", "continent"))
+
+missing_country <- happy %>%
+  filter(is.na(Continent)) %>%
+  select(Country)
+
+missing_country
+```
+
+This missingness if because the `countrycode` package we installed could not match the country name from our dataset to its internal database of country names. So let we will manually add a continent label for this country. We will also ensure the `Continent` variable is a factor variable. Replace the "XXX" with the name of the missing country (be sure to keep the quotation marks).
+
+```{r q4-add-kosovo, eval=TRUE}
+happy <- happy %>% 
+  mutate(Continent = ifelse(Country == "Kosovo", "Europe", Continent),
+         Continent = factor(Continent)) 
+```
+
+
+5. Create a scatterplot that illustrates the relationship between happiness score and healthy life expectancy, colored by continent, with a regression line for each. Faceting the plot may help you see the groups better. You are encouraged to use colors other than the default ggplot color scheme by using the ggsci, paletteer, wes_anderson, or harrypotter color packages. Fill in the "XXX"s in the code to create a suitable plot; give your plot appropriate axis labels and an informative title. Note that you can create a line break in the title by inserting `\n` (without ticks) where you want the new line to start. 
+
+```{r q5-scatterplot, warning=FALSE, eval=TRUE}
+
+happy %>% 
+  ggplot(mapping = aes(x = HLE, y = Score, color = Continent)) +  
+  geom_point(alpha = 0.6) + 
+  theme_bw() + 
+  geom_smooth(method = "lm", se = T) + 
+  facet_wrap(~ Continent) + 
+  labs(title = "Happines Score vs. Healthy Life Expectancy by continent", 
+       x = "Healthy Life Expectancy (years)", y = "Happines Score") 
+```
+
+
+6. Based on the scatterplot in the previous question, does it appear as though the intercepts for each continent should be allowed to vary? The slopes? Explain why or why not, describing specific features of the plot in your answer. 
+
+- **Yes the intercepts should vary as the plots show that between continents there is a clear difference in baseline happines scores. The slopes also vary as seen in the plots, the americas slope is far steeper than the africa continent slope.**
+
+7. Are there any continents that, if included, could pose a problem for estimating regression parameters? Why do you think they could be problematic?
+
+
+- **Oceania could be problematic since it only has two countries, making its plot differ greatly from all the other continent plots.**
+
+
+8. What happens if we try to fit an "interaction model" here? Focus on the SE for the coefficients associated with the `Oceania` countries. What do you notice? Why do you think this is?
+
+```{r q7-int-fit, eval = TRUE}
+fit_int <- lm(Score ~ HLE * Continent, data = happy)
+summary(fit_int)
+```
+**The SE for the Oceania coefficents are very large compared to all other continents. This is because Oceania only has two countries, where all other continents have more than two.**
+
+9. Our research question is "interactive" in nature. To proceed, with our investigation we can _restrict our scope of inference_ to continents that are not `Oceania` and investigate if the true increase in mean happiness score for a one year increase in average life expectancy is different across non-oceanic continents. The code chunk below will filter `Oceania` out and re-fit the model. 
+
+```{r q8-refit-int, eval=TRUE}
+
+happy_non_oceania <- happy %>% 
+  # filter out Oceania
+  filter(Continent != "Oceania") %>% 
+  # re-factor to get rid of unnecessary level for Oceania
+  mutate(Continent = factor(Continent))
+
+# fit interaction model
+fit_int_non_oceania <- lm(Score ~ HLE * Continent, data = happy_non_oceania) 
+summary(fit_int_non_oceania) 
+```
+
+
+10. Which of the categories for `Continent` is the baseline group for the model you just fit? Explain how you can tell. 
+
+- **The baseline group is Africa, since its the only continent not listed as a seperate coefficent in the summary output.**
+
+
+11. Using the model summary that you just created, write out the estimated model, defining all variables as necessary. *Note: make sure that the full model is visible when you knit. If it is not, you may need to write it as multiple lines.*
+
+- **$$\widehat{\text{Score}}_i = 2.12211 + 0.04116(\text{HLE}_i) - 7.29621(\text{Americas}_i) - 3.61183(\text{Asia}_i) - 9.59824(\text{Europe}_i) \\
+\quad + 0.12657(\text{HLE}_i \cdot \text{Americas}_i) + 0.06205(\text{HLE}_i \cdot \text{Asia}_i) + 0.15645(\text{HLE}_i \cdot \text{Europe}_i)$$**
+
+12. Using the estimated MLR model, predict the true mean happiness score of a country in Europe with healthy average life expectancy of 74 years. Show all work.
+
+- **Score = 2.1221 + 0.0412(74) - 9.5982(1) + 0.1564(74)**
+- **= 7.147**
+
+
+13. The following code will allow you to address the research question with a hypothesis test. Run the code and write an evidence statement and conclusion for the test that allows you to address the research question. Be sure to include the test statistic, its distribution under the null hypothesis, and an associated p-value in your evidence statement, as well as provide a clear conclusion.
+
+```{r q12-test, eval = TRUE}
+anova(fit_int_non_oceania)
+```
+
+- **We conclude that the true increase in mean happines score for a one year inclrease in helthy life expectancy is significantly different across at least two continents. F = 6.9632 on 3,143 degrees of freedom, pval = 0.0002089.**
+
+14. TRUE or FALSE. At this point, the most appropriate next step in the modeling process would be to summarize the interaction model by writing out the SLR for each non-Oceanic continent. We could also use the `effects` package or a plot like we did for all continents above to visualize the separate SLRs for each continent. 
+
+- **TRUE**
+
+
+15. Use the provided code chunk to create an effects plot with partial residuals as well as the set of model diagnostics for your fitted MLR model. In your response, list the letter associated with each assumption that appears to have moderate to strong evidence against them. 
+
+A. Linearity 
+
+B. Equal variances
+
+C. Normality 
+
+D. Influential points 
+
+E. None of the above 
+
+
+```{r, eval = TRUE, message = F, warning = F}
+library(effects) 
+ 
+plot(allEffects(fit_int_non_oceania, residual = T), 
+     main = "MLR model", colors = c("#22A884FF","#414487FF"), 
+     partial.residuals = list(pch = 16), 
+     axes = list(x = list(rotate = 35))) 
+par(mfrow = c(2,2)) 
+plot(fit_int_non_oceania, pch = 20, add.smooth = T) 
+```
+
+- **E**
+
+15. Please list anyone that you worked on any part of this Lecture Check with. For tutors, give their name and affiliation (MSC, SmartyCats, etc.). For fellow students, give their name and section number. If you did not utilize any outside resources, simply enter "NA."
+
+
+**NA**

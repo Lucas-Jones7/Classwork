@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;FinalProject_Part7(CLUADE-TEST)/main.c&apos; to &apos;FP_Part7_PRACTICEmain.c&apos;" description="Rename resource &apos;main.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="main.c" name="FP_Part7_PRACTICEmain.c" stamp="1776976219835" updateReferences="true"/>
+</session>

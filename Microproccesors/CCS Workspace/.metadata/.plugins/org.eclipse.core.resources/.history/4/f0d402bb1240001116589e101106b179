@@ -1,0 +1,185 @@
+//-----------------------------------------------------
+// Lucas Jones, EELE 371, Final Project Part 7, 04/20/2026
+//
+// Motor: Adafruit 858, 5VDC, 32-step, 1/16 gearing
+//
+// Steps per full rotation: 32 * 16 = 512 steps
+//
+// Reverse (SW2) - max speed:
+//   Max RPM = 25 RPM @ 5V
+//   Min pulse width = (60s/25RPM) / 512 steps = 0.469ms -> use 0.5ms
+//   SMCLK / ID__4 / TBIDEX__4 = 62,500 Hz
+//   CCR0 = 31 (62,500 * 0.0005 = 31.25 -> 31)
+//   Expected time for 1 rotation = 512 * 0.5ms = 256ms
+//
+// Forward (SW1) - 36 degrees per press:
+//   Steps per press = 512 / 10 = 51 steps
+//   Target time = 50% of 256ms = 128ms
+//   Pulse width = 128ms / 51 = 2.5ms
+//   CCR0 = 156 (62,500 * 0.0025 = 156.25 -> 156)
+//-----------------------------------------------------
+
+#include <msp430.h>
+
+volatile int timerFlag = 0;
+
+char revMsg[] = "Motor reversed 1 rotation.\r\n";
+char fwdMsg[] = "Motor advanced 1 step.\r\n";
+
+unsigned int position   = 0;
+unsigned int msgLen     = 0;
+volatile unsigned int sending = 0;  // 1 = currently sending
+char* currentMsg;
+
+const unsigned char stepCW[4]  = {BIT0, BIT1, BIT2, BIT3};
+const unsigned char stepCCW[4] = {BIT0, BIT3, BIT1, BIT2};
+
+int main(void)
+{
+    int i;
+
+    WDTCTL = WDTPW | WDTHOLD;
+
+    // UART - exact same config as working code
+    UCA1CTLW0 |= UCSWRST;
+    UCA1CTLW0 |= UCSSEL__SMCLK;
+    UCA1BRW = 17;
+    UCA1MCTLW = 0x4A00;
+
+    // P3.0-P3.3 outputs for stepper coils
+    P3DIR |= BIT0 | BIT1 | BIT2 | BIT3;
+    P3OUT &= ~(BIT0 | BIT1 | BIT2 | BIT3);
+
+    // SW1 - P4.1
+    P4DIR &= ~BIT1;
+    P4REN |= BIT1;
+    P4OUT |= BIT1;
+    P4IES |= BIT1;
+
+    // SW2 - P2.3
+    P2DIR &= ~BIT3;
+    P2REN |= BIT3;
+    P2OUT |= BIT3;
+    P2IES |= BIT3;
+
+    // UART pins
+    P4SEL1 &= ~(BIT3 | BIT2);
+    P4SEL0 |= (BIT3 | BIT2);
+
+    PM5CTL0 &= ~LOCKLPM5;
+
+    UCA1CTLW0 &= ~UCSWRST;
+
+    // Timer - exact same config as working code
+    TB0CTL   = TBCLR;
+    TB0CTL  |= TBSSEL__SMCLK;
+    TB0CTL  |= ID__4;
+    TB0EX0   = TBIDEX__4;
+    TB0CCR0  = 31;               // 0.5ms default (reverse speed)
+    TB0CCTL0 = CCIE;
+
+    P4IFG &= ~BIT1;
+    P4IE  |=  BIT1;
+    P2IFG &= ~BIT3;
+    P2IE  |=  BIT3;
+
+    __enable_interrupt();
+
+    while(1) {
+
+        // SW1: forward 36 degrees (51 steps, 2.5ms pulse)
+        if((P4IN & BIT1) == 0) {
+            for(i = 0; i < 10000; i++){}
+            if((P4IN & BIT1) == 0) {
+                while((P4IN & BIT1) == 0){}
+
+                TB0CCR0 = 156;              // 2.5ms
+
+                for(i = 0; i < 51; i++) {
+                    P3OUT = (P3OUT & 0xF0) | stepCW[i % 4];
+                    timerFlag = 0;
+                    TB0CTL |= MC__UP;
+                    while(timerFlag == 0){}
+                    TB0CTL &= ~MC__UP;
+                    TB0CTL |= TBCLR;
+                }
+                P3OUT &= ~(BIT0 | BIT1 | BIT2 | BIT3);
+
+                // send UART message same way as working code
+                currentMsg = fwdMsg;
+                position   = 0;
+                msgLen     = sizeof(fwdMsg) - 1;
+                sending    = 1;
+                UCA1IE |= UCTXCPTIE;
+                UCA1IFG &= ~UCTXCPTIFG;
+                UCA1TXBUF = currentMsg[position];
+                while(sending){}            // wait for message to finish
+            }
+        }
+
+        // SW2: reverse 1 full rotation (512 steps, 0.5ms pulse)
+        if((P2IN & BIT3) == 0) {
+            for(i = 0; i < 10000; i++){}
+            if((P2IN & BIT3) == 0) {
+                while((P2IN & BIT3) == 0){}
+
+                TB0CCR0 = 31;               // 0.5ms
+
+                for(i = 0; i < 512; i++) {
+                    P3OUT = (P3OUT & 0xF0) | stepCCW[i % 4];
+                    timerFlag = 0;
+                    TB0CTL |= MC__UP;
+                    while(timerFlag == 0){}
+                    TB0CTL &= ~MC__UP;
+                    TB0CTL |= TBCLR;
+                }
+                P3OUT &= ~(BIT0 | BIT1 | BIT2 | BIT3);
+
+                currentMsg = revMsg;
+                position   = 0;
+                msgLen     = sizeof(revMsg) - 1;
+                sending    = 1;
+                UCA1IE |= UCTXCPTIE;
+                UCA1IFG &= ~UCTXCPTIFG;
+                UCA1TXBUF = currentMsg[position];
+                while(sending){}
+            }
+        }
+    }
+
+    return 0;
+}
+
+//-----------------------------------------------------
+// ISRs
+//-----------------------------------------------------
+#pragma vector = USCI_A1_VECTOR
+__interrupt void ISR_EUSCI_A1(void)
+{
+    position++;
+    if(position == msgLen)
+    {
+        UCA1IE &= ~UCTXCPTIE;
+        sending = 0;
+    }
+    else
+    {
+        UCA1TXBUF = currentMsg[position];
+    }
+    UCA1IFG &= ~UCTXCPTIFG;
+}
+
+#pragma vector = TIMER0_B0_VECTOR
+__interrupt void Timer_B0_ISR(void) {
+    timerFlag = 1;
+}
+
+#pragma vector = PORT4_VECTOR
+__interrupt void ISR_Port4_S1(void) {
+    P4IFG &= ~BIT1;
+}
+
+#pragma vector = PORT2_VECTOR
+__interrupt void ISR_Port2_S2(void) {
+    P2IFG &= ~BIT3;
+}

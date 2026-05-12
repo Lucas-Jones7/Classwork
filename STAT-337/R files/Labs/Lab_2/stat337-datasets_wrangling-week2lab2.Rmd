@@ -1,0 +1,180 @@
+---
+title: "STAT 337 - datasets and data wrangling"
+author: "Lucas Jones & Henry Stickling"
+date: "Tuesday, Jan 20, 2026"
+output:
+  word_document: default
+  html_document:
+    df_print: paged
+  pdf_document: default
+fontsize: 12pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(show.signif.stars = FALSE)
+```
+## Instructions
+
+**Include all written code and generated plots to receive full credit for this submission. Be sure to bold your answers to questions where relevant, and write in complete sentences. Work in a group of 2 or 3 to complete this activity during class. If you need to finish on your own you may submit the assignment individually. If you finish as a group, please submit one assignment and ensure all group members are associated with your submission.** ***CAREFULLY READ ALL TEXT in this activity!***
+
+
+## Setup for working in .Rmd files VERY IMPORTANT FIRST STEP!
+
+First "knit" this document by pushing the "knit" button. You will see all the code inline but you will not see any output associated with the code. That's because all code chunks have `eval = FALSE`. We're going to change each code-chunk to `eval = TRUE` **"one-at-a-time"** to see what the code in each chunk does.
+
+-   **Make sure this .Rmd file and the Walker2014_mod.csv are in the same folder and in a place where you want them to be saved forever (e.g., in a STAT337-specific folder for week2 activities STAT337/activities/week2/)**.
+
+-   If you opened this file from this file's "forever home location," then your working directory will be set correctly. But, if you opened this file from within RStudio it may not be correct.
+
+-   The *working directory* is where R looks to load and save files, so it's important that it is set correctly!
+
+-   The easiest way make sure things will work is to **(1) make sure the file is in and any data files (e.g., .csv files) are their "forever home location", and (2) click "Session" --\> "Set Working Directory" --\> "To Source Location."**
+
+-   Finally, check check that your working directory matches the folder where your files are saved by running the following line of code in the code chunk below.
+
+```{r, eval = FALSE}
+# find working directory
+getwd()
+```
+
+## Example from Chapter 2
+
+We're going to use a subset of the bike commute data example from your text...
+
+> "...consider the data collected from a study (Walker, Garrard, and Jowitt 2014) to investigate whether clothing worn by a bicyclist might impact the passing distance of cars. One of the authors wore seven different outfits (outfit for the day was chosen randomly by shuffling seven playing cards) on his regular 26 km commute near London in the United Kingdom. Using a specially instrumented bicycle, they measured how close the vehicles passed to the widest point on the handlebars."
+
+1.  **Make this .Rmd and *Walker2014_mod.csv* are in your working directory (see above!).** Read in the dataset from your computer using `tidyverse`. To load the data into the Environment for this R session, run the lines of code in the code chunk. You should see `df_commute` become an object in your Environment with 5690 observations and 2 variables. What does each row in the dataset represent?
+
+```{r, echo = FALSE, eval = FALSE, message = FALSE, warning = FALSE}
+# load tidyverse 
+library(tidyverse)
+
+# read in WalkerEtAl2014 data from your 
+df_commute <- read_csv(file = "Walker2014_mod.csv")
+df_commute
+```
+
+-   **Each row of the data set represents one observation/individual bike commute to work and the associated outfit.**
+
+2.  Now, Change `eval = FALSE` to `eval = TRUE` in the code chunk below and "knit" your document again.
+
+```{r, eval = TRUE, message = FALSE, warning = FALSE}
+# load tidyverse 
+library(tidyverse)
+
+# read in WalkerEtAl2014 data from your 
+df_commute <- read_csv(file = "Walker2014_mod.csv")
+df_commute
+summary(df_commute)
+```
+
+3.  How did the output document change when you changed `eval = FALSE` to `eval = TRUE`? Write your response in the space provided below. Knit again, and notice how the output changes!
+
+-   **Under eval = FALSE, nothing was outputted to the knitted document, changing eval to TRUE the output was displayed in word after kniting the document.**
+
+4.  Run the R code in the following chunk to see what `mutate` does. Summarize what you learned in the space below. After you're done, change the code chunk to `eval = TRUE` and re-knit the document.
+
+```{r, eval = TRUE}
+# use mutate in the tidyverse
+df_commute <- df_commute %>% 
+  mutate(Condition = factor(Condition)) 
+summary(df_commute)
+```
+
+-   **Mutate is taking Condition and making it a factor type.**
+
+5.  In Ch 2 you saw the text investigate the mean passing distance between "casual" and "commute." The code to do this is provided below.
+
+```{r, eval = FALSE}
+# code to make a subset of data with only 
+# "casual" and "commute" conditions
+df_commute %>%
+  # keep only observations with Condition = "casual" 
+  # or Condition = "commute"
+  filter(Condition %in% c("casual", "commute")) %>%
+  # make Condition a factor again to get rid of other 
+  # levels of the factor
+  mutate(Condition = factor(Condition))
+```
+
+5a. Choose two different levels of `Condition` to investigate. Change the code below to investigate differences in mean passing distance between the two categories you chose. First, run the code to make sure you end up with a tibble that has data in it, then change `eval = FALSE` to `eval = TRUE`.
+
+```{r, eval = TRUE}
+# create a new tibble, called df_sub, with the two 
+# categories of commute outfit you want to investigate
+# change "CATEGORY1" and "CATEGORY2" accordingly. 
+df_sub <- df_commute %>% 
+  filter(Condition %in% c("police", "novice")) %>%
+  mutate(Condition = factor(Condition))
+df_sub
+```
+
+-   **The Filter function created tibble only containing data from the conditions of "novice" and "police".**
+
+5b. Now, make a `pirateplot` to look at the raw data comparing the distances to the handlebars between your chosen `Condition` categories. Use the plot to describe how the passing distances compare across the two conditions you're investigating. Does there appear to be visual evidence of a difference between the mean passing distances for these two conditions? *Again, once you've created the plot by running the code inline and answered the question, change `eval = TRUE` and "reknit" to notice how your output document changes.*
+
+**There does appear to be a small difference between the mean passing distances of the novice and police outfit categories, with the police category having a slightly higher average passing distance.**
+
+```{r eval = FALSE, fig.width=6, fig.height=4, message = FALSE, warning = FALSE}
+# load yarrr
+library(yarrr)
+pirateplot(Distance ~ Condition, data = df_sub, 
+           inf.method = "ci", inf.disp = "line", 
+           ylab = "Distance (cm)")
+```
+
+-   **The plot depicts the distribution of mean passing distances between the police and novice group. Both parametric and non-parametric methods are reasonable for this data due to the roughly normal distribution.**
+
+5c. Now let's create a permutation distribution for testing the null hypothesis of "no difference" between mean passing distance for the two conditions you chose versus a two-sided alternative. The following two code chunks provide all the output you need to conduct such a test. Run the code line by line to make sure it's working with your `df_sub`, then change `eval = FALSE` to `eval = TRUE` and re-knit.
+
+```{r, eval = TRUE, message = FALSE, warning = FALSE}
+library(mosaic)
+# summary statistics 
+favstats(Distance ~ Condition, data = df_sub)
+# observed result 
+OR <- diffmean(Distance ~ Condition, data = df_sub)
+OR
+```
+
+-   Edit the following to share the observed result rounded to 2 decimal places.
+
+-   $\overline{y}_{police} - \overline{y}_{novice} = 5.18$ (cm).
+
+The next chunk will create a permutation null distribution with 1000 simulated differences in means under the null hypothesis. Run the code line by line to make sure it's working with your `df_sub`, then change `eval = FALSE` to `eval = TRUE` and re-knit. Use the output to find the p-value and interpret it in the context of the problem.
+
+```{r eval = TRUE, echo = FALSE}
+# set # of permutations to run
+B <- 1000
+# create storage vector
+Tstar <- rep(NA, B)
+
+# create 1000 simulated "null differences" 
+for(i in 1:B){
+  Tstar[i] <- diffmean(Distance ~ shuffle(Condition), 
+                       data = df_sub)
+}
+# summary stats for null dist
+favstats(Tstar)
+
+# plot permutation dist
+tibble(Tstar) %>% ggplot(aes(x = Tstar)) +
+  geom_histogram(aes(y = after_stat(ncount)), 
+                 bins = 15, col = 1, fill = "skyblue", color = "black",
+                 center = 0) + 
+  geom_density(aes(y = after_stat(scaled))) +
+  theme_bw(base_size = 14) + 
+  labs(y = "Density") +
+  stat_bin(aes(y = after_stat(ncount), 
+               label = after_stat(count)), bins = 15,
+           geom = "text", vjust = -0.75) +  
+  geom_vline(xintercept = c(-1,1)*OR, col = "red", lwd = 1.5)
+```
+
+-   **The p-value was found by calculating the proportion of simulated differences in mean passing distance for the police and novice outfit categories from the null distribution that were at least as extreme as 5.181 cm in both tails.**
+
+6.  On a sheet of paper, write up ALL STEPS of the hypothesis test you conducted. Include the research question, definitions of the parameters of interest, the null and alternative hypotheses, the test statistic, a sketch of the null-permutation distribution with reference to the observed result, the associated p-value, and *write a conclusion for the test*.
+
+7. Please list anyone that you worked on any part of this activity with if their name is not already part of this group's submission and/or any outside resources used. For tutors, give their name and affiliation (MSC, SmartyCats, etc.). For fellow students, give their name and section number. If you did not utilize any outside resources or collaborate with anyone, simply enter "NA."
+
+**Henry Stickling 002**

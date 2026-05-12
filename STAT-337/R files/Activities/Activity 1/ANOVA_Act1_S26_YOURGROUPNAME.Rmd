@@ -1,0 +1,77 @@
+---
+title: 'STAT 337: ANOVA Activity #1'
+author: "Lucas Jones & Henry Stickling"
+output:
+  word_document: default
+  pdf_document: default
+fontsize: 11pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1. Work through the practice in the course notes to write out the cell-means and reference-coded hypotheses, estimates, and comparison of estimates for the "CO2 Emissions for 5 Country Groups Example" (pg. 8 - 11).
+
+__Once finished with 1__, complete the code chunks below and answer Questions 2-5. Once you've pasted and tested (i.e,. run code inline to make sure it works) and answered any associated question, change `eval = FALSE` to `eval = TRUE` and knit this document. 
+
+2. Using the code chunk below, read in the `CO2_emissions_country_groups.csv` dataset. Create an appropriate data visualization, and output summary statistics (Hint: p.10 & 13 of the notes or the beginning of Section 2.2 of the textbook). Add comments describing what each line of code is doing. Make some notes about what you observe in your visualization.
+
+```{r q2-eda, eval = TRUE}
+library(tidyverse)
+library(mosaic)
+library(yarrr)
+
+
+emissions5 <- read_csv("CO2_emissions_country_groups.csv")
+emissions5 <- emissions5 %>% drop_na()
+
+favstats(CO2.Emissions ~ Country.Code, data = emissions5) #Computes summary stat.
+
+ggplot(emissions5, aes(x = Country.Code, y = CO2.Emissions, fill = Country.Code)) + #Creates Boxplot
+  geom_boxplot(alpha = 0.6) + #Draws boxplot for each group
+  geom_jitter(width = 0.15, alpha = 0.6) + #adds points
+  labs(title = "CO2 Emissions by Country Group",
+       x = "Country Group",
+       y = "CO2 Emissions") + # add title and axis labes
+  theme_minimal() #clean theme
+
+
+```
+
+- ***The dataset contains emissions grouped by country development level. Developed countries tend to have higher median CO2 emissions.*
+
+4. Fit the _reference coded model_ and show the summary output
+
+```{r q4-rcmodel, eval = TRUE}
+rc_model <- lm(CO2.Emissions ~ Country.Code, data = emissions5) #creates model
+summary(rc_model) #display summary
+```
+
+
+5. Fit the _cell-means model_ and show the summary output
+
+```{r q5-cmmodel, eval = TRUE}
+cm_model <- lm(CO2.Emissions ~ Country.Code -1, data = emissions5) # fit cell-mesns model
+summary(cm_model) # show summary
+```
+
+
+6. Create a term plot --- choose whichever you like better from the two plots given below. Report the plot and describe in your own words what it shows. 
+
+```{r q7-term-plot, eval = TRUE}
+library(effects)
+plot(allEffects(cm_model), main = "Term Plot of CO2 Emissions by Country Group", colors=c("steelblue","firebrick"))
+
+# you will likely need to install ggeffects to run this code
+#library(ggeffects)
+#ggeffect(<MODEL_FROM_Q5>, terms = "Country.Code")
+#plot(ggeffect(<MODEL_FROM_Q5>, terms = "Country.Code"))
+```
+
+- **The term plot shows the estimated mean CO2 emissions for each country group based on the cell-means model. Each point is the average emissions for a group, with error bars indicating the spread in the estimate. The plot clearly shows increasing Co2 emissions as country development increases.**
+
+
+
+
+

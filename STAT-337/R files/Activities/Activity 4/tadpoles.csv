@@ -1,0 +1,216 @@
+Conditioning,Cue,Pre,Post,Diff,Pdiff
+Experienced,Tiger trout,14,1,-13,-0.93
+Experienced,Tiger trout,13,1,-12,-0.92
+Experienced,Tiger trout,20,2,-1,-0.9
+Experienced,Tiger trout,9,1,-8,-0.89
+Experienced,Tiger trout,28,5,-23,-0.82
+Experienced,Tiger trout,11,2,-9,-0.82
+Experienced,Tiger trout,16,3,-13,-0.81
+Experienced,Tiger trout,14,3,-11,-0.79
+Experienced,Tiger trout,31,8,-23,-0.74
+Experienced,Tiger trout,22,6,-16,-0.73
+Experienced,Tiger trout,31,9,-22,-0.71
+Experienced,Tiger trout,19,6,-13,-0.68
+Experienced,Tiger trout,17,6,-11,-0.65
+Experienced,Tiger trout,18,7,-11,-0.61
+Experienced,Tiger trout,27,11,-16,-0.59
+Experienced,Tiger trout,38,16,-22,-0.58
+Experienced,Tiger trout,25,14,-11,-0.44
+Experienced,Tiger trout,16,9,-7,-0.44
+Experienced,Tiger trout,14,9,-5,-0.36
+Experienced,Tiger trout,24,16,-8,-0.33
+Naive,Tiger trout,22,15,-7,-0.32
+Experienced,Tiger trout,16,11,-5,-0.31
+Experienced,Tiger trout,11,8,-3,-0.27
+Naive,Tiger trout,30,22,-8,-0.27
+Experienced,Tiger trout,12,9,-3,-0.25
+Naive,Tiger trout,25,19,-6,-0.24
+Experienced,Tiger trout,13,10,-3,-0.23
+Experienced,Tiger trout,24,19,-5,-0.21
+Experienced,Tiger trout,16,13,-3,-0.19
+Experienced,Tiger trout,27,22,-5,-0.19
+Experienced,Tiger trout,23,19,-4,-0.17
+Naive,Tiger trout,18,15,-3,-0.17
+Experienced,Tiger trout,12,10,-2,-0.17
+Naive,Tiger trout,29,27,-2,-0.07
+Naive,Tiger trout,9,9,0,0
+Naive,Tiger trout,12,12,0,0
+Experienced,Tiger trout,7,7,0,0
+Naive,Tiger trout,32,33,1,0.03
+Naive,Tiger trout,17,19,2,0.12
+Naive,Tiger trout,13,15,2,0.15
+Naive,Tiger trout,13,16,3,0.23
+Naive,Tiger trout,12,15,3,0.25
+Naive,Tiger trout,16,20,4,0.25
+Naive,Tiger trout,7,12,5,0.71
+Experienced,Brown trout,19,0,-19,-1
+Experienced,Brown trout,8,1,-7,-0.88
+Experienced,Brown trout,14,2,-12,-0.86
+Experienced,Brown trout,17,3,-14,-0.82
+Experienced,Brown trout,21,4,-17,-0.81
+Experienced,Brown trout,24,5,-19,-0.79
+Experienced,Brown trout,19,4,-15,-0.79
+Experienced,Brown trout,24,6,-18,-0.75
+Experienced,Brown trout,26,7,-19,-0.73
+Experienced,Brown trout,29,8,-21,-0.72
+Experienced,Brown trout,41,13,-28,-0.68
+Naive,Brown trout,9,3,-6,-0.67
+Experienced,Brown trout,6,2,-4,-0.67
+Experienced,Brown trout,24,8,-16,-0.67
+Experienced,Brown trout,9,3,-6,-0.67
+Experienced,Brown trout,6,2,-4,-0.67
+Experienced,Brown trout,47,16,-31,-0.66
+Experienced,Brown trout,20,7,-13,-0.65
+Experienced,Brown trout,36,13,-23,-0.64
+Experienced,Brown trout,22,9,-13,-0.59
+Experienced,Brown trout,24,10,-14,-0.58
+Experienced,Brown trout,30,13,-17,-0.57
+Experienced,Brown trout,15,7,-8,-0.53
+Experienced,Brown trout,17,8,-9,-0.53
+Experienced,Brown trout,35,17,-18,-0.51
+Experienced,Brown trout,20,19,-1,-0.5
+Experienced,Brown trout,6,3,-3,-0.5
+Experienced,Brown trout,30,19,-11,-0.37
+Naive,Brown trout,43,30,-13,-0.3
+Experienced,Brown trout,11,8,-3,-0.27
+Naive,Brown trout,25,19,-6,-0.24
+Experienced,Brown trout,21,16,-5,-0.24
+Experienced,Brown trout,18,14,-4,-0.22
+Naive,Brown trout,22,18,-4,-0.18
+Naive,Brown trout,7,6,-1,-0.14
+Naive,Brown trout,18,16,-2,-0.11
+Naive,Brown trout,23,23,0,0
+Naive,Brown trout,30,32,2,0.07
+Naive,Brown trout,12,13,1,0.08
+Naive,Brown trout,29,32,3,0.1
+Naive,Brown trout,11,14,3,0.27
+Naive,Brown trout,7,12,5,0.71
+Experienced,Brook trout,30,0,-30,-1
+Experienced,Brook trout,13,1,-12,-0.92
+Experienced,Brook trout,36,7,-29,-0.81
+Experienced,Brook trout,31,7,-24,-0.77
+Experienced,Brook trout,16,5,-11,-0.69
+Experienced,Brook trout,27,9,-18,-0.67
+Experienced,Brook trout,25,10,-15,-0.6
+Experienced,Brook trout,33,14,-19,-0.58
+Experienced,Brook trout,44,19,-25,-0.57
+Experienced,Brook trout,29,13,-16,-0.55
+Experienced,Brook trout,14,7,-7,-0.5
+Naive,Brook trout,31,16,-15,-0.48
+Experienced,Brook trout,27,14,-13,-0.48
+Experienced,Brook trout,21,12,-9,-0.43
+Experienced,Brook trout,42,24,-18,-0.43
+Experienced,Brook trout,17,10,-7,-0.41
+Experienced,Brook trout,33,20,-13,-0.39
+Experienced,Brook trout,21,13,-8,-0.38
+Experienced,Brook trout,8,5,-3,-0.38
+Experienced,Brook trout,38,26,-12,-0.32
+Experienced,Brook trout,13,9,-4,-0.31
+Experienced,Brook trout,13,9,-4,-0.31
+Experienced,Brook trout,41,29,-12,-0.29
+Experienced,Brook trout,37,27,-10,-0.27
+Naive,Brook trout,27,20,-7,-0.26
+Naive,Brook trout,21,16,-5,-0.24
+Naive,Brook trout,26,20,-6,-0.23
+Naive,Brook trout,10,8,-2,-0.2
+Naive,Brook trout,15,12,-3,-0.2
+Experienced,Brook trout,27,22,-5,-0.19
+Experienced,Brook trout,6,5,-1,-0.17
+Naive,Brook trout,24,21,-3,-0.13
+Naive,Brook trout,10,9,-1,-0.1
+Experienced,Brook trout,10,9,-1,-0.1
+Experienced,Brook trout,21,19,-2,-0.1
+Naive,Brook trout,32,29,-3,-0.09
+Naive,Brook trout,7,7,0,0
+Naive,Brook trout,28,28,0,0
+Experienced,Brook trout,23,23,0,0
+Naive,Brook trout,25,27,2,0.08
+Experienced,Brook trout,8,9,1,0.13
+Naive,Brook trout,20,23,3,0.15
+Experienced,Brook trout,21,25,4,0.19
+Naive,Brook trout,14,19,5,0.36
+Naive,Brook trout,6,10,4,0.67
+Experienced,Rainbow trout,19,0,-19,-1
+Experienced,Rainbow trout,9,2,-7,-0.78
+Experienced,Rainbow trout,7,3,-4,-0.57
+Experienced,Rainbow trout,6,3,-3,-0.5
+Experienced,Rainbow trout,25,13,-12,-0.48
+Experienced,Rainbow trout,21,12,-9,-0.43
+Experienced,Rainbow trout,41,24,-17,-0.41
+Experienced,Rainbow trout,47,46,-1,-0.4
+Naive,Rainbow trout,32,20,-12,-0.38
+Experienced,Rainbow trout,28,18,-10,-0.36
+Experienced,Rainbow trout,10,7,-3,-0.3
+Experienced,Rainbow trout,30,21,-9,-0.3
+Experienced,Rainbow trout,10,7,-3,-0.3
+Experienced,Rainbow trout,33,24,-9,-0.27
+Experienced,Rainbow trout,38,28,-10,-0.26
+Experienced,Rainbow trout,28,21,-7,-0.25
+Experienced,Rainbow trout,28,21,-7,-0.25
+Naive,Rainbow trout,17,13,-4,-0.24
+Naive,Rainbow trout,34,27,-7,-0.21
+Experienced,Rainbow trout,35,29,-6,-0.17
+Naive,Rainbow trout,6,5,-1,-0.17
+Experienced,Rainbow trout,22,19,-3,-0.14
+Naive,Rainbow trout,40,36,-4,-0.1
+Naive,Rainbow trout,24,22,-2,-0.08
+Experienced,Rainbow trout,18,17,-1,-0.06
+Experienced,Rainbow trout,27,26,-1,-0.04
+Naive,Rainbow trout,7,7,0,0
+Experienced,Rainbow trout,11,11,0,0
+Naive,Rainbow trout,19,20,1,0.05
+Naive,Rainbow trout,35,37,2,0.06
+Experienced,Rainbow trout,17,18,1,0.06
+Experienced,Rainbow trout,14,16,2,0.14
+Naive,Rainbow trout,11,13,2,0.18
+Experienced,Rainbow trout,17,21,4,0.24
+Naive,Rainbow trout,14,18,4,0.29
+Experienced,Rainbow trout,17,23,6,0.35
+Experienced,Rainbow trout,17,24,7,0.41
+Naive,Rainbow trout,8,12,4,0.5
+Naive,Rainbow trout,10,15,5,0.5
+Experienced,Rainbow trout,7,13,6,0.86
+Naive,Goldfish,21,3,-18,-0.86
+Naive,Goldfish,18,10,-8,-0.44
+Experienced,Goldfish,16,10,-6,-0.38
+Experienced,Goldfish,18,12,-6,-0.33
+Naive,Goldfish,26,18,-8,-0.31
+Experienced,Goldfish,20,14,-6,-0.3
+Experienced,Goldfish,25,18,-7,-0.28
+Experienced,Goldfish,17,13,-4,-0.24
+Experienced,Goldfish,21,17,-4,-0.19
+Experienced,Goldfish,27,22,-5,-0.19
+Experienced,Goldfish,22,18,-4,-0.18
+Experienced,Goldfish,33,28,-5,-0.15
+Naive,Goldfish,23,20,-3,-0.13
+Naive,Goldfish,33,29,-4,-0.12
+Experienced,Goldfish,19,17,-2,-0.11
+Experienced,Goldfish,21,19,-2,-0.1
+Naive,Goldfish,11,10,-1,-0.09
+Experienced,Goldfish,25,23,-2,-0.08
+Experienced,Goldfish,27,25,-2,-0.07
+Naive,Goldfish,14,13,-1,-0.07
+Experienced,Goldfish,28,26,-2,-0.07
+Experienced,Goldfish,29,27,-2,-0.07
+Naive,Goldfish,15,14,-1,-0.07
+Naive,Goldfish,15,14,-1,-0.07
+Naive,Goldfish,19,18,-1,-0.05
+Experienced,Goldfish,27,26,-1,-0.04
+Naive,Goldfish,8,8,0,0
+Naive,Goldfish,33,33,0,0
+Experienced,Goldfish,15,15,0,0
+Experienced,Goldfish,21,21,0,0
+Experienced,Goldfish,17,19,2,0.12
+Naive,Goldfish,12,14,2,0.17
+Naive,Goldfish,6,7,1,0.17
+Experienced,Goldfish,17,20,3,0.18
+Experienced,Goldfish,17,20,3,0.18
+Experienced,Goldfish,26,32,6,0.23
+Naive,Goldfish,29,37,8,0.28
+Experienced,Goldfish,12,16,4,0.33
+Naive,Goldfish,17,24,7,0.41
+Experienced,Goldfish,7,10,3,0.43
+Experienced,Goldfish,7,10,3,0.43
+Experienced,Goldfish,10,16,6,0.6
+Experienced,Goldfish,6,10,4,0.67
+Experienced,Goldfish,10,17,7,0.7

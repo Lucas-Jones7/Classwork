@@ -1,0 +1,121 @@
+Year,CO2.Emissions,Country.Name,Country.Code
+1990,1.797924204,East Asia & Pacific (excluding high income),EAP
+1991,1.882821649,East Asia & Pacific (excluding high income),EAP
+1992,1.952493133,East Asia & Pacific (excluding high income),EAP
+1993,2.067402756,East Asia & Pacific (excluding high income),EAP
+1994,2.165114836,East Asia & Pacific (excluding high income),EAP
+1995,2.32997626,East Asia & Pacific (excluding high income),EAP
+1996,2.420036385,East Asia & Pacific (excluding high income),EAP
+1997,2.423994629,East Asia & Pacific (excluding high income),EAP
+1998,2.257153453,East Asia & Pacific (excluding high income),EAP
+1999,2.253903451,East Asia & Pacific (excluding high income),EAP
+2000,2.31317612,East Asia & Pacific (excluding high income),EAP
+2001,2.370552173,East Asia & Pacific (excluding high income),EAP
+2002,2.478391121,East Asia & Pacific (excluding high income),EAP
+2003,2.936038594,East Asia & Pacific (excluding high income),EAP
+2004,3.352602374,East Asia & Pacific (excluding high income),EAP
+2005,3.606791203,East Asia & Pacific (excluding high income),EAP
+2006,3.90913233,East Asia & Pacific (excluding high income),EAP
+2007,4.101138032,East Asia & Pacific (excluding high income),EAP
+2008,4.312981622,East Asia & Pacific (excluding high income),EAP
+2009,4.540136463,East Asia & Pacific (excluding high income),EAP
+2010,5.119726357,East Asia & Pacific (excluding high income),EAP
+2011,5.643858416,East Asia & Pacific (excluding high income),EAP
+2012,5.776054438,East Asia & Pacific (excluding high income),EAP
+2013,5.802840965,East Asia & Pacific (excluding high income),EAP
+1990,,Europe & Central Asia (excluding high income),ECA
+1991,,Europe & Central Asia (excluding high income),ECA
+1992,9.676938773,Europe & Central Asia (excluding high income),ECA
+1993,8.860044672,Europe & Central Asia (excluding high income),ECA
+1994,7.735411714,Europe & Central Asia (excluding high income),ECA
+1995,7.494791388,Europe & Central Asia (excluding high income),ECA
+1996,7.321361338,Europe & Central Asia (excluding high income),ECA
+1997,6.84079912,Europe & Central Asia (excluding high income),ECA
+1998,6.743972335,Europe & Central Asia (excluding high income),ECA
+1999,6.753399422,Europe & Central Asia (excluding high income),ECA
+2000,6.857593677,Europe & Central Asia (excluding high income),ECA
+2001,6.864156582,Europe & Central Asia (excluding high income),ECA
+2002,6.910958247,Europe & Central Asia (excluding high income),ECA
+2003,7.204377339,Europe & Central Asia (excluding high income),ECA
+2004,7.274486056,Europe & Central Asia (excluding high income),ECA
+2005,7.318440771,Europe & Central Asia (excluding high income),ECA
+2006,7.588189917,Europe & Central Asia (excluding high income),ECA
+2007,7.683045852,Europe & Central Asia (excluding high income),ECA
+2008,7.686710925,Europe & Central Asia (excluding high income),ECA
+2009,6.960547138,Europe & Central Asia (excluding high income),ECA
+2010,7.555028042,Europe & Central Asia (excluding high income),ECA
+2011,7.885887168,Europe & Central Asia (excluding high income),ECA
+2012,8.003464779,Europe & Central Asia (excluding high income),ECA
+2013,7.741759817,Europe & Central Asia (excluding high income),ECA
+1990,2.203596001,Latin America & Caribbean (excluding high income),LAC
+1991,2.204660082,Latin America & Caribbean (excluding high income),LAC
+1992,2.202782219,Latin America & Caribbean (excluding high income),LAC
+1993,2.242490619,Latin America & Caribbean (excluding high income),LAC
+1994,2.296048202,Latin America & Caribbean (excluding high income),LAC
+1995,2.269929328,Latin America & Caribbean (excluding high income),LAC
+1996,2.324592298,Latin America & Caribbean (excluding high income),LAC
+1997,2.398635417,Latin America & Caribbean (excluding high income),LAC
+1998,2.506562359,Latin America & Caribbean (excluding high income),LAC
+1999,2.512488671,Latin America & Caribbean (excluding high income),LAC
+2000,2.446788053,Latin America & Caribbean (excluding high income),LAC
+2001,2.480483373,Latin America & Caribbean (excluding high income),LAC
+2002,2.456316354,Latin America & Caribbean (excluding high income),LAC
+2003,2.465115653,Latin America & Caribbean (excluding high income),LAC
+2004,2.443919403,Latin America & Caribbean (excluding high income),LAC
+2005,2.533600414,Latin America & Caribbean (excluding high income),LAC
+2006,2.562789784,Latin America & Caribbean (excluding high income),LAC
+2007,2.585774661,Latin America & Caribbean (excluding high income),LAC
+2008,2.700264649,Latin America & Caribbean (excluding high income),LAC
+2009,2.599976948,Latin America & Caribbean (excluding high income),LAC
+2010,2.721665162,Latin America & Caribbean (excluding high income),LAC
+2011,2.743095588,Latin America & Caribbean (excluding high income),LAC
+2012,2.845357695,Latin America & Caribbean (excluding high income),LAC
+2013,2.88961895,Latin America & Caribbean (excluding high income),LAC
+1990,2.460236884,Middle East & North Africa (excluding high income),MNA
+1991,2.537805096,Middle East & North Africa (excluding high income),MNA
+1992,2.575284648,Middle East & North Africa (excluding high income),MNA
+1993,2.650017161,Middle East & North Africa (excluding high income),MNA
+1994,2.772786084,Middle East & North Africa (excluding high income),MNA
+1995,2.827285172,Middle East & North Africa (excluding high income),MNA
+1996,2.797530973,Middle East & North Africa (excluding high income),MNA
+1997,2.709016748,Middle East & North Africa (excluding high income),MNA
+1998,2.982818156,Middle East & North Africa (excluding high income),MNA
+1999,3.168182383,Middle East & North Africa (excluding high income),MNA
+2000,3.132634523,Middle East & North Africa (excluding high income),MNA
+2001,3.171745251,Middle East & North Africa (excluding high income),MNA
+2002,3.132275868,Middle East & North Africa (excluding high income),MNA
+2003,3.296493186,Middle East & North Africa (excluding high income),MNA
+2004,3.438027386,Middle East & North Africa (excluding high income),MNA
+2005,3.585008958,Middle East & North Africa (excluding high income),MNA
+2006,3.63892207,Middle East & North Africa (excluding high income),MNA
+2007,3.725313284,Middle East & North Africa (excluding high income),MNA
+2008,3.898208662,Middle East & North Africa (excluding high income),MNA
+2009,3.961772691,Middle East & North Africa (excluding high income),MNA
+2010,3.955962355,Middle East & North Africa (excluding high income),MNA
+2011,3.953610517,Middle East & North Africa (excluding high income),MNA
+2012,4.065778289,Middle East & North Africa (excluding high income),MNA
+2013,3.945450743,Middle East & North Africa (excluding high income),MNA
+1990,0.873121126,Sub-Saharan Africa (excluding high income),SSA
+1991,0.875375113,Sub-Saharan Africa (excluding high income),SSA
+1992,0.857961608,Sub-Saharan Africa (excluding high income),SSA
+1993,0.852806481,Sub-Saharan Africa (excluding high income),SSA
+1994,0.834645277,Sub-Saharan Africa (excluding high income),SSA
+1995,0.849236331,Sub-Saharan Africa (excluding high income),SSA
+1996,0.851770702,Sub-Saharan Africa (excluding high income),SSA
+1997,0.846539169,Sub-Saharan Africa (excluding high income),SSA
+1998,0.822503283,Sub-Saharan Africa (excluding high income),SSA
+1999,0.810634941,Sub-Saharan Africa (excluding high income),SSA
+2000,0.847970423,Sub-Saharan Africa (excluding high income),SSA
+2001,0.830001327,Sub-Saharan Africa (excluding high income),SSA
+2002,0.815186017,Sub-Saharan Africa (excluding high income),SSA
+2003,0.851815682,Sub-Saharan Africa (excluding high income),SSA
+2004,0.918328801,Sub-Saharan Africa (excluding high income),SSA
+2005,0.865347699,Sub-Saharan Africa (excluding high income),SSA
+2006,0.885572676,Sub-Saharan Africa (excluding high income),SSA
+2007,0.894262869,Sub-Saharan Africa (excluding high income),SSA
+2008,0.91273819,Sub-Saharan Africa (excluding high income),SSA
+2009,0.877958222,Sub-Saharan Africa (excluding high income),SSA
+2010,0.855064961,Sub-Saharan Africa (excluding high income),SSA
+2011,0.850381434,Sub-Saharan Africa (excluding high income),SSA
+2012,0.840166013,Sub-Saharan Africa (excluding high income),SSA
+2013,0.826391813,Sub-Saharan Africa (excluding high income),SSA

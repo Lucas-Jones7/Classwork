@@ -1,0 +1,294 @@
+Place,Name,Bib,City,State,Gender,Age,Pace,finish_time,mph,tot_time,age_group,distance
+1,Logan Broadhead,476,Hailey,ID,M,18,11.4 mph,01:58:25,11.4,118.41666666666667,< 19,30 mile
+2,Luuk Mackenzie,310,Bozeman,MT,M,23,11.3 mph,01:59:58,11.3,119.96666666666667,19-29,30 mile
+3,Kjetil Hassman,452,Big Sky,MT,M,20,11.3 mph,01:59:18,11.3,119.3,19-29,30 mile
+4,Smith Hastings,361,Missoula,MT,M,14,11.1 mph,02:02:18,11.1,122.3,< 19,30 mile
+5,Sam Madsen,407,Bozeman,MT,M,16,11.1 mph,01:58:24,11.1,118.4,< 19,30 mile
+6,Charlie Henry,562,Bozeman,MT,M,15,11.1 mph,02:02:31,11.1,122.51666666666667,< 19,30 mile
+7,Eric Bowman,457,Bozeman,MT,M,46,11.1 mph,02:02:18,11.1,122.3,40-49,30 mile
+8,Tanner Johnson,401,Spearfish,SD,M,17,11 mph,02:02:57,11,122.95,< 19,30 mile
+9,Luka Schymik,440,Highlands Ranch,CO,M,18,10.9 mph,02:02:54,10.9,122.9,< 19,30 mile
+10,Kurt Kropp,383,Bozeman,MT,M,46,10.9 mph,02:03:55,10.9,123.91666666666667,40-49,30 mile
+11,Travis Presnell,412,Ketchum,ID,M,39,10.6 mph,02:08:11,10.6,128.18333333333334,30-39,30 mile
+12,Wade Pence,492,BozemanBozeman,MT,M,16,10.6 mph,02:07:28,10.6,127.46666666666667,< 19,30 mile
+13,Andrew Laskowski,395,Bozeman,MT,M,36,10.5 mph,02:08:46,10.5,128.76666666666668,30-39,30 mile
+14,Roland Wyatt,462,Bozeman,MT,M,55,10.4 mph,02:11:25,10.4,131.41666666666666,50+,30 mile
+15,Bobby Perez,502,west yellowstone,MT,M,40,10.4 mph,02:10:28,10.4,130.46666666666667,40-49,30 mile
+16,Scott Makoutz,348,Bozeman,MT,M,44,10.3 mph,02:10:32,10.3,130.53333333333333,40-49,30 mile
+17,Logan Beck,378,Red Lodge,MT,M,27,10.3 mph,02:09:13,10.3,129.21666666666667,19-29,30 mile
+18,Carlo DeLong,620,Helena,MT,M,16,10.3 mph,02:09:40,10.3,129.66666666666666,< 19,30 mile
+19,Tyson Berry,625,Bozeman,MT,M,16,10.2 mph,02:13:03,10.2,133.05,< 19,30 mile
+20,Graham Hollingsworth,467,BOZEMAN,MT,M,17,10.1 mph,02:11:37,10.1,131.61666666666667,< 19,30 mile
+21,Mario Bartoletti,356,Butte,MT,M,35,10.1 mph,02:12:55,10.1,132.91666666666666,30-39,30 mile
+22,Jason Erickson,494,Bozeman,MT,M,42,10.1 mph,02:13:13,10.1,133.21666666666667,40-49,30 mile
+23,Dustin Handley,368,Jackson,WY,M,42,10 mph,02:14:57,10,134.95,40-49,30 mile
+24,Ryan Sudbury,375,Missoula,MT,M,45,9.9 mph,02:16:53,9.9,136.88333333333333,40-49,30 mile
+25,Emmett Davis,465,Missoula,MT,M,15,9.9 mph,02:16:54,9.9,136.9,< 19,30 mile
+26,Parker Retz,353,Whitefish,MT,M,15,9.9 mph,02:17:49,9.9,137.81666666666666,< 19,30 mile
+27,Tiptin Tourville,391,Columbia Falls,MT,M,16,9.9 mph,02:17:49,9.9,137.81666666666666,< 19,30 mile
+28,Nathan Ray,435,Victor,ID,M,42,9.8 mph,02:19:41,9.8,139.68333333333334,40-49,30 mile
+29,Emma Maaranen,586,Bend,OR,F,47,9.8 mph,02:17:42,9.8,137.7,40-49,30 mile
+30,Ellis Parson,593,Missoula,MT,M,15,9.8 mph,NA,9.8,NA,< 19,30 mile
+31,Heidi Makoutz,350,Bozeman,MT,F,44,9.8 mph,02:19:16,9.8,139.26666666666668,40-49,30 mile
+32,Chris Davis,518,Missoula,MT,M,36,9.7 mph,02:18:47,9.7,138.78333333333333,30-39,30 mile
+33,Josh Chilton,406,Billings,MT,M,44,9.7 mph,02:19:38,9.7,139.63333333333333,40-49,30 mile
+34,Mike Henry,561,Bozeman,MT,M,46,9.6 mph,02:19:06,9.6,139.1,40-49,30 mile
+35,Patrick Linn,535,Bozeman,MT,M,39,9.5 mph,NA,9.5,NA,30-39,30 mile
+36,Cole Herdman,513,Bozeman,MT,M,26,9.5 mph,NA,9.5,NA,19-29,30 mile
+37,Adam Rutz,606,Gallatin Gateway,MT,M,37,9.5 mph,02:21:35,9.5,141.58333333333334,30-39,30 mile
+38,Adam Tajan,364,Dover,ID,M,47,9.5 mph,02:23:00,9.5,143,40-49,30 mile
+39,Eli Bunting,485,Bozeman,MT,M,17,9.5 mph,02:23:31,9.5,143.51666666666668,< 19,30 mile
+40,Kelly Ziemann,489,Bozeman,MT,M,62,9.4 mph,02:25:41,9.4,145.68333333333334,50+,30 mile
+41,Octavia Fisher,486,Bozeman,MT,F,21,9.4 mph,02:21:25,9.4,141.41666666666666,19-29,30 mile
+42,Nathan Roter,596,Portland,OR,M,38,9.3 mph,02:28:33,9.3,148.55,30-39,30 mile
+43,GREG SEETHALER,602,Mead,WA,M,52,9.3 mph,NA,9.3,NA,50+,30 mile
+44,Frank Previch,590,Missoula,MT,M,36,9.3 mph,NA,9.3,NA,30-39,30 mile
+45,Ben Williams,390,Salt Lake City,UT,M,27,9.3 mph,02:26:26,9.3,146.43333333333334,19-29,30 mile
+46,Jeremy Newman,398,Twisp,WA,M,49,9.3 mph,NA,9.3,NA,40-49,30 mile
+47,Matt Edwards,434,Bozeman,MT,M,47,9.3 mph,NA,9.3,NA,40-49,30 mile
+48,Michelle Waller,346,Bozeman,MT,F,41,9.3 mph,02:26:22,9.3,146.36666666666667,40-49,30 mile
+49,Guy Mackenzie,309,Bozeman,MT,M,53,9.2 mph,NA,9.2,NA,50+,30 mile
+50,Emily Linton,609,Missoula,MT,F,48,9.2 mph,NA,9.2,NA,40-49,30 mile
+51,Graden Daume,594,missoula,MT,F,14,9.2 mph,NA,9.2,NA,< 19,30 mile
+52,Dustin Pellegrino,399,Bozeman,MT,M,33,9.2 mph,NA,9.2,NA,30-39,30 mile
+53,Noah Sheedy,404,Big Sky,MT,M,45,9.2 mph,NA,9.2,NA,40-49,30 mile
+54,Gabriel Hull,468,Bozeman,MT,M,18,9.2 mph,NA,9.2,NA,< 19,30 mile
+55,Troy Nedved,542,Big Sky,MT,M,52,9.2 mph,NA,9.2,NA,50+,30 mile
+56,Jackie Worden,311,Bozeman,MT,F,35,9.1 mph,02:27:31,9.1,147.51666666666668,30-39,30 mile
+57,Andrew Hull,466,Bozeman,MT,M,51,9.1 mph,NA,9.1,NA,50+,30 mile
+58,Rachel Holden,490,Bozeman,MT,F,43,9.1 mph,NA,9.1,NA,40-49,30 mile
+59,Lucy Millar,497,"Missoula, MT",MT,F,16,9.1 mph,02:29:02,9.1,149.03333333333333,< 19,30 mile
+60,Nelson Bedient,525,Bozeman,MT,M,26,9.1 mph,NA,9.1,NA,19-29,30 mile
+61,Tom Wilson,511,Butte,MT,M,38,9 mph,NA,9,NA,30-39,30 mile
+62,Clark West,512,Bozeman,MT,M,16,9 mph,NA,9,NA,< 19,30 mile
+63,Lauren Bertolino,363,Roberts,MT,F,36,9 mph,02:26:53,9,146.88333333333333,30-39,30 mile
+64,Rob McRae,355,Big Sky,MT,M,48,9 mph,NA,9,NA,40-49,30 mile
+65,Kjellen Bogard,551,Bozeman,MT,M,20,9 mph,NA,9,NA,19-29,30 mile
+66,Kael Olson,358,Colbert,WA,M,15,9 mph,NA,9,NA,< 19,30 mile
+67,Jeff MacLean,515,Bozeman,MT,M,36,8.9 mph,NA,8.9,NA,30-39,30 mile
+68,Erik Olson,373,Colbert,WA,M,48,8.9 mph,NA,8.9,NA,40-49,30 mile
+69,Tyler Currence,464,Missoula,MT,M,33,8.9 mph,NA,8.9,NA,30-39,30 mile
+70,Brad Jepson,307,Bozeman,MT,M,55,8.9 mph,NA,8.9,NA,50+,30 mile
+71,Ryan Davis,341,Park City,UT,M,52,8.8 mph,NA,8.8,NA,50+,30 mile
+72,Heidi Livran,480,Edwards,CO,F,27,8.8 mph,02:36:40,8.8,156.66666666666666,19-29,30 mile
+73,Dallas Davis-Timms,603,Columbia Falls,MT,M,45,8.8 mph,NA,8.8,NA,40-49,30 mile
+74,Kyle Johnson,613,Missoula,MT,M,41,8.8 mph,NA,8.8,NA,40-49,30 mile
+75,Michela Adrian,555,Bozeman,MT,F,43,8.8 mph,02:33:33,8.8,153.55,40-49,30 mile
+76,Brian Finch,429,Bozeman,MT,M,38,8.8 mph,NA,8.8,NA,30-39,30 mile
+77,Andrew Clark,306,Missoula,MT,M,34,8.7 mph,NA,8.7,NA,30-39,30 mile
+78,John Barry,631,Bozeman,MT,M,29,8.7 mph,NA,8.7,NA,19-29,30 mile
+79,Ryan Packard,340,Westbrook,ME,M,31,8.7 mph,NA,8.7,NA,30-39,30 mile
+80,Mark Hebblewhite,423,Missoula,MT,M,51,8.7 mph,NA,8.7,NA,50+,30 mile
+81,Chester Heeger,461,Driggs,ID,M,46,8.7 mph,NA,8.7,NA,40-49,30 mile
+82,Sean Ostrowski,616,Bozeman,MT,M,60,8.6 mph,NA,8.6,NA,50+,30 mile
+83,Brett Alessi,614,Weston,MA,M,48,8.6 mph,NA,8.6,NA,40-49,30 mile
+84,Britta Berube,638,Beach,ND,F,40,8.5 mph,02:36:14,8.5,156.23333333333332,40-49,30 mile
+85,Tim Piehl,654,Sandpoint,ID,M,47,8.5 mph,NA,8.5,NA,40-49,30 mile
+86,Paul Parson,376,Missoula,MT,M,49,8.5 mph,NA,8.5,NA,40-49,30 mile
+87,Troy DeLong,349,Helena,MT,M,56,8.5 mph,02:41:35,8.5,161.58333333333334,50+,30 mile
+88,Stefan Morgan,520,Cambridge,MA,M,25,8.5 mph,NA,8.5,NA,19-29,30 mile
+89,Preston Schneider,424,Bozeman,MT,M,46,8.5 mph,NA,8.5,NA,40-49,30 mile
+90,Will Pedde,621,Missoula,MT,M,49,8.5 mph,02:41:50,8.5,161.83333333333334,40-49,30 mile
+91,Eli Wilcox,522,Missoula,MT,M,14,8.5 mph,02:44:38,8.5,164.63333333333333,< 19,30 mile
+92,Adam Schumaker,421,Bozeman,MT,M,39,8.5 mph,NA,8.5,NA,30-39,30 mile
+93,Dave Riley,389,Canmore,AB,M,62,8.5 mph,NA,8.5,NA,50+,30 mile
+94,Lisa Palomaki,365,Bozeman,MT,F,31,8.5 mph,02:40:08,8.5,160.13333333333333,30-39,30 mile
+95,Pj Trimble,432,Bozeman,MT,M,30,8.5 mph,02:38:00,8.5,158,30-39,30 mile
+96,John Twa,655,Boise,ID,M,39,8.5 mph,02:42:15,8.5,162.25,30-39,30 mile
+97,Charlie Hastings,394,Missoula,MT,M,44,8.5 mph,NA,8.5,NA,40-49,30 mile
+98,Bode Hastings,393,Missoula,MT,M,13,8.4 mph,NA,8.4,NA,< 19,30 mile
+99,Paul Irby,617,Bozeman,MT,M,49,8.4 mph,02:39:58,8.4,159.96666666666667,40-49,30 mile
+100,Julia Everest,560,West Yellowstone,MT,F,22,8.3 mph,02:41:03,8.3,161.05,19-29,30 mile
+101,Risa Mosenthal,604,Salt Lake City,UT,F,25,8.3 mph,02:42:03,8.3,162.05,19-29,30 mile
+102,Wren Hassman,453,Big Sky,MT,F,17,8.3 mph,02:41:12,8.3,161.2,< 19,30 mile
+103,Sam Kavanagh,342,Columbia Falls,MT,M,45,8.3 mph,NA,8.3,NA,40-49,30 mile
+104,Eric Peterson,344,Helena,MT,M,46,8.3 mph,NA,8.3,NA,40-49,30 mile
+105,Delia Rodman,447,Bozeman,MT,F,15,8.3 mph,02:43:01,8.3,163.01666666666668,< 19,30 mile
+106,Carri Wullner,657,Pocatello,ID,F,50,8.3 mph,02:45:39,8.3,165.65,50+,30 mile
+107,Michael Lange,536,Bozeman,MT,M,28,8.3 mph,02:46:55,8.3,166.91666666666666,19-29,30 mile
+108,Aldo McWethy,483,Bozeman,MT,M,17,8.3 mph,02:51:08,8.3,171.13333333333333,< 19,30 mile
+109,Jon Patterson,570,Bozeman,MT,M,23,8.3 mph,02:50:34,8.3,170.56666666666666,19-29,30 mile
+110,Taylor Dobyns,484,Bozeman,MT,F,26,8.2 mph,02:43:31,8.2,163.51666666666668,19-29,30 mile
+111,Stephen Haysley,402,Bozeman,MT,M,22,8.2 mph,NA,8.2,NA,19-29,30 mile
+112,Rodney Ward,659,Las Vegas,NV,M,58,8.2 mph,02:43:35,8.2,163.58333333333334,50+,30 mile
+113,Jacob Edson,475,Bozeman,MT,M,43,8.2 mph,NA,8.2,NA,40-49,30 mile
+114,Andrew Schulz,595,Belgrade,MT,M,39,8.2 mph,NA,8.2,NA,30-39,30 mile
+115,John McCurdy,608,Chester Springs,PA,M,29,8.2 mph,02:44:43,8.2,164.71666666666667,19-29,30 mile
+116,Alex Burkhalter,463,Missoula,MT,M,41,8.2 mph,02:43:11,8.2,163.18333333333334,40-49,30 mile
+117,Samuel Paradee,548,Bozeman,MT,M,24,8.2 mph,02:41:03,8.2,161.05,19-29,30 mile
+118,Rob Young,628,Missoula,MT,M,49,8.1 mph,02:41:52,8.1,161.86666666666667,40-49,30 mile
+119,William Schoenhuber,519,Bozeman,MT,M,24,8.1 mph,02:44:32,8.1,164.53333333333333,19-29,30 mile
+120,Chad Godbout,380,Butte,MT,M,49,8.1 mph,02:49:39,8.1,169.65,40-49,30 mile
+121,Colter Mumford,332,Kalispell,MT,M,32,8.1 mph,02:42:25,8.1,162.41666666666666,30-39,30 mile
+122,Wilder Byrne,569,Bozeman,MT,M,24,8.1 mph,02:42:21,8.1,162.35,19-29,30 mile
+123,Pete Wilcox,521,Missoula,MT,M,17,8.1 mph,02:49:13,8.1,169.21666666666667,< 19,30 mile
+124,Friedrich Drees,516,Helena,MT,M,64,8.1 mph,02:44:59,8.1,164.98333333333332,50+,30 mile
+125,Jennifer Shinn,529,Bozeman,MT,F,59,8.1 mph,02:43:13,8.1,163.21666666666667,50+,30 mile
+126,Ryan Bjornstal,514,Big Sky,MT,M,28,8.1 mph,02:41:56,8.1,161.93333333333334,19-29,30 mile
+127,Adam Davis,591,BOZEMAN,MT,M,38,8 mph,02:44:57,8,164.95,30-39,30 mile
+128,Jeret Lockhart,517,Lolo,MT,M,38,8 mph,02:48:03,8,168.05,30-39,30 mile
+129,Steven McCann,366,Gallatin Gateway,MT,M,58,8 mph,02:46:04,8,166.06666666666666,50+,30 mile
+130,Adam Vanarsdall,387,Portland,OR,M,51,8 mph,02:47:57,8,167.95,50+,30 mile
+131,Martin Smith,303,Bozeman,MT,M,25,8 mph,02:45:50,8,165.83333333333334,19-29,30 mile
+132,Scott Kelley,579,Virginia City,MT,M,50,7.9 mph,02:49:15,7.9,169.25,50+,30 mile
+133,Reed Wommack,557,Ten Sleep,WY,M,32,7.9 mph,02:46:07,7.9,166.11666666666667,30-39,30 mile
+134,Mark Poertner,459,Bozeman,MT,M,57,7.9 mph,02:47:12,7.9,167.2,50+,30 mile
+135,Kyle Vanderstoep,573,Bozeman,MT,M,33,7.9 mph,02:52:29,7.9,172.48333333333332,30-39,30 mile
+136,Serge Ditesheim,651,Big Sky,MT,M,44,7.8 mph,02:49:34,7.8,169.56666666666666,40-49,30 mile
+137,Chris Bunting,532,Bozeman,MT,M,53,7.8 mph,02:49:54,7.8,169.9,50+,30 mile
+138,Isabelle Goodacre,580,Bozeman,MT,F,26,7.8 mph,02:52:38,7.8,172.63333333333333,19-29,30 mile
+139,Grace Lux,540,Bozeman,MT,F,17,7.8 mph,02:52:45,7.8,172.75,< 19,30 mile
+140,Kyle Finch,601,Bozeman,MT,M,26,7.8 mph,02:47:09,7.8,167.15,19-29,30 mile
+141,Jonathan Finch,600,Bozeman,MT,M,31,7.8 mph,02:47:18,7.8,167.3,30-39,30 mile
+142,David Cornes,451,Bozeman,MT,M,37,7.8 mph,02:53:19,7.8,173.31666666666666,30-39,30 mile
+143,Nico Newman,371,Bozeman,MT,M,33,7.8 mph,02:51:07,7.8,171.11666666666667,30-39,30 mile
+144,Meg Heubach,385,Encinitas,CA,F,54,7.7 mph,02:54:41,7.7,174.68333333333334,50+,30 mile
+145,JACK HAYWARD,305,Bozeman,MT,M,24,7.7 mph,02:52:55,7.7,172.91666666666666,19-29,30 mile
+146,Margy Gentile,448,Missoula,MT,F,46,7.7 mph,02:53:03,7.7,173.05,40-49,30 mile
+147,Ezra Stafford,588,Sandpoint,ID,M,47,7.7 mph,03:00:19,7.7,180.31666666666666,40-49,30 mile
+148,Nicole Vassar,370,Framingham,MA,F,52,7.7 mph,02:58:29,7.7,178.48333333333332,50+,30 mile
+149,Alease Bott,592,Payson,UT,F,45,7.7 mph,02:56:27,7.7,176.45,40-49,30 mile
+150,Suzanne Samardich,454,Big Sky,MT,F,58,7.6 mph,02:59:37,7.6,179.61666666666667,50+,30 mile
+151,Adam Klein,550,Helena,MT,M,35,7.6 mph,02:56:12,7.6,176.2,30-39,30 mile
+152,Paul Roberts,524,Bozeman,MT,M,26,7.6 mph,02:56:10,7.6,176.16666666666666,19-29,30 mile
+153,Gillian Millar,589,Missoula,MT,F,18,7.6 mph,02:58:53,7.6,178.88333333333333,< 19,30 mile
+154,Larsen Bidstrup,384,Bozeman,MT,M,28,7.5 mph,02:56:36,7.5,176.6,19-29,30 mile
+155,ANDREW SULLIVAN,419,Missoula,MT,M,39,7.5 mph,03:00:08,7.5,180.13333333333333,30-39,30 mile
+156,Ashley Feerer,556,Bozeman,MT,F,42,7.5 mph,03:00:30,7.5,180.5,40-49,30 mile
+157,Matthew Ramirez,610,Bozeman,MT,M,29,7.5 mph,02:56:55,7.5,176.91666666666666,19-29,30 mile
+158,Nicholas Van antwerp,537,BozemanBozeman,MT,M,32,7.5 mph,02:54:40,7.5,174.66666666666666,30-39,30 mile
+159,Dean Irvin,571,Folsom,CA,M,59,7.5 mph,02:56:38,7.5,176.63333333333333,50+,30 mile
+160,Boz Boswell,351,Bozeman,MT,M,55,7.5 mph,02:59:28,7.5,179.46666666666667,50+,30 mile
+161,Mark Loomis,357,Gallatin Gateway,MT,M,49,7.5 mph,03:01:55,7.5,181.91666666666666,40-49,30 mile
+162,Kathleen Olson,379,Colbert,WA,F,48,7.4 mph,02:58:13,7.4,178.21666666666667,40-49,30 mile
+163,Mathew Whitman,568,Livingston,MT,M,37,7.4 mph,03:01:16,7.4,181.26666666666668,30-39,30 mile
+164,David McWethy,478,Bozeman,MT,M,54,7.4 mph,02:54:16,7.4,174.26666666666668,50+,30 mile
+165,Eric Belongea,624,Salt Lake City,UT,M,27,7.4 mph,03:01:06,7.4,181.1,19-29,30 mile
+166,Jared Rawlings,136,Sheridan,WY,M,45,7.4 mph,02:52:13,7.4,172.21666666666667,40-49,30 mile
+167,Kyle Krafft,450,Bonita Springs,FL,M,42,7.4 mph,03:04:09,7.4,184.15,40-49,30 mile
+168,Jack Keller,479,Baltimore,MD,M,30,7.3 mph,02:58:27,7.3,178.45,30-39,30 mile
+169,Salvatore Guarnieri,477,BozemanBozeman,MT,M,42,7.3 mph,03:05:47,7.3,185.78333333333333,40-49,30 mile
+170,Hanna Kluck,495,Butte,MT,F,17,7.3 mph,02:58:55,7.3,178.91666666666666,< 19,30 mile
+171,Nick Lux,446,Bozeman,MT,M,48,7.3 mph,03:01:18,7.3,181.3,40-49,30 mile
+172,Dawn Brown,543,BozemanBozeman,MT,F,46,7.3 mph,03:06:18,7.3,186.3,40-49,30 mile
+173,Keller Davis,436,Missoula,MT,M,52,7.3 mph,02:56:51,7.3,176.85,50+,30 mile
+174,Joe Davis,552,Bozeman,MT,M,44,7.3 mph,02:57:57,7.3,177.95,40-49,30 mile
+175,Jason Green,428,Missoula,MT,M,50,7.3 mph,03:01:56,7.3,181.93333333333334,50+,30 mile
+176,Robin Rocco,458,Bozeman,MT,M,41,7.3 mph,02:59:29,7.3,179.48333333333332,40-49,30 mile
+177,Adam Bork,576,Missoula,MT,M,45,7.3 mph,03:01:50,7.3,181.83333333333334,40-49,30 mile
+178,Chelsey Schumaker,418,Bozeman,MT,F,40,7.3 mph,03:03:02,7.3,183.03333333333333,40-49,30 mile
+179,Shawn Kohtz,566,Bozeman,MT,M,48,7.3 mph,03:05:45,7.3,185.75,40-49,30 mile
+180,Parker Hughes,372,Stanford,MT,M,18,7.2 mph,03:05:50,7.2,185.83333333333334,< 19,30 mile
+181,Josh Doherty,347,Bozeman,MT,M,39,7.2 mph,03:07:12,7.2,187.2,30-39,30 mile
+182,Brian House,441,Castle Pines,CO,M,50,7.2 mph,03:12:43,7.2,192.71666666666667,50+,30 mile
+183,Erik Retz,352,Whitefish,MT,M,54,7.2 mph,03:05:37,7.2,185.61666666666667,50+,30 mile
+184,Melissa Cronin,501,Bozeman,MT,F,54,7.2 mph,02:59:25,7.2,179.41666666666666,50+,30 mile
+185,Jason Holm,491,Louisville,CO,M,53,7.2 mph,02:58:47,7.2,178.78333333333333,50+,30 mile
+186,Matthew Benson,386,Big Sky,MT,M,31,7.2 mph,03:04:29,7.2,184.48333333333332,30-39,30 mile
+187,Emily Hyde,559,Bozeman,MT,F,27,7.2 mph,03:14:11,7.2,194.18333333333334,19-29,30 mile
+188,Leah Granger,504,Bahama,NC,F,24,7.2 mph,03:14:15,7.2,194.25,19-29,30 mile
+189,Ben Elstner,503,Bozeman,MT,M,24,7.2 mph,03:14:14,7.2,194.23333333333332,19-29,30 mile
+190,Ace Fisher,433,Bozeman,MT,M,58,7.1 mph,03:05:25,7.1,185.41666666666666,50+,30 mile
+191,Brian dekiep,539,Helena,MT,M,51,7.1 mph,02:52:34,7.1,172.56666666666666,50+,30 mile
+192,Wesley Bott,400,Payson,UT,M,47,7.1 mph,02:57:47,7.1,177.78333333333333,40-49,30 mile
+193,Patrick Johnson,369,Bozeman,MT,M,47,7.1 mph,03:16:46,7.1,196.76666666666668,40-49,30 mile
+194,Rob Leo,558,Bozeman,MT,M,38,7.1 mph,03:12:58,7.1,192.96666666666667,30-39,30 mile
+195,Andrew Schick,627,Bozeman,MT,M,45,7.1 mph,03:16:49,7.1,196.81666666666666,40-49,30 mile
+196,Nathan Ender,607,Bozeman,MT,M,32,7.1 mph,03:08:50,7.1,188.83333333333334,30-39,30 mile
+197,Joshua Francis,487,Bozeman,MT,M,45,7 mph,03:15:19,7,195.31666666666666,40-49,30 mile
+198,Matias Rojas,581,Belgrade,MT,M,30,7 mph,03:10:19,7,190.31666666666666,30-39,30 mile
+199,Zachary Millar,598,Missoula,MT,M,48,7 mph,03:09:36,7,189.6,40-49,30 mile
+200,Gregory Gilpin,528,Bozeman,MT,M,46,7 mph,03:14:42,7,194.7,40-49,30 mile
+201,Eric Guinn,430,Boise,ID,M,29,7 mph,03:08:20,7,188.33333333333334,19-29,30 mile
+202,Taylor Middleton,587,Big Sky,MT,M,66,7 mph,03:08:17,7,188.28333333333333,50+,30 mile
+203,Tawnia Bell,411,Bozeman,MT,F,44,7 mph,03:09:46,7,189.76666666666668,40-49,30 mile
+204,Matthew Redmond,509,Bozeman,MT,M,32,7 mph,02:56:56,7,176.93333333333334,30-39,30 mile
+205,Kimberly Franke,493,Moab,UT,F,44,6.9 mph,03:16:02,6.9,196.03333333333333,40-49,30 mile
+206,Christine Hahn,531,Leavenworth,WA,F,49,6.9 mph,03:07:08,6.9,187.13333333333333,40-49,30 mile
+207,Noah Jaeger,597,Stevens Point,WI,M,25,6.8 mph,03:11:36,6.8,191.6,19-29,30 mile
+208,Jamie Anderson,649,Big Sky,MT,F,33,6.8 mph,03:18:19,6.8,198.31666666666666,30-39,30 mile
+209,Miles Pereira,500,Cupertino,CA,M,22,6.8 mph,03:20:30,6.8,200.5,19-29,30 mile
+210,Jeremy Mardambek,546,Salt Lake City,UT,M,39,6.8 mph,03:24:38,6.8,204.63333333333333,30-39,30 mile
+211,Carissa Benjamin,302,Missoula,MT,F,49,6.8 mph,03:21:29,6.8,201.48333333333332,40-49,30 mile
+212,Becky Brockie,362,Big Sky,MT,F,46,6.7 mph,03:19:46,6.7,199.76666666666668,40-49,30 mile
+213,Matthew Mosher,585,Bozeman,MT,M,21,6.7 mph,03:11:19,6.7,191.31666666666666,19-29,30 mile
+214,Anderson Wallace,656,Big Sky,MT,M,45,6.7 mph,03:21:32,6.7,201.53333333333333,40-49,30 mile
+215,Gregg Valeriano,650,BozemanBozeman,MT,M,57,6.7 mph,03:15:02,6.7,195.03333333333333,50+,30 mile
+216,Sean Havey,304,Bozeman,MT,M,29,6.7 mph,03:15:16,6.7,195.26666666666668,19-29,30 mile
+217,AJ Reiter,648,Sandy,UT,M,29,6.7 mph,03:19:45,6.7,199.75,19-29,30 mile
+218,Angie Ostrowski,313,Bozeman,MT,F,49,6.7 mph,03:22:41,6.7,202.68333333333334,40-49,30 mile
+219,Andy Reiter,626,Salt Lake City,UT,M,27,6.7 mph,03:19:46,6.7,199.76666666666668,19-29,30 mile
+220,Michelle Havens,397,Pocatello,ID,F,54,6.7 mph,03:19:51,6.7,199.85,50+,30 mile
+221,Skyler Wild,577,West Haven,UT,M,36,6.7 mph,03:20:46,6.7,200.76666666666668,30-39,30 mile
+222,Brandon Rice,545,San Francisco,CA,M,37,6.6 mph,03:12:08,6.6,192.13333333333333,30-39,30 mile
+223,Michael Wolfe,660,Big Sky,MT,M,44,6.6 mph,03:21:42,6.6,201.7,40-49,30 mile
+224,Taylor Kissell,615,Gallatin Gateway,MT,M,44,6.6 mph,03:21:44,6.6,201.73333333333332,40-49,30 mile
+225,Garrett Rhinard,530,Bozeman,MT,M,38,6.6 mph,03:24:44,6.6,204.73333333333332,30-39,30 mile
+226,Gaelen Rhinard,527,Bozeman,MT,M,40,6.6 mph,03:24:43,6.6,204.71666666666667,40-49,30 mile
+227,Kim Kircher,541,Big Sky,MT,F,53,6.6 mph,03:23:25,6.6,203.41666666666666,50+,30 mile
+228,Kara Daume,312,missoula,MT,F,48,6.6 mph,03:21:38,6.6,201.63333333333333,40-49,30 mile
+229,Shivani Beall,359,Red Lodge,MT,F,26,6.6 mph,03:21:15,6.6,201.25,19-29,30 mile
+230,Daniel Egan,456,Rapid City,SD,M,29,6.6 mph,03:28:28,6.6,208.46666666666667,19-29,30 mile
+231,Logan Bell,405,Big Sky,MT,F,27,6.6 mph,03:24:04,6.6,204.06666666666666,19-29,30 mile
+232,Kelsey Egan,455,Rapid City,SD,F,29,6.6 mph,03:29:53,6.6,209.88333333333333,19-29,30 mile
+233,Vince Yannelli,413,Woodcliff Lake,NJ,M,27,6.5 mph,03:21:01,6.5,201.01666666666668,19-29,30 mile
+234,Jillycakes Martin,567,Bozeman,MT,F,41,6.5 mph,03:30:32,6.5,210.53333333333333,40-49,30 mile
+235,Matt Dodd,416,Big Sky,MT,M,45,6.5 mph,03:28:49,6.5,208.81666666666666,40-49,30 mile
+236,Courtney Jones,345,Big Sky,MT,F,45,6.5 mph,03:29:00,6.5,209,40-49,30 mile
+237,Matt Lydens,420,Big Sky,MT,M,55,6.4 mph,03:04:56,6.4,184.93333333333334,50+,30 mile
+238,Rebekah Bunting,505,Bozeman,MT,F,51,6.4 mph,03:27:47,6.4,207.78333333333333,50+,30 mile
+239,Kimberly Greene,488,Bozeman,MT,F,49,6.4 mph,03:27:51,6.4,207.85,40-49,30 mile
+240,Andrew Theis,422,West Jordan,UT,M,36,6.4 mph,03:16:04,6.4,196.06666666666666,30-39,30 mile
+241,Sarah Joyner,572,Big Sky,MT,F,34,6.4 mph,03:26:02,6.4,206.03333333333333,30-39,30 mile
+242,Nicholas Newbury,554,Bozeman,MT,M,39,6.4 mph,03:29:11,6.4,209.18333333333334,30-39,30 mile
+243,Daniel Mitchell,553,Bozeman,MT,M,42,6.4 mph,03:29:10,6.4,209.16666666666666,40-49,30 mile
+244,Jeremy Mitchell,360,Big Sky,MT,M,44,6.4 mph,03:29:09,6.4,209.15,40-49,30 mile
+245,Heidi Dohse,388,Hailey,ID,F,60,6.3 mph,03:27:18,6.3,207.3,50+,30 mile
+246,Ryan Hoyt,618,West Bloomfield,MI,M,29,6.3 mph,03:36:26,6.3,216.43333333333334,19-29,30 mile
+247,Devin Pereira,481,Bozeman,MT,F,24,6.3 mph,03:28:41,6.3,208.68333333333334,19-29,30 mile
+248,Max Sisson,534,Bozeman,MT,M,27,6.3 mph,03:34:46,6.3,214.76666666666668,19-29,30 mile
+249,Ali Chipouras,510,Bozeman,MT,F,30,6.3 mph,03:34:16,6.3,214.26666666666668,30-39,30 mile
+250,Will Hammond,499,Bozeman,MT,M,25,6.3 mph,03:30:08,6.3,210.13333333333333,19-29,30 mile
+251,Mike Grey,653,Gallatin Gateway,MT,M,34,6.3 mph,03:31:25,6.3,211.41666666666666,30-39,30 mile
+252,Lindsay Colbert,632,Ennis,MT,F,35,6.2 mph,03:31:57,6.2,211.95,30-39,30 mile
+253,Deb Lewis,612,Big Sky,MT,F,61,6.1 mph,03:37:04,6.1,217.06666666666666,50+,30 mile
+254,Michael Momont,622,Duluth,MN,M,57,6.1 mph,03:38:08,6.1,218.13333333333333,50+,30 mile
+255,Elena Silverman,415,Bozeman,MT,F,22,6.1 mph,03:41:27,6.1,221.45,19-29,30 mile
+256,Porter Nick,354,Bozeman,MT,M,37,6.1 mph,03:34:20,6.1,214.33333333333334,30-39,30 mile
+257,Andrew Rice,544,Albuquerque,NM,M,35,6.1 mph,03:38:09,6.1,218.15,30-39,30 mile
+258,Tom Stark,549,Helena,MT,M,57,6.1 mph,03:37:37,6.1,217.61666666666667,50+,30 mile
+259,Patrick Gale,392,Bozeman,MT,M,43,6.1 mph,03:36:58,6.1,216.96666666666667,40-49,30 mile
+260,Christina Williams,623,Salt Lake City,UT,F,27,6 mph,03:37:26,6,217.43333333333334,19-29,30 mile
+261,Steve Knudtsen,408,Broomfield,CO,M,64,6 mph,03:40:43,6,220.71666666666667,50+,30 mile
+262,David Watts,308,Bozeman,MT,M,29,6 mph,03:39:10,6,219.16666666666666,19-29,30 mile
+263,William Carstens,575,Clearfield,UT,M,29,6 mph,03:49:33,6,229.55,19-29,30 mile
+264,Shane Acord,526,Bozeman,MT,M,45,6 mph,03:41:49,6,221.81666666666666,40-49,30 mile
+265,Elaina Ruger,482,Bozeman,MT,F,26,6 mph,03:37:17,6,217.28333333333333,19-29,30 mile
+266,Rachael Reed,547,Bozeman,MT,F,26,6 mph,03:37:09,6,217.15,19-29,30 mile
+267,David Millman,578,Bozeman,MT,M,43,5.9 mph,03:38:57,5.9,218.95,40-49,30 mile
+268,Hailey Turk,508,Hamilton,MT,F,32,5.9 mph,03:38:18,5.9,218.3,30-39,30 mile
+269,Bob Powers,506,Butte,MT,M,48,5.9 mph,03:46:30,5.9,226.5,40-49,30 mile
+270,Anthony Aiello,533,Sheridan,WY,M,39,5.9 mph,03:37:32,5.9,217.53333333333333,30-39,30 mile
+271,Nicholas Cantoni,652,Missoula,MT,M,36,5.8 mph,03:56:04,5.8,236.06666666666666,30-39,30 mile
+272,Craig Seidel,658,Big Sky,MT,M,40,5.8 mph,03:47:32,5.8,227.53333333333333,40-49,30 mile
+273,Julia Lambert,410,Salt Lake City,UT,F,28,5.8 mph,03:50:27,5.8,230.45,19-29,30 mile
+274,Isabel Strachan,414,Sandy,UT,F,28,5.8 mph,03:50:25,5.8,230.41666666666666,19-29,30 mile
+275,Jeff Green,619,Bozeman,MT,M,54,5.7 mph,03:40:34,5.7,220.56666666666666,50+,30 mile
+276,James Cameron,582,Deer Lodge,MT,M,60,5.7 mph,03:39:34,5.7,219.56666666666666,50+,30 mile
+277,Jess LaBuff,507,Butte,MT,M,49,5.7 mph,03:51:27,5.7,231.45,40-49,30 mile
+278,Morgan Landers,427,Sun Valley,ID,F,41,5.6 mph,03:55:30,5.6,235.5,40-49,30 mile
+279,Derek Louquet,417,Missoula,MT,M,39,5.6 mph,03:54:35,5.6,234.58333333333334,30-39,30 mile
+280,Justin Hotaling,396,Clinton,MT,M,30,5.5 mph,03:59:32,5.5,239.53333333333333,30-39,30 mile
+281,JR Mooney,584,Bozeman,MT,M,34,5.4 mph,03:55:11,5.4,235.18333333333334,30-39,30 mile
+282,Travis Charboneau,583,Billings,MT,M,38,5.4 mph,03:55:25,5.4,235.41666666666666,30-39,30 mile
+283,John Walker,403,Butte,MT,M,47,5.3 mph,04:05:56,5.3,245.93333333333334,40-49,30 mile
+284,Brian Ricks,611,East Helena,MT,M,35,5.3 mph,04:07:35,5.3,247.58333333333334,30-39,30 mile
+285,Ashley Perris,599,Salt Lake City,UT,F,37,5.2 mph,04:09:16,5.2,249.26666666666668,30-39,30 mile
+286,Nicholas Potyok,439,Helena,MT,M,28,5.2 mph,04:10:55,5.2,250.91666666666666,19-29,30 mile
+287,Calvin A Fagley,444,Excelsior,MN,M,23,5 mph,04:21:57,5,261.95,19-29,30 mile
+288,C. Todd Fagley,443,Excelsior,MN,M,53,5 mph,04:21:58,5,261.96666666666664,50+,30 mile
+289,Paul Borash,442,Bozeman,MT,M,24,5 mph,04:22:01,5,262.01666666666665,19-29,30 mile
+Drop,Alisa Wade,523,Missoula,MT,F,55,NA,02:51:18,NA,171.3,50+,30 mile
+Drop,Colin Harper,460,Missoula,MT,M,20,NA,02:46:42,NA,166.7,19-29,30 mile
+Drop,Anna Davis,498,Missoula,MT,F,52,NA,NA,NA,NA,50+,30 mile
+Drop,Brendan Hogg,343,Missoula,MT,M,30,NA,NA,NA,NA,30-39,30 mile

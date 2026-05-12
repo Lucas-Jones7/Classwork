@@ -1,0 +1,193 @@
+//-----------------------------------------------------
+// Lucas Jones, EELE 371, Final Project Part 7, 04/20/2026
+//
+// ADC pin assingment: P1.4
+//
+// Voltage Range Thresholds:
+//    DC offset = 15 DN
+//    LOW_MAX(1v) = (1 * 4095 / 3.3) - 15 = 1226
+//    HIGH_MAX(2v) = (2 * 4095 / 3.3) - 15 = 2467
+//-----------------------------------------------------
+
+#include <msp430.h> 
+
+// rtc init time (Class start: 1:10, April 13, 2026) CHANGE THIS CHANGE THIS CHANGE THIS CHANGE THIS CHANGE THIS
+#define START_REG   0x03
+#define SEC_INIT    0x00
+#define MIN_INIT    0x10
+#define HOUR_INIT   0x01
+#define DAY_INIT    0x13
+#define WDAY_INIT   0x03
+#define MONTH_INIT  0x04
+#define YEAR_INIT   0x26
+
+// tx packet array
+unsigned char txPacket[8] = {
+    START_REG, SEC_INIT, MIN_INIT, HOUR_INIT,
+    DAY_INIT, WDAY_INIT, MONTH_INIT, YEAR_INIT
+};
+
+// global vars
+// Day 2
+volatile int txIndex        = 0;
+volatile int rxIndex        = 0;
+volatile int doingTxInit    = 0;    // 1 = writing init, 0 = writing reg pointer
+volatile unsigned char rxBuffer[2]        = {0, 0};
+volatile unsigned char timestamp_seconds  = 0;
+volatile unsigned char timestamp_minutes  = 0;
+// Day 1
+volatile unsigned int ADCvalue = 0;
+#define OFFSET   15
+#define LOW_MAX  (1226 - OFFSET)    // 1v (DN = 1226)
+#define HIGH_MAX (2467 - OFFSET)    // 2v (DN = 2467)
+
+
+// ----------------------------------------- MAIN LOOP ------------------------------------
+int main(void)
+{
+	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
+	
+	 // config I2C
+	UCB0CTLW0 |= UCSWRST;               // put into sw resett mode
+	UCB0CTLW0 |= UCSSEL__SMCLK;         // pick SMCLK clock source
+	UCB0BRW    = 10;                    // divide SMCLK by 10 for SCL
+	UCB0CTLW0 |= UCMODE_3;              // put into I2C mode
+	UCB0CTLW0 |= UCMST;                 // put into master mode
+	UCB0I2CSA  = 0x0068;                // slave address RTC
+	UCB0CTLW1 |= UCASTP_2;
+
+	// cofig I2C ports
+	// P1.3 = SCL
+	P1SEL1 &= ~BIT3;
+	P1SEL0 |= BIT3;
+	// P1.2 = SDA
+	P1SEL1 &= ~BIT2;
+	P1SEL0 |= BIT2;
+
+	// config ports
+	// leds
+	P1DIR |= BIT0;                  // config LED1 as output
+	P1OUT &= ~BIT0;                 // LED1 off to start
+	P6DIR |= BIT6;                  // config LED2 as output
+	P6OUT &= ~BIT6;                 // LED2 off to start
+
+	// configure P1.4 as ADC input (NOT P1.0 - P1.3)
+	P1SEL1 |= BIT4;                 // configure P1.4 to ADC function
+	P1SEL0 |= BIT4;
+
+	 // disable high z
+	PM5CTL0 &= ~LOCKLPM5;
+
+	// take out of sw reset
+	UCB0CTLW0 &= ~UCSWRST;
+
+	// configure ADC
+	ADCCTL0 &= ~ADCSHT;            // clear ADCSHT from default
+	ADCCTL0 |= ADCSHT_2;           // conversion cycles = 16
+	ADCCTL0 |= ADCON;              // turn ADC on
+	ADCCTL1 |= ADCSSEL_2;          // ADC clock source = SMCLK
+	ADCCTL1 |= ADCSHP;             // sample signal source = sampling timer
+	ADCCTL2 &= ~ADCRES;            // clear ADCRES from default
+	ADCCTL2 |= ADCRES_2;           // was ADCRES, ADCRES_2 = 12-bit (highest possible resolution)
+	ADCMCTL0 |= ADCINCH_4;         // ADC input channel = A4 (P1.4)
+	ADCIE |= ADCIE0;               // enable ADC conversion complete IRQ
+
+	//enable tx and rx IRQs
+	UCB0IE |= UCTXIE0;
+	UCB0IE |= UCRXIE0;
+	__enable_interrupt();
+
+	//write initial time to rtc
+	UCB0TBCNT = 0x08;
+	txIndex    = 0;
+	doingTxInit = 1;
+	UCB0CTLW0 |= UCTR;
+	UCB0CTLW0 |= UCTXSTT;
+	while((UCB0IFG & UCSTPIFG) == 0){}
+	UCB0IFG &= ~UCSTPIFG;
+
+
+	while(1){
+	    ADCCTL0 |= ADCENC | ADCSC; // enable and start conversion
+	    __bis_SR_register(LPM0_bits);
+
+	    // control leds based of ADC reading
+	    if(ADCvalue < LOW_MAX){
+	        // if v < 1v, led1 off led2 on
+	        P1OUT &= ~BIT0;
+	        P6OUT |= BIT6;
+	    } else if(ADCvalue > HIGH_MAX){
+	        // if v > 2v, led1 on, led 2 off
+	        P1OUT |= BIT0;
+	        P6OUT &= ~BIT6;
+
+	        // return mins and seconds register values if adc read exceeds high value
+	        rxIndex = 0;
+
+	        //send register pointer
+	        UCB0TBCNT   = 0x01;
+	        doingTxInit = 0;
+	        UCB0CTLW0  |= UCTR;
+	        UCB0CTLW0  |= UCTXSTT;
+	        while((UCB0IFG & UCSTPIFG) == 0){}
+	        UCB0IFG &= ~UCSTPIFG;
+
+	        //read 2 bytes (seconds, minutes)
+	        UCB0TBCNT   = 0x02;
+	        UCB0CTLW0  &= ~UCTR;
+	        UCB0CTLW0  |=  UCTXSTT;
+	        while((UCB0IFG & UCSTPIFG) == 0){}
+	        UCB0IFG &= ~UCSTPIFG;
+
+	        timestamp_seconds = rxBuffer[0];
+	        timestamp_minutes = rxBuffer[1];
+	    } else {
+	        // if 1v < v < 2v, both leds off
+	        P1OUT &= ~BIT0;
+	        P6OUT &= ~BIT6;
+	    }
+	}
+	return 0;
+}
+
+// ------------------------ END MAIN ---------------------------------------
+
+
+//-----------------------------------------------------
+// Interrupt Service Routines
+//-----------------------------------------------------
+#pragma vector = ADC_VECTOR
+__interrupt void ADC_ISR(void){
+    ADCvalue = ADCMEM0;                     // store ADC result
+    __bic_SR_register_on_exit(LPM0_bits);   // wake up main loop
+}
+
+// --------------------------------- END ADC ISR --------------------------------------b
+
+// service TXBUF
+#pragma vector = EUSCI_B0_VECTOR
+__interrupt void EUSCI_B0_ISR(void)
+{
+    switch(UCB0IV)
+    {
+        case 0x16:                          // RXIFG0
+            rxBuffer[rxIndex] = UCB0RXBUF;
+            rxIndex++;
+            break;
+        case 0x18:                          // TXIFG0
+            if(doingTxInit)
+            {
+                UCB0TXBUF = txPacket[txIndex];
+                txIndex++;
+            }
+            else
+            {
+                UCB0TXBUF = START_REG;      // register pointer
+            }
+            break;
+        default:
+            break;
+    }
+}
+
+// ------------------------ END TXBUF service -----------------------------------------

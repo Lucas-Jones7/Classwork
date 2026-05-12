@@ -1,0 +1,8 @@
+
+**** Build of configuration Debug for project Z_FP_Part7_Finished ****
+
+"C:\\ti\\ccs1281\\ccs\\utils\\bin\\gmake" -k -j 16 all -O 
+ 
+gmake[1]: 'Z_FP_Part7_Finished.out' is up to date.
+
+**** Build Finished ****

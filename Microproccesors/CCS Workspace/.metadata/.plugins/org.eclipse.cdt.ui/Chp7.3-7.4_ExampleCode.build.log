@@ -1,0 +1,15 @@
+
+**** Clean-only build of configuration Debug for project Chp7.3-7.4_ExampleCode ****
+
+"C:\\ti\\ccs1281\\ccs\\utils\\bin\\gmake" -k -j 8 clean -O 
+ 
+DEL /F  "Chp7.3-7.4_ExampleCode.out" 
+DEL /F "7.3-7.4main.obj" 
+DEL /F "7.3-7.4main.d" 
+Could Not Find C:\ALL_STORAGE_HERE\Classwork\Spring 2026\Microproccesors\CCS Workspace\Chp7.3-7.4_ExampleCode\Debug\Chp7.3-7.4_ExampleCode.out
+Could Not Find C:\ALL_STORAGE_HERE\Classwork\Spring 2026\Microproccesors\CCS Workspace\Chp7.3-7.4_ExampleCode\Debug\7.3-7.4main.obj
+Could Not Find C:\ALL_STORAGE_HERE\Classwork\Spring 2026\Microproccesors\CCS Workspace\Chp7.3-7.4_ExampleCode\Debug\7.3-7.4main.d
+Finished clean
+ 
+
+**** Build Finished ****
