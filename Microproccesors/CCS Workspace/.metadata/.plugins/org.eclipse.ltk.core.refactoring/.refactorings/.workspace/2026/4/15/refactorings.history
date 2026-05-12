@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Practical5_Jones&apos; to &apos;Practical5_AnalogToDigitalJones&apos;" description="Rename resource &apos;Practical5_Jones&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Practical5_Jones" name="Practical5_AnalogToDigitalJones" stamp="1775675525843" updateReferences="true"/>&#x0A;<refactoring comment="Delete resource &apos;ztest15&apos;" deleteContents="false" description="Delete resource &apos;ztest15&apos;" element1="/ztest15" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1775676599968"/>
-</session>

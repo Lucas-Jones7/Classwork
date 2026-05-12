@@ -1,8 +1,0 @@
-
-**** Build of configuration Debug for project Lab1.1_ASM_Blinky1_Jones ****
-
-"C:\\ti\\ccs1281\\ccs\\utils\\bin\\gmake" -k -j 16 all -O 
- 
-gmake[1]: 'Lab1.1_ASM_Blinky1_Jones.out' is up to date.
-
-**** Build Finished ****

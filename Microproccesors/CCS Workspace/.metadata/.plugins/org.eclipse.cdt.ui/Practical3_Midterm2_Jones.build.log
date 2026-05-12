@@ -1,8 +1,0 @@
-
-**** Build of configuration Debug for project Practical3_Midterm2_Jones ****
-
-"C:\\ti\\ccs1281\\ccs\\utils\\bin\\gmake" -k -j 16 all -O 
- 
-gmake[1]: 'Practical3_Midterm2_Jones.out' is up to date.
-
-**** Build Finished ****
