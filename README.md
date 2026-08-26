@@ -1,4 +1,4 @@
-# Lucas Jones Coursework REPO
+# Lucas Jones Coursework
 All of my coding assingments from my courses at Montana State University. The files are grouped in folders titled after the semesters when I took the courses.
 
 # Fall 2024
@@ -17,8 +17,8 @@ All of my coding assingments from my courses at Montana State University. The fi
 - CSCI-338 | Computer Science Theory            |  A-
 
 # Spring 2026
-- CSCI-347 | Data Mining                        |  In Progress
-- EELE-371 | Microprocessor HW & SW Systems     |  In Progress
-- STAT-337 | Interm Statistics w/Computing      |  In Progress
+- CSCI-347 | Data Mining                        |  A
+- EELE-371 | Microprocessor HW & SW Systems     |  A-
+- STAT-337 | Interm Statistics w/Computing      |  C+
 
 
